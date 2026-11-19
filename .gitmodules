@@ -1,0 +1,4 @@
+[submodule "Benchmark/tools/fastchess-src"]
+	path = Benchmark/tools/fastchess-src
+	url = https://github.com/Disservin/fastchess.git
+	ignore = untracked
