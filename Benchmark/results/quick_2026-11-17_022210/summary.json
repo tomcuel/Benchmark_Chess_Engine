@@ -1,0 +1,87 @@
+{
+  "planned_games": 20,
+  "played_games": 20,
+  "counted_games": 20,
+  "complete": true,
+  "wins": 15,
+  "draws": 0,
+  "losses": 5,
+  "score": 0.75,
+  "opponents": {
+    "SF1400": {
+      "games": 10,
+      "score": 1.0,
+      "stderr": 0.0,
+      "elo": Infinity,
+      "elo_low": Infinity,
+      "elo_high": Infinity,
+      "wins": 10,
+      "draws": 0,
+      "losses": 0,
+      "white_points": 5.0,
+      "white_games": 5,
+      "black_points": 5.0,
+      "black_games": 5,
+      "plies": 733,
+      "rating": 1400,
+      "average_plies": 73.3
+    },
+    "SF1800": {
+      "games": 10,
+      "score": 0.5,
+      "stderr": 0.15811388300841897,
+      "elo": 0.0,
+      "elo_low": -251.7833355442057,
+      "elo_high": 251.78333554420567,
+      "wins": 5,
+      "draws": 0,
+      "losses": 5,
+      "white_points": 2.0,
+      "white_games": 5,
+      "black_points": 3.0,
+      "black_games": 5,
+      "plies": 824,
+      "rating": 1800,
+      "average_plies": 82.4
+    }
+  },
+  "terminations": {
+    "arrêt par adjudication (gain)": 18,
+    "mat": 2
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 747,
+    "book_moves": 30,
+    "average_depth": 4.86479250334672,
+    "average_time_ms": 37.54082998661312,
+    "average_nodes": 26782.24765729585,
+    "average_nps": 1284580.74099723,
+    "average_hashfull": 23.60374832663989
+  },
+  "rating": {
+    "games": 20,
+    "score": 0.75,
+    "elo": 1849.0447535922403,
+    "margin": 176.88396784986085
+  },
+  "rating_white": {
+    "games": 10,
+    "score": 0.7,
+    "elo": 1795.2654013979782,
+    "margin": 230.96837175114877
+  },
+  "rating_black": {
+    "games": 10,
+    "score": 0.8,
+    "elo": 1908.2278568093684,
+    "margin": 273.6372087225804
+  },
+  "warnings": [
+    "Seulement 20 parties : l'estimation est indicative. Il en faut environ 200 pour une marge proche de ±50 Elo, et 1000 pour ±25.",
+    "Score de 100 % contre SF1400 : ce palier ne renseigne que sur une borne, pas sur l'écart réel."
+  ]
+}

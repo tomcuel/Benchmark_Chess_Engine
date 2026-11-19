@@ -1,0 +1,1995 @@
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "1"]
+[White "CleanedChess"]
+[Black "SF1400"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:02"]
+[GameStartTime "2026-11-17T02:22:11 +0100"]
+[GameEndTime "2026-11-17T02:22:14 +0100"]
+[PlyCount "34"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "B07"]
+[Opening "King's Pawn Game: Maróczy Defense"]
+
+1. d4 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+d6 {0.00/8 0.136s, n=47705, nps=348211, hashfull=13}
+2. e4 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e5 {-0.43/11 0.138s, n=56299, nps=405028, hashfull=12}
+3. dxe5 {+0.62/5 0.054s, n=45300, nps=1224324, hashfull=0}
+dxe5 {-0.41/11 0.049s, n=26461, nps=540020, hashfull=5}
+4. Qxd8+ {+0.33/5 0.053s, n=31937, nps=1228346, hashfull=2}
+Kxd8 {-0.32/11 0.018s, n=8425, nps=443421, hashfull=3}
+5. Nf3 {+0.43/5 0.052s, n=5, nps=5000, hashfull=2}
+Bd6 {-0.28/8 0.034s, n=17666, nps=504742, hashfull=5}
+6. Bc4 {+0.77/5 0.050s, n=31227, nps=1040900, hashfull=7}
+f6 {-0.38/11 0.121s, n=56261, nps=464966, hashfull=13}
+7. Nc3 {+0.71/6 0.049s, n=55148, nps=1198869, hashfull=10}
+Nc6 {-0.39/10 0.113s, n=45726, nps=404654, hashfull=12}
+8. Be3 {+0.73/5 0.049s, n=12342, nps=1028500, hashfull=10}
+Nb4 {-0.52/10 0.134s, n=56779, nps=420585, hashfull=20}
+9. O-O-O {+0.99/5 0.048s, n=36266, nps=1295214, hashfull=10}
+Nc6 {-2.61/10 0.168s, n=60584, nps=360619, hashfull=19}
+10. Bc5 {+1.64/5 0.046s, n=40780, nps=1073157, hashfull=11}
+Nge7 {-2.46/11 0.081s, n=35431, nps=437419, hashfull=11}
+11. Bxd6 {+1.72/4 0.046s, n=3930, nps=1965000, hashfull=11}
+Ke8 {-2.89/12 0.066s, n=29479, nps=446651, hashfull=8}
+12. Nb5 {+5.16/5 0.044s, n=26596, nps=1208909, hashfull=13}
+Nd5 {-6.76/13 0.046s, n=17037, nps=370369, hashfull=5}
+13. exd5 {+8.38/5 0.044s, n=41769, nps=1670760, hashfull=14}
+Nb8 {0.00/12 0.163s, n=59275, nps=361432, hashfull=25}
+14. Nxc7+ {+11.50/5 0.043s, n=30040, nps=1767058, hashfull=18}
+Kf7 {-10.28/13 0.096s, n=35295, nps=367656, hashfull=14}
+15. Nxa8 {+13.47/5 0.042s, n=38230, nps=1592916, hashfull=19}
+Bg4 {-10.44/11 0.072s, n=28472, nps=395444, hashfull=10}
+16. Bxb8 {+13.87/5 0.042s, n=28288, nps=1571555, hashfull=19}
+Rc8 {-10.83/13 0.137s, n=56968, nps=412811, hashfull=20}
+17. d6+ {+15.28/5 0.040s, n=40293, nps=1492333, hashfull=22}
+Rxc4 {-9.80/13 0.039s, n=17493, nps=448538, hashfull=5, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "2"]
+[White "CleanedChess"]
+[Black "SF1800"]
+[Result "0-1"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:11 +0100"]
+[GameEndTime "2026-11-17T02:22:16 +0100"]
+[PlyCount "75"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A45"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+
+1. Nc3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+Nf6 {+0.04/10 0.053s, n=22358, nps=429961, hashfull=3}
+2. d4 {+0.21/6 0.053s, n=58535, nps=1245425, hashfull=0}
+d5 {+0.01/9 0.027s, n=13641, nps=487178, hashfull=3}
+3. e3 {+0.14/5 0.051s, n=27137, nps=1085480, hashfull=0}
+Bg4 {+0.25/9 0.044s, n=17580, nps=390666, hashfull=4}
+4. Bb5+ {+0.33/5 0.050s, n=35782, nps=1277928, hashfull=3}
+c6 {+0.26/8 0.039s, n=12484, nps=320102, hashfull=4}
+5. Be2 {+0.61/6 0.049s, n=31486, nps=1368956, hashfull=4}
+Bxe2 {+0.10/10 0.181s, n=69117, nps=379763, hashfull=16}
+6. Ngxe2 {+0.75/5 0.049s, n=5, nps=5000, hashfull=4}
+Nbd7 {+0.20/8 0.060s, n=24390, nps=399836, hashfull=5}
+7. O-O {+0.63/5 0.047s, n=9554, nps=1061555, hashfull=7}
+e5 {+0.17/8 0.039s, n=15705, nps=402692, hashfull=3}
+8. Re1 {+0.46/5 0.047s, n=13308, nps=1023692, hashfull=8}
+e4 {+1.03/8 0.035s, n=20098, nps=558277, hashfull=3}
+9. Ng3 {+0.07/6 0.046s, n=51966, nps=1181045, hashfull=11}
+h5 {+1.53/8 0.039s, n=15855, nps=406538, hashfull=4}
+10. Nf5 {+0.69/5 0.046s, n=35036, nps=1208137, hashfull=11}
+g6 {+4.97/9 0.032s, n=11502, nps=348545, hashfull=6}
+11. Ng3 {+0.18/5 0.044s, n=31692, nps=1320500, hashfull=12}
+Nh7 {+2.57/13 0.169s, n=57763, nps=339782, hashfull=19}
+12. Bd2 {+0.81/4 0.044s, n=22945, nps=1092619, hashfull=13}
+Ndf6 {+3.50/10 0.055s, n=18226, nps=325464, hashfull=6}
+13. f4 {+0.94/4 0.043s, n=24434, nps=1286000, hashfull=14}
+Qd7 {+2.37/15 0.214s, n=69473, nps=323130, hashfull=24}
+14. Rc1 {+0.92/3 0.042s, n=6211, nps=1035166, hashfull=14}
+Bd6 {+2.56/11 0.152s, n=47873, nps=312895, hashfull=17}
+15. Rb1 {+0.72/3 0.041s, n=10924, nps=1092400, hashfull=16}
+Ke7 {+3.09/9 0.023s, n=9028, nps=392521, hashfull=0}
+16. Rc1 {+0.70/4 0.041s, n=24972, nps=1135090, hashfull=17}
+Rag8 {+2.94/11 0.082s, n=29132, nps=350987, hashfull=14}
+17. Rb1 {+0.70/4 0.040s, n=22184, nps=1167578, hashfull=17}
+g5 {+3.54/11 0.104s, n=32390, nps=308476, hashfull=13}
+18. Nxh5 {+0.91/5 0.040s, n=30944, nps=1237760, hashfull=19}
+Ke8 {+6.78/10 0.061s, n=21052, nps=339548, hashfull=8}
+19. Ng3 {+1.25/4 0.039s, n=13543, nps=1128583, hashfull=19}
+Nf8 {+3.39/11 0.078s, n=28900, nps=370512, hashfull=11}
+20. fxg5 {+0.96/5 0.038s, n=24986, nps=1135727, hashfull=20}
+Rxg5 {+5.96/13 0.060s, n=22673, nps=371688, hashfull=10}
+21. Nce2 {+1.14/4 0.038s, n=5386, nps=1077200, hashfull=22}
+Nh5 {+5.87/10 0.021s, n=9521, nps=432772, hashfull=3}
+22. Nxh5 {+1.03/5 0.036s, n=16851, nps=1404250, hashfull=22}
+Bxh2+ {+5.67/10 0.027s, n=12058, nps=446592, hashfull=3}
+23. Kxh2 {+2.70/5 0.036s, n=15575, nps=1415909, hashfull=23}
+Rgxh5+ {+M11/11 0.050s, n=28567, nps=571340, hashfull=8}
+24. Kg1 {+2.66/6 0.035s, n=36609, nps=1464360, hashfull=23}
+Qd8 {0.00/10 0.172s, n=79750, nps=460982, hashfull=27}
+25. Bc3 {+2.76/5 0.035s, n=23679, nps=1479937, hashfull=25}
+Qg5 {+5.90/11 0.070s, n=30558, nps=436542, hashfull=9}
+26. Nf4 {+2.96/6 0.035s, n=40639, nps=1401344, hashfull=26}
+Rh2 {+3.26/10 0.130s, n=54963, nps=419564, hashfull=17}
+27. Rc1 {+3.06/4 0.034s, n=9511, nps=1188875, hashfull=26}
+Ng6 {+7.39/10 0.033s, n=14854, nps=436882, hashfull=4}
+28. Qd2 {+1.42/5 0.034s, n=25542, nps=1502470, hashfull=27}
+Nxf4 {+7.74/11 0.103s, n=44222, nps=425211, hashfull=15}
+29. exf4 {+0.58/6 0.033s, n=47490, nps=1484062, hashfull=30}
+Qh5 {+7.67/10 0.042s, n=19379, nps=461404, hashfull=5}
+30. Rcd1 {+2.11/4 0.032s, n=15496, nps=1291333, hashfull=30}
+Qh4 {+7.33/10 0.024s, n=11897, nps=475880, hashfull=4}
+31. Kf1 {+2.01/5 0.033s, n=20194, nps=1346266, hashfull=30}
+f5 {+7.46/7 0.016s, n=7879, nps=463470, hashfull=1}
+32. Qe3 {+2.15/4 0.032s, n=27914, nps=1213652, hashfull=30}
+a6 {+5.82/8 0.016s, n=7155, nps=447187, hashfull=2}
+33. a3 {+2.15/4 0.031s, n=18615, nps=1163437, hashfull=32}
+Rg8 {+4.66/7 0.018s, n=7729, nps=406789, hashfull=3}
+34. g4 {0.00/4 0.031s, n=26154, nps=1376526, hashfull=35}
+Qxg4 {+M9/10 0.015s, n=7768, nps=517866, hashfull=6}
+35. Qg3 {-M6/5 0.005s, n=9672, nps=1934400, hashfull=36}
+Qxg3 {+M5/8 0.030s, n=19039, nps=614161, hashfull=9}
+36. Rxe4+ {-M4/1 0.000s, n=1, nps=1000, hashfull=36}
+fxe4 {+M3/11 0.009s, n=5047, nps=560777, hashfull=4}
+37. Bd2 {-M2/1 0.000s, n=1, nps=1000, hashfull=36}
+Qg2+ {+M1/2 0.000s, n=452, nps=452000, hashfull=15}
+38. Ke1 {-M2/2 0.000s, n=52, nps=52000, hashfull=36, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "1"]
+[White "SF1400"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:11 +0100"]
+[GameEndTime "2026-11-17T02:22:16 +0100"]
+[PlyCount "71"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A10"]
+[Opening "English Opening"]
+
+1. c4 {+0.29/11 0.112s, n=43632, nps=386123, hashfull=10}
+b6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. Nc3 {+0.44/9 0.049s, n=24573, nps=491460, hashfull=5}
+Bb7 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+3. Nf3 {+0.55/9 0.064s, n=27622, nps=424953, hashfull=4}
+Nf6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+4. g3 {+0.31/10 0.054s, n=21374, nps=388618, hashfull=5}
+e6 {+0.07/5 0.055s, n=34636, nps=1082375, hashfull=0}
+5. a3 {+0.32/9 0.056s, n=23527, nps=420125, hashfull=8}
+Nc6 {+0.47/5 0.054s, n=46757, nps=1113261, hashfull=1}
+6. d3 {+0.47/11 0.151s, n=61399, nps=403940, hashfull=17}
+Bd6 {+0.64/5 0.052s, n=50981, nps=980403, hashfull=2}
+7. e4 {+1.28/9 0.028s, n=18743, nps=669392, hashfull=1}
+O-O {+0.53/4 0.050s, n=7099, nps=1419800, hashfull=2}
+8. Bh3 {0.00/9 0.176s, n=61430, nps=347062, hashfull=16}
+Be7 {+0.51/5 0.049s, n=49692, nps=1080260, hashfull=3}
+9. O-O {+0.83/7 0.036s, n=17740, nps=492777, hashfull=4}
+d5 {+0.51/5 0.049s, n=36509, nps=1043114, hashfull=4}
+10. Bf4 {+0.04/10 0.078s, n=41116, nps=520455, hashfull=11}
+d4 {+0.47/5 0.048s, n=26148, nps=1245142, hashfull=6}
+11. Nb5 {-0.18/8 0.075s, n=29319, nps=390920, hashfull=4}
+Rc8 {+0.36/4 0.048s, n=4, nps=4000, hashfull=6}
+12. e5 {-0.04/10 0.130s, n=61912, nps=472610, hashfull=13}
+Nd7 {+0.36/4 0.046s, n=5543, nps=1385750, hashfull=6}
+13. Nbxd4 {+0.52/9 0.174s, n=54978, nps=376561, hashfull=16}
+Nxd4 {-0.78/5 0.046s, n=38984, nps=1344275, hashfull=7}
+14. Nxd4 {-0.46/12 0.065s, n=26815, nps=406287, hashfull=7}
+Nc5 {-0.83/6 0.045s, n=62835, nps=1396333, hashfull=7}
+15. Nb5 {+0.72/10 0.054s, n=30986, nps=563381, hashfull=4}
+Nxd3 {+0.18/5 0.044s, n=37748, nps=1398074, hashfull=7}
+16. Qe2 {-0.59/11 0.164s, n=76960, nps=469268, hashfull=21}
+Nxf4 {+0.18/5 0.043s, n=33459, nps=1394125, hashfull=7}
+17. gxf4 {-0.62/11 0.040s, n=20686, nps=504536, hashfull=6}
+a5 {+0.03/5 0.043s, n=20066, nps=1433285, hashfull=7}
+18. Bg2 {-0.70/10 0.143s, n=58562, nps=406680, hashfull=16}
+Bxg2 {+0.85/6 0.042s, n=38088, nps=1410666, hashfull=7}
+19. Rfd1 {-0.60/10 0.038s, n=20434, nps=523948, hashfull=6}
+Bd5 {+1.30/5 0.041s, n=21797, nps=1453133, hashfull=9}
+20. Nc3 {-0.13/10 0.074s, n=35616, nps=481297, hashfull=6}
+c6 {+1.37/5 0.041s, n=22787, nps=1340411, hashfull=9}
+21. Rab1 {-2.85/9 0.122s, n=44467, nps=361520, hashfull=14}
+Qc7 {+1.40/5 0.040s, n=21035, nps=1314687, hashfull=9}
+22. f5 {0.00/11 0.105s, n=37337, nps=355590, hashfull=11}
+Bxc4 {+2.25/6 0.039s, n=39690, nps=1804090, hashfull=12}
+23. Qxc4 {-4.19/11 0.041s, n=17399, nps=414261, hashfull=6}
+Qxe5 {+2.42/6 0.037s, n=37190, nps=1126969, hashfull=16}
+24. Qe2 {-3.80/12 0.019s, n=10898, nps=573578, hashfull=0}
+Qxe2 {+3.84/6 0.037s, n=57264, nps=1547675, hashfull=17}
+25. Nxe2 {-5.83/11 0.042s, n=19197, nps=457071, hashfull=6}
+exf5 {+3.94/6 0.037s, n=29031, nps=1527947, hashfull=17}
+26. b4 {-6.21/12 0.083s, n=37676, nps=448523, hashfull=13}
+axb4 {+4.15/6 0.036s, n=41202, nps=1716750, hashfull=18}
+27. axb4 {-6.19/15 0.069s, n=33252, nps=481913, hashfull=8}
+c5 {+4.16/5 0.035s, n=5, nps=5000, hashfull=18}
+28. Rd7 {-5.32/11 0.020s, n=10941, nps=547050, hashfull=2}
+Bf6 {+4.20/6 0.035s, n=37392, nps=1495680, hashfull=18}
+29. Rd6 {-5.26/12 0.061s, n=29312, nps=472774, hashfull=11}
+cxb4 {+4.61/6 0.035s, n=25923, nps=1440166, hashfull=19}
+30. Rxf6 {-5.48/9 0.007s, n=4893, nps=611625, hashfull=0}
+gxf6 {+4.92/7 0.034s, n=49440, nps=1704827, hashfull=21}
+31. Ng3 {-5.39/12 0.016s, n=10760, nps=632941, hashfull=2}
+f4 {+6.10/7 0.033s, n=50419, nps=1800678, hashfull=22}
+32. Rxb4 {0.00/12 0.056s, n=29727, nps=530839, hashfull=12}
+fxg3 {+7.50/6 0.033s, n=24477, nps=1359833, hashfull=24}
+33. Rg4+ {-7.75/12 0.047s, n=27437, nps=571604, hashfull=18}
+Kh8 {+7.67/8 0.032s, n=49775, nps=1777678, hashfull=26}
+34. Rxg3 {-8.29/12 0.041s, n=30645, nps=729642, hashfull=10}
+Rfe8 {+7.94/5 0.032s, n=12354, nps=1764857, hashfull=28}
+35. Kg2 {-7.78/10 0.006s, n=5604, nps=934000, hashfull=4}
+b5 {+8.08/6 0.032s, n=27451, nps=1715687, hashfull=30}
+36. h3 {-7.82/13 0.027s, n=20372, nps=727571, hashfull=10, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "2"]
+[White "SF1800"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:11 +0100"]
+[GameEndTime "2026-11-17T02:22:17 +0100"]
+[PlyCount "103"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense"]
+
+1. e4 {+0.29/11 0.113s, n=43632, nps=386123, hashfull=10}
+c6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. Nf3 {+0.40/10 0.087s, n=36566, nps=415522, hashfull=11}
+g6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+3. h3 {+0.71/9 0.044s, n=18596, nps=413244, hashfull=4}
+d5 {-1.27/6 0.054s, n=38398, nps=1163575, hashfull=0}
+4. Nc3 {+0.72/10 0.062s, n=28388, nps=457870, hashfull=5}
+d4 {-1.18/6 0.052s, n=28262, nps=1662470, hashfull=1}
+5. Nb1 {+0.25/11 0.158s, n=62042, nps=390201, hashfull=15}
+Nd7 {-0.55/5 0.052s, n=31896, nps=1099862, hashfull=2}
+6. c3 {+0.53/10 0.030s, n=14745, nps=491500, hashfull=1}
+Ngf6 {-0.75/5 0.051s, n=17406, nps=1338923, hashfull=2}
+7. Qc2 {+0.85/11 0.124s, n=51846, nps=418112, hashfull=13}
+Nc5 {-0.35/5 0.050s, n=21864, nps=1214666, hashfull=4}
+8. cxd4 {+0.72/10 0.069s, n=36615, nps=530652, hashfull=6}
+Ncxe4 {-0.59/6 0.048s, n=58543, nps=1330522, hashfull=6}
+9. Bc4 {-0.58/11 0.065s, n=30469, nps=461651, hashfull=7}
+Nd6 {-0.32/4 0.048s, n=16210, nps=1080666, hashfull=6}
+10. d3 {-0.46/11 0.073s, n=35767, nps=489958, hashfull=6}
+Nxc4 {-0.29/4 0.047s, n=12157, nps=810466, hashfull=7}
+11. dxc4 {+0.11/11 0.083s, n=35557, nps=428397, hashfull=12}
+Bf5 {-0.32/5 0.046s, n=28708, nps=1104153, hashfull=7}
+12. Qb3 {+0.56/9 0.047s, n=21920, nps=466382, hashfull=6}
+Qb6 {-0.28/5 0.045s, n=41988, nps=1049700, hashfull=7}
+13. Nc3 {+0.20/10 0.182s, n=60367, nps=353023, hashfull=19}
+Qxb3 {-0.32/6 0.044s, n=46659, nps=1261054, hashfull=9}
+14. axb3 {+0.21/12 0.039s, n=20757, nps=532230, hashfull=4}
+Bg7 {-0.30/6 0.043s, n=34204, nps=1140133, hashfull=9}
+15. O-O {+0.18/9 0.044s, n=24274, nps=551681, hashfull=3}
+O-O {-0.30/5 0.042s, n=3110, nps=777500, hashfull=11}
+16. Re1 {+0.18/11 0.096s, n=47418, nps=493937, hashfull=11}
+e6 {-0.31/5 0.041s, n=26974, nps=1284476, hashfull=12}
+17. g4 {+1.17/12 0.088s, n=43961, nps=499556, hashfull=9}
+Bc2 {-0.05/6 0.040s, n=47866, nps=1450484, hashfull=15}
+18. Be3 {0.00/10 0.165s, n=79204, nps=480024, hashfull=26}
+Bxb3 {+0.73/6 0.040s, n=53140, nps=1362564, hashfull=19}
+19. Nd2 {+0.07/12 0.115s, n=63209, nps=549643, hashfull=21}
+Bc2 {+0.82/6 0.039s, n=35514, nps=1420560, hashfull=20}
+20. Rac1 {-0.03/9 0.124s, n=37533, nps=647120, hashfull=13}
+Bd3 {+0.98/5 0.038s, n=14458, nps=1445800, hashfull=21}
+21. Na4 {-0.37/9 0.047s, n=26828, nps=558916, hashfull=7}
+b5 {+1.01/6 0.038s, n=31918, nps=1450818, hashfull=21}
+22. Rc3 {-0.63/9 0.042s, n=23889, nps=568785, hashfull=6}
+Bxc4 {+1.42/6 0.037s, n=38515, nps=1481346, hashfull=23}
+23. Nxc4 {-0.78/11 0.052s, n=25700, nps=484905, hashfull=6}
+Nd5 {+1.42/6 0.038s, n=31841, nps=1326708, hashfull=24}
+24. Na5 {-1.09/10 0.088s, n=47681, nps=541829, hashfull=12}
+bxa4 {+1.73/6 0.037s, n=46425, nps=1365441, hashfull=26}
+25. Rc2 {-1.15/9 0.023s, n=15194, nps=633083, hashfull=3}
+Nb4 {+2.10/6 0.037s, n=35540, nps=1225517, hashfull=26}
+26. Rc3 {-1.02/8 0.034s, n=17648, nps=504228, hashfull=5}
+c5 {+2.80/6 0.035s, n=30629, nps=1531450, hashfull=27}
+27. Rc4 {-2.39/10 0.046s, n=23450, nps=509782, hashfull=7}
+cxd4 {+3.12/6 0.035s, n=36025, nps=1896052, hashfull=29}
+28. Bxd4 {-2.25/11 0.020s, n=12872, nps=643600, hashfull=2}
+Rfb8 {+2.68/6 0.035s, n=15544, nps=1554400, hashfull=31}
+29. Re4 {-2.72/12 0.082s, n=41715, nps=502590, hashfull=8}
+Bxd4 {+2.48/6 0.034s, n=35105, nps=1462708, hashfull=38}
+30. Rexd4 {-2.93/10 0.026s, n=13520, nps=500740, hashfull=3}
+e5 {+2.68/6 0.034s, n=20900, nps=1607692, hashfull=40}
+31. Rd6 {-0.65/9 0.024s, n=16397, nps=655880, hashfull=2}
+Rb5 {+2.63/6 0.033s, n=17279, nps=1570818, hashfull=41}
+32. Rd7 {-1.08/10 0.023s, n=13801, nps=600043, hashfull=1}
+a6 {+2.67/4 0.033s, n=12615, nps=1261500, hashfull=41}
+33. Nc6 {-0.90/9 0.020s, n=14550, nps=727500, hashfull=11}
+Nxc6 {+4.55/6 0.033s, n=25599, nps=1422166, hashfull=46}
+34. Rxc6 {-0.54/9 0.018s, n=12769, nps=672052, hashfull=12}
+Rxb2 {+3.12/6 0.031s, n=20153, nps=1343533, hashfull=48}
+35. Rf6 {-0.15/8 0.032s, n=15857, nps=480515, hashfull=6}
+Rb3 {+3.27/6 0.031s, n=37839, nps=1220612, hashfull=50}
+36. Re7 {0.00/9 0.068s, n=43170, nps=625652, hashfull=11}
+Rxh3 {+4.45/5 0.030s, n=19799, nps=1523000, hashfull=50}
+37. f3 {-1.47/9 0.048s, n=29063, nps=605479, hashfull=24}
+a3 {+5.58/6 0.030s, n=41109, nps=1581115, hashfull=53}
+38. Kg2 {-5.91/9 0.048s, n=26747, nps=545857, hashfull=8}
+a2 {+6.84/5 0.030s, n=18087, nps=1507250, hashfull=53}
+39. Kxh3 {-5.55/8 0.019s, n=14989, nps=788894, hashfull=16}
+a1=Q {+6.92/6 0.029s, n=11468, nps=1433500, hashfull=54}
+40. Rfxf7 {-5.62/10 0.012s, n=7251, nps=604250, hashfull=5}
+Qh1+ {+6.95/5 0.029s, n=5, nps=5000, hashfull=54}
+41. Kg3 {-6.65/14 0.023s, n=13258, nps=552416, hashfull=9}
+a5 {+6.78/5 0.030s, n=5, nps=5000, hashfull=54}
+42. Rd7 {0.00/10 0.049s, n=30646, nps=625428, hashfull=17}
+a4 {+7.08/5 0.029s, n=28014, nps=1556333, hashfull=56}
+43. g5 {-5.65/10 0.029s, n=18889, nps=651344, hashfull=18}
+Qg1+ {+8.02/5 0.029s, n=17489, nps=1748900, hashfull=58}
+44. Kh3 {-7.39/12 0.031s, n=19334, nps=623677, hashfull=11}
+Qxg5 {+7.86/6 0.029s, n=37642, nps=1505680, hashfull=60}
+45. Rg7+ {-3.81/11 0.012s, n=9933, nps=827750, hashfull=15}
+Kf8 {+7.96/7 0.029s, n=29762, nps=1417238, hashfull=62}
+46. Rgf7+ {-3.65/8 0.042s, n=5892, nps=736500, hashfull=4}
+Ke8 {+8.40/7 0.028s, n=39743, nps=1471962, hashfull=62}
+47. Rxh7 {-5.47/8 0.033s, n=24950, nps=733823, hashfull=9}
+a3 {+8.40/5 0.028s, n=5, nps=5000, hashfull=62}
+48. Kh2 {-6.08/8 0.025s, n=16379, nps=629961, hashfull=16}
+a2 {+9.22/4 0.027s, n=13557, nps=1042846, hashfull=66}
+49. f4 {-7.32/9 0.015s, n=11583, nps=723937, hashfull=11}
+Qxf4+ {+18.37/5 0.028s, n=33809, nps=1536772, hashfull=69}
+50. Kg2 {-11.79/13 0.007s, n=7271, nps=908875, hashfull=21}
+a1=Q {+18.07/5 0.027s, n=21140, nps=1510000, hashfull=69}
+51. Rhe7+ {-12.74/13 0.013s, n=14809, nps=1057785, hashfull=21}
+Kf8 {+18.50/6 0.027s, n=6433, nps=1608250, hashfull=70}
+52. Rf7+ {-M12/17 0.005s, n=8763, nps=1752600, hashfull=18, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "3"]
+[White "CleanedChess"]
+[Black "SF1400"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:14 +0100"]
+[GameEndTime "2026-11-17T02:22:18 +0100"]
+[PlyCount "79"]
+[Termination "normal"]
+[TimeControl "2+0.02"]
+[ECO "B28"]
+[Opening "Sicilian Defense: O'Kelly Variation, Yerevan System"]
+
+1. Nc3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+c5 {+0.11/10 0.053s, n=25716, nps=476222, hashfull=3}
+2. e4 {+0.83/6 0.053s, n=44058, nps=1376812, hashfull=0}
+a6 {-0.21/9 0.032s, n=14178, nps=443062, hashfull=5}
+3. Nf3 {+1.49/5 0.051s, n=31091, nps=1195807, hashfull=4}
+d6 {-0.25/11 0.102s, n=40535, nps=397401, hashfull=11}
+4. Bd3 {+1.34/5 0.051s, n=24858, nps=1242900, hashfull=5}
+g6 {+0.11/10 0.095s, n=32957, nps=343302, hashfull=15}
+5. O-O {+1.56/5 0.050s, n=25051, nps=1252550, hashfull=6}
+b5 {+0.10/8 0.030s, n=12142, nps=391677, hashfull=3}
+6. Re1 {+2.11/4 0.048s, n=9350, nps=1335714, hashfull=8}
+Bg7 {-0.08/10 0.144s, n=61040, nps=423888, hashfull=12}
+7. a3 {+1.98/4 0.047s, n=17804, nps=1112750, hashfull=9}
+Nc6 {+0.32/11 0.162s, n=56539, nps=346865, hashfull=16}
+8. Be2 {+1.24/5 0.048s, n=42760, nps=1096410, hashfull=10}
+Nf6 {+0.34/8 0.046s, n=19175, nps=416847, hashfull=2}
+9. d4 {+1.26/5 0.047s, n=25678, nps=1167181, hashfull=11}
+O-O {+0.10/11 0.103s, n=44700, nps=433980, hashfull=10}
+10. d5 {+1.36/5 0.045s, n=28783, nps=1151320, hashfull=11}
+Na5 {-0.40/11 0.179s, n=54155, nps=365912, hashfull=13}
+11. Bf1 {+1.41/4 0.045s, n=33134, nps=1035437, hashfull=13}
+Bd7 {0.00/8 0.060s, n=23685, nps=388278, hashfull=5}
+12. Bd3 {+1.31/4 0.043s, n=37175, nps=1004729, hashfull=13}
+Qb6 {0.00/8 0.047s, n=22457, nps=477808, hashfull=6}
+13. Bf4 {+1.36/4 0.043s, n=16945, nps=1129666, hashfull=13}
+e6 {-0.12/11 0.108s, n=47078, nps=435907, hashfull=9}
+14. Qd2 {+1.46/3 0.042s, n=7306, nps=1043714, hashfull=14}
+c4 {-0.04/9 0.082s, n=37515, nps=457500, hashfull=4}
+15. Be3 {+1.31/5 0.041s, n=74136, nps=2003675, hashfull=16}
+Qc7 {-0.06/9 0.044s, n=18963, nps=430977, hashfull=2}
+16. Be2 {+1.21/5 0.041s, n=66098, nps=2203266, hashfull=18}
+Nb7 {-0.08/10 0.166s, n=39757, nps=422946, hashfull=12}
+17. dxe6 {+1.09/4 0.039s, n=22586, nps=1026636, hashfull=18}
+Bc6 {-0.31/9 0.058s, n=23217, nps=393508, hashfull=4}
+18. exf7+ {+2.85/4 0.039s, n=23345, nps=1061136, hashfull=19}
+Qxf7 {-2.02/10 0.144s, n=27639, nps=325164, hashfull=9}
+19. Ng5 {+2.80/4 0.039s, n=14137, nps=1178083, hashfull=20}
+Qd7 {-2.01/10 0.123s, n=20930, nps=418600, hashfull=4}
+20. Rad1 {+2.80/2 0.038s, n=2, nps=2000, hashfull=20}
+Rae8 {-2.15/8 0.042s, n=15674, nps=373190, hashfull=5}
+21. Bd4 {+2.55/3 0.038s, n=26904, nps=960857, hashfull=20}
+Nc5 {-0.84/7 0.015s, n=6971, nps=464733, hashfull=1}
+22. Bxc5 {+2.52/4 0.036s, n=23102, nps=1100095, hashfull=21}
+dxc5 {-0.79/10 0.030s, n=14267, nps=460225, hashfull=4}
+23. Qe3 {+2.57/4 0.036s, n=12849, nps=1168090, hashfull=21}
+Qe7 {-0.42/8 0.116s, n=32662, nps=480323, hashfull=6}
+24. e5 {+2.67/4 0.035s, n=33747, nps=1088612, hashfull=23}
+Qxe5 {0.00/8 0.096s, n=39636, nps=408618, hashfull=15}
+25. Bxc4+ {+3.64/5 0.035s, n=36375, nps=1581521, hashfull=24}
+bxc4 {-5.79/12 0.073s, n=28947, nps=396534, hashfull=8}
+26. Qxe5 {+3.57/6 0.035s, n=31891, nps=1518619, hashfull=24}
+Rxe5 {-5.66/8 0.007s, n=4474, nps=639142, hashfull=1}
+27. Rxe5 {+3.64/6 0.035s, n=21437, nps=1429133, hashfull=26}
+h6 {-5.23/11 0.019s, n=10229, nps=538368, hashfull=1}
+28. Rxc5 {+4.60/6 0.033s, n=50519, nps=1578718, hashfull=30}
+Bxg2 {-7.07/12 0.076s, n=34393, nps=452539, hashfull=9}
+29. Kxg2 {+4.86/6 0.034s, n=30274, nps=1681888, hashfull=30}
+Rb8 {0.00/12 0.061s, n=28308, nps=456580, hashfull=9}
+30. Ne6 {+6.35/5 0.033s, n=23996, nps=1714000, hashfull=31}
+a5 {-8.33/11 0.056s, n=25273, nps=451303, hashfull=13}
+31. Rb1 {+7.60/4 0.033s, n=10690, nps=1781666, hashfull=33}
+Bf8 {-7.16/11 0.038s, n=12657, nps=333078, hashfull=4}
+32. Rc7 {+7.90/4 0.033s, n=7889, nps=986125, hashfull=34}
+Bd6 {0.00/12 0.041s, n=17215, nps=409880, hashfull=5}
+33. Rg7+ {+8.03/5 0.033s, n=18103, nps=1392538, hashfull=36}
+Kh8 {-7.46/10 0.003s, n=922, nps=307333, hashfull=3}
+34. Rxg6 {+7.94/6 0.034s, n=41543, nps=1340096, hashfull=37}
+Rg8 {0.00/12 0.042s, n=17881, nps=425738, hashfull=10}
+35. Rxg8+ {+7.94/5 0.030s, n=14392, nps=1599111, hashfull=37}
+Nxg8 {-8.44/10 0.013s, n=6581, nps=506230, hashfull=13}
+36. Ne4 {+8.64/5 0.031s, n=13794, nps=1532666, hashfull=41}
+Be5 {-7.86/12 0.027s, n=14922, nps=552666, hashfull=20}
+37. c3 {+9.19/6 0.029s, n=34467, nps=1566681, hashfull=43}
+Bxc3 {-7.92/12 0.040s, n=22344, nps=558600, hashfull=9}
+38. bxc3 {+11.53/6 0.029s, n=29986, nps=2141857, hashfull=45}
+Nf6 {0.00/11 0.034s, n=22381, nps=639457, hashfull=17}
+39. Nxf6 {+M3/3 0.000s, n=528, nps=528000, hashfull=45}
+h5 {-M2/1 0.000s, n=5, nps=5000, hashfull=14}
+40. Rb8# {+M1/1 0.000s, n=42, nps=42000, hashfull=45, White mates} 1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "4"]
+[White "CleanedChess"]
+[Black "SF1800"]
+[Result "0-1"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:02"]
+[GameStartTime "2026-11-17T02:22:16 +0100"]
+[GameEndTime "2026-11-17T02:22:19 +0100"]
+[PlyCount "55"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A01"]
+[Opening "Nimzo-Larsen Attack: Classical Variation"]
+
+1. b3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+d5 {+0.18/10 0.137s, n=43468, nps=377982, hashfull=12}
+2. e3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e5 {+0.38/8 0.024s, n=16754, nps=698083, hashfull=2}
+3. d4 {-0.49/5 0.054s, n=30882, nps=1064896, hashfull=1}
+e4 {+0.69/10 0.120s, n=58421, nps=486841, hashfull=16}
+4. Nc3 {-0.42/5 0.053s, n=38204, nps=1317379, hashfull=3}
+Nf6 {+0.99/10 0.123s, n=48065, nps=390772, hashfull=15}
+5. Bb5+ {-0.55/5 0.052s, n=31544, nps=1168296, hashfull=3}
+Nbd7 {+1.60/11 0.032s, n=13926, nps=422000, hashfull=4}
+6. Bxd7+ {-0.14/5 0.051s, n=13031, nps=1447888, hashfull=5}
+Qxd7 {+1.22/13 0.136s, n=51503, nps=378698, hashfull=17}
+7. Nge2 {-0.58/6 0.050s, n=48566, nps=1214150, hashfull=9}
+h5 {+1.80/10 0.041s, n=16219, nps=395585, hashfull=5}
+8. O-O {-0.24/6 0.048s, n=53785, nps=1195222, hashfull=11}
+b5 {+1.61/11 0.124s, n=42806, nps=342448, hashfull=16}
+9. a3 {+0.03/5 0.047s, n=42117, nps=1169916, hashfull=11}
+Bd6 {+1.91/11 0.122s, n=41538, nps=340475, hashfull=11}
+10. Bb2 {-0.12/5 0.046s, n=25991, nps=1181409, hashfull=11}
+Bb7 {+2.43/10 0.032s, n=12213, nps=381656, hashfull=3}
+11. Nf4 {-0.12/5 0.046s, n=32439, nps=1081300, hashfull=12}
+O-O-O {+3.94/9 0.056s, n=18086, nps=322964, hashfull=9}
+12. Re1 {+0.04/5 0.045s, n=51591, nps=1199790, hashfull=12}
+g5 {+4.68/9 0.034s, n=11004, nps=314400, hashfull=4}
+13. Nfe2 {+0.04/5 0.043s, n=24008, nps=1500500, hashfull=13}
+a6 {+5.46/12 0.091s, n=28503, nps=309815, hashfull=12}
+14. Qd2 {+0.25/5 0.043s, n=25978, nps=1237047, hashfull=13}
+Kb8 {+5.86/11 0.056s, n=18205, nps=325089, hashfull=7}
+15. Rad1 {+0.35/5 0.042s, n=39195, nps=1224843, hashfull=14}
+Rdf8 {+6.37/12 0.136s, n=40247, nps=295933, hashfull=12}
+16. b4 {+0.44/4 0.042s, n=13484, nps=1037230, hashfull=14}
+Ng4 {+6.43/11 0.028s, n=10038, nps=346137, hashfull=4}
+17. h3 {-0.44/6 0.040s, n=45883, nps=1390393, hashfull=19}
+Nh2 {+6.67/12 0.117s, n=25207, nps=213618, hashfull=9}
+18. Ng3 {+0.58/5 0.041s, n=45335, nps=1193026, hashfull=24}
+Nf3+ {+7.71/12 0.068s, n=19491, nps=282478, hashfull=5}
+19. gxf3 {-0.62/6 0.039s, n=45056, nps=1185684, hashfull=25}
+exf3 {+7.46/13 0.045s, n=16606, nps=361000, hashfull=3}
+20. Qd3 {-0.78/5 0.038s, n=11500, nps=1437500, hashfull=26}
+Qxh3 {+7.59/12 0.160s, n=13478, nps=354684, hashfull=3}
+21. Qf1 {-1.51/5 0.038s, n=14731, nps=1052214, hashfull=28}
+Qg4 {+10.81/10 0.057s, n=20941, nps=367385, hashfull=8}
+22. e4 {-1.85/5 0.038s, n=14528, nps=1816000, hashfull=31}
+h4 {+11.16/11 0.043s, n=18420, nps=418636, hashfull=5}
+23. e5 {-3.23/5 0.037s, n=21640, nps=1545714, hashfull=32}
+hxg3 {+14.64/10 0.023s, n=10737, nps=447375, hashfull=2}
+24. exd6 {-6.29/4 0.036s, n=4, nps=4000, hashfull=33}
+g2 {+M7/12 0.054s, n=26417, nps=489203, hashfull=9}
+25. dxc7+ {-M6/4 0.010s, n=15772, nps=1577200, hashfull=35}
+Kc8 {+M5/13 0.028s, n=17719, nps=611000, hashfull=5}
+26. Re8+ {-M4/1 0.000s, n=1, nps=1000, hashfull=35}
+Rxe8 {+M3/12 0.030s, n=17723, nps=571709, hashfull=6}
+27. Qd3 {-M2/1 0.000s, n=1, nps=1000, hashfull=35}
+Re1+ {+M1/20 0.008s, n=10318, nps=1289750, hashfull=0}
+28. Rxe1 {-M2/2 0.002s, n=89, nps=89000, hashfull=35, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "3"]
+[White "SF1400"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:16 +0100"]
+[GameEndTime "2026-11-17T02:22:20 +0100"]
+[PlyCount "87"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "C00"]
+[Opening "French Defense: Knight Variation"]
+
+1. Nf3 {+0.22/10 0.091s, n=34262, nps=376505, hashfull=8}
+e6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. e4 {+0.35/8 0.032s, n=12511, nps=390968, hashfull=2}
+Ne7 {-0.35/5 0.054s, n=18619, nps=1095235, hashfull=0}
+3. Nc3 {+0.85/12 0.064s, n=29480, nps=460625, hashfull=6}
+Nbc6 {-0.62/6 0.051s, n=31433, nps=1309708, hashfull=3}
+4. d4 {+1.18/12 0.152s, n=51054, nps=335881, hashfull=17}
+Rb8 {-0.70/4 0.051s, n=17259, nps=1150600, hashfull=4}
+5. h4 {+3.91/9 0.025s, n=11397, nps=438346, hashfull=2}
+Ra8 {-0.63/4 0.050s, n=15838, nps=1131285, hashfull=6}
+6. h5 {+3.25/10 0.020s, n=9826, nps=491300, hashfull=3}
+a6 {-0.69/4 0.049s, n=17092, nps=1068250, hashfull=8}
+7. h6 {+3.17/8 0.035s, n=12092, nps=345485, hashfull=2}
+gxh6 {-0.47/3 0.047s, n=19540, nps=673793, hashfull=9}
+8. Bxh6 {+3.71/10 0.027s, n=11946, nps=442444, hashfull=2}
+Bxh6 {-0.61/5 0.047s, n=20928, nps=1046400, hashfull=10}
+9. a3 {+2.53/11 0.072s, n=35044, nps=486722, hashfull=5}
+Bg7 {+2.48/4 0.047s, n=9051, nps=1131375, hashfull=12}
+10. Qd3 {-6.18/11 0.205s, n=64079, nps=312580, hashfull=23}
+d6 {+2.41/4 0.045s, n=31873, nps=910657, hashfull=12}
+11. Be2 {-5.44/14 0.161s, n=52036, nps=323204, hashfull=16}
+e5 {+2.48/4 0.046s, n=15664, nps=1044266, hashfull=13}
+12. d5 {-5.78/13 0.108s, n=35585, nps=326467, hashfull=10}
+Nd4 {+2.40/5 0.043s, n=26254, nps=1141478, hashfull=13}
+13. Rh5 {-6.53/12 0.098s, n=33421, nps=341030, hashfull=10}
+Nxe2 {+2.86/4 0.042s, n=19657, nps=1034578, hashfull=13}
+14. Nxe2 {-6.52/13 0.172s, n=55455, nps=322412, hashfull=17}
+Bf6 {+2.75/5 0.042s, n=39072, nps=1001846, hashfull=15}
+15. b3 {0.00/15 0.160s, n=57366, nps=356310, hashfull=16}
+O-O {+3.19/5 0.042s, n=36743, nps=1148218, hashfull=15}
+16. Ng3 {-3.20/10 0.122s, n=29432, nps=239284, hashfull=10}
+Ng6 {+3.38/5 0.042s, n=43461, nps=1060024, hashfull=15}
+17. Qe3 {-3.51/12 0.058s, n=19405, nps=328898, hashfull=7}
+Nf4 {+3.34/5 0.039s, n=21850, nps=1040476, hashfull=17}
+18. O-O-O {-3.95/14 0.124s, n=41880, nps=337741, hashfull=18}
+Nxh5 {+5.33/5 0.040s, n=29995, nps=1249791, hashfull=17}
+19. Nxh5 {-4.82/10 0.054s, n=22781, nps=421870, hashfull=8}
+Re8 {+5.10/5 0.038s, n=37863, nps=1456269, hashfull=19}
+20. Qh6 {+5.29/7 0.023s, n=10539, nps=458217, hashfull=2}
+Bh8 {+1.55/5 0.037s, n=15581, nps=973812, hashfull=20}
+21. Ng5 {+7.29/12 0.033s, n=20257, nps=613848, hashfull=1}
+Qd7 {0.00/5 0.037s, n=13737, nps=1717125, hashfull=22}
+22. Qxh7+ {+M9/11 0.038s, n=16414, nps=431947, hashfull=5}
+Kf8 {-M8/1 0.000s, n=1, nps=1000, hashfull=22}
+23. Rh1 {+M7/10 0.029s, n=13653, nps=470793, hashfull=4}
+Ke7 {-0.56/6 0.037s, n=54620, nps=1517222, hashfull=22}
+24. Nxf7 {+7.44/11 0.045s, n=20688, nps=459733, hashfull=6}
+Bg7 {-0.56/6 0.036s, n=25297, nps=1405388, hashfull=22}
+25. Nh6 {+7.80/10 0.026s, n=10733, nps=412807, hashfull=2}
+Kd8 {-0.45/6 0.036s, n=29464, nps=1473200, hashfull=24}
+26. Nxg7 {+5.03/9 0.033s, n=12717, nps=385363, hashfull=1}
+Qe7 {-0.60/6 0.035s, n=22453, nps=1320764, hashfull=24}
+27. Kb2 {+5.60/9 0.017s, n=6593, nps=366277, hashfull=2}
+Rf8 {-0.46/6 0.036s, n=47116, nps=1385764, hashfull=27}
+28. Rh5 {+4.77/11 0.057s, n=18945, nps=332368, hashfull=7}
+Rxf2 {+0.97/5 0.035s, n=23084, nps=1214947, hashfull=27}
+29. Qg8+ {+4.14/8 0.018s, n=6999, nps=368368, hashfull=3}
+Rf8 {+0.79/6 0.034s, n=17903, nps=1377153, hashfull=29}
+30. Qh7 {+1.35/8 0.050s, n=23370, nps=467400, hashfull=3}
+c6 {+0.90/5 0.033s, n=16065, nps=1338750, hashfull=30}
+31. g4 {+2.03/8 0.063s, n=32593, nps=509265, hashfull=8}
+cxd5 {+2.10/5 0.033s, n=20839, nps=1389266, hashfull=31}
+32. exd5 {+1.58/9 0.044s, n=22583, nps=513250, hashfull=5}
+e4 {+1.96/5 0.032s, n=19245, nps=1202812, hashfull=31}
+33. Ka2 {+1.72/8 0.036s, n=25304, nps=702888, hashfull=15}
+Rf2 {+2.10/5 0.033s, n=10378, nps=1297250, hashfull=32}
+34. Nhf5 {+0.82/8 0.029s, n=21728, nps=749241, hashfull=5}
+Bxf5 {+1.49/5 0.033s, n=21306, nps=1420400, hashfull=33}
+35. gxf5 {-0.52/9 0.044s, n=29514, nps=655866, hashfull=11}
+Kd7 {+2.49/5 0.031s, n=23158, nps=1543866, hashfull=35}
+36. Ne6 {+0.29/8 0.031s, n=21221, nps=684548, hashfull=22}
+Rxc2+ {+2.32/6 0.032s, n=35610, nps=1369615, hashfull=38}
+37. Kb1 {-0.38/9 0.046s, n=22646, nps=492304, hashfull=10}
+Rf2 {+2.38/6 0.031s, n=25713, nps=1512529, hashfull=39}
+38. b4 {+0.06/7 0.061s, n=37811, nps=609854, hashfull=9}
+e3 {+2.88/5 0.030s, n=17644, nps=1357230, hashfull=40}
+39. Qg6 {-1.74/8 0.024s, n=16205, nps=675208, hashfull=6}
+e2 {+5.88/4 0.030s, n=12554, nps=1141272, hashfull=41}
+40. Rh1 {-8.01/10 0.055s, n=28623, nps=520418, hashfull=9}
+Rf1+ {+10.02/5 0.029s, n=24243, nps=1346833, hashfull=46}
+41. Kb2 {-9.79/10 0.049s, n=24147, nps=492795, hashfull=13}
+e1=Q {+10.27/5 0.029s, n=6222, nps=1244400, hashfull=46}
+42. Rxf1 {-10.93/11 0.043s, n=23046, nps=535953, hashfull=25}
+Qe2+ {+10.72/4 0.030s, n=4, nps=4000, hashfull=47}
+43. Kb3 {-8.39/10 0.014s, n=8182, nps=584428, hashfull=17}
+Qxf1 {+11.00/4 0.029s, n=11173, nps=1596142, hashfull=50}
+44. Nf8+ {-12.94/11 0.034s, n=22764, nps=650400, hashfull=16, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "4"]
+[White "SF1800"]
+[Black "CleanedChess"]
+[Result "1-0"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:05"]
+[GameStartTime "2026-11-17T02:22:17 +0100"]
+[GameEndTime "2026-11-17T02:22:22 +0100"]
+[PlyCount "122"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A05"]
+[Opening "Zukertort Opening: Quiet System"]
+
+1. e3 {+0.29/11 0.110s, n=43632, nps=396654, hashfull=10}
+Nf6 {-0.20/6 0.052s, n=44389, nps=1233027, hashfull=1}
+2. Nf3 {+0.14/10 0.052s, n=23105, nps=444326, hashfull=7}
+Nc6 {-0.23/6 0.052s, n=57855, nps=1257717, hashfull=2}
+3. Be2 {+0.39/8 0.025s, n=11000, nps=423076, hashfull=1}
+e5 {+0.07/6 0.050s, n=29551, nps=1284826, hashfull=3}
+4. O-O {-0.04/10 0.085s, n=35950, nps=422941, hashfull=12}
+e4 {+0.19/6 0.050s, n=46325, nps=1597413, hashfull=7}
+5. Nd4 {-0.14/10 0.084s, n=34248, nps=402917, hashfull=8}
+Bd6 {+0.15/5 0.048s, n=14718, nps=1226500, hashfull=8}
+6. Nb5 {+0.23/11 0.115s, n=45290, nps=393826, hashfull=10}
+Be5 {+0.35/5 0.047s, n=32502, nps=1250076, hashfull=11}
+7. f4 {+0.47/10 0.166s, n=65634, nps=393017, hashfull=16}
+exf3 {+0.58/6 0.046s, n=70265, nps=1527500, hashfull=13}
+8. gxf3 {-0.05/10 0.077s, n=37178, nps=482831, hashfull=5}
+a6 {+1.30/5 0.045s, n=31360, nps=1161481, hashfull=14}
+9. N5c3 {-0.71/10 0.145s, n=46496, nps=318465, hashfull=14}
+d5 {+1.20/5 0.044s, n=22870, nps=879615, hashfull=16}
+10. f4 {-1.60/11 0.096s, n=29732, nps=306515, hashfull=9}
+Bd6 {+1.71/5 0.043s, n=16883, nps=1205928, hashfull=17}
+11. Bf3 {-2.40/11 0.075s, n=26144, nps=348586, hashfull=10}
+Bh3 {+1.81/5 0.044s, n=25463, nps=979346, hashfull=17}
+12. Nxd5 {-2.89/11 0.163s, n=52690, nps=323251, hashfull=14}
+Bxf1 {+2.55/5 0.042s, n=28368, nps=1289454, hashfull=17}
+13. Qxf1 {-2.82/11 0.146s, n=60104, nps=408870, hashfull=17}
+Nxd5 {+2.11/5 0.041s, n=15624, nps=1201846, hashfull=20}
+14. Bxd5 {-3.21/12 0.035s, n=16794, nps=479828, hashfull=4}
+O-O {+1.75/5 0.040s, n=27256, nps=1297904, hashfull=21}
+15. Nc3 {-1.25/9 0.044s, n=20739, nps=460866, hashfull=4}
+Qd7 {+1.69/5 0.040s, n=20375, nps=1018750, hashfull=21}
+16. b3 {-0.87/8 0.037s, n=14136, nps=372000, hashfull=4}
+Rad8 {+2.02/4 0.040s, n=21486, nps=1074300, hashfull=22}
+17. Bb2 {-0.89/8 0.044s, n=20668, nps=459288, hashfull=5}
+Nb4 {+1.92/5 0.038s, n=33543, nps=1156655, hashfull=23}
+18. Be4 {-0.86/12 0.143s, n=59071, nps=472568, hashfull=11}
+c5 {+1.84/4 0.039s, n=31503, nps=1050100, hashfull=23}
+19. a3 {+0.04/8 0.015s, n=12469, nps=779312, hashfull=2}
+Nc6 {+1.76/5 0.038s, n=40993, nps=1242212, hashfull=23}
+20. Kh1 {0.00/9 0.130s, n=55516, nps=423786, hashfull=11}
+Rfe8 {+1.89/4 0.039s, n=30366, nps=1012200, hashfull=24}
+21. Qg2 {+2.11/8 0.036s, n=18794, nps=522055, hashfull=4}
+Kh8 {+1.64/4 0.037s, n=36498, nps=1013833, hashfull=24}
+22. Nd5 {+3.21/10 0.050s, n=23668, nps=473360, hashfull=5}
+Bf8 {+1.63/4 0.036s, n=18395, nps=968157, hashfull=24}
+23. Nf6 {+5.00/11 0.030s, n=16621, nps=536161, hashfull=5}
+Qe6 {-0.65/5 0.035s, n=29834, nps=1356090, hashfull=24}
+24. f5 {+5.91/11 0.085s, n=30107, nps=350081, hashfull=10}
+Qd6 {-0.80/5 0.034s, n=20052, nps=1432285, hashfull=28}
+25. Bxc6 {+3.92/10 0.030s, n=14913, nps=497100, hashfull=2}
+Re7 {-0.70/5 0.036s, n=22803, nps=1425187, hashfull=30}
+26. Bd5 {+3.43/11 0.105s, n=41695, nps=397095, hashfull=14}
+gxf6 {-0.15/5 0.034s, n=26965, nps=1225681, hashfull=31}
+27. Rg1 {+3.54/11 0.020s, n=11220, nps=534285, hashfull=5}
+Bh6 {-0.25/5 0.033s, n=13539, nps=1504333, hashfull=31}
+28. c4 {+4.15/13 0.039s, n=18638, nps=477897, hashfull=4}
+Qb6 {+0.94/4 0.033s, n=18907, nps=1112176, hashfull=33}
+29. Qh3 {0.00/10 0.023s, n=10527, nps=457695, hashfull=2}
+Bg7 {+1.02/5 0.033s, n=21838, nps=1364875, hashfull=33}
+30. e4 {+3.25/11 0.052s, n=22023, nps=415528, hashfull=8}
+Rg8 {+0.97/4 0.032s, n=34455, nps=1111451, hashfull=33}
+31. Rg4 {+1.93/9 0.076s, n=30706, nps=404026, hashfull=7}
+h6 {+1.01/4 0.031s, n=31235, nps=1115535, hashfull=33}
+32. Qf3 {+2.56/7 0.012s, n=7518, nps=578307, hashfull=1}
+Kh7 {+1.06/4 0.032s, n=9476, nps=1052888, hashfull=34}
+33. Rg1 {+1.73/8 0.020s, n=10983, nps=523000, hashfull=11}
+Rge8 {+1.01/4 0.031s, n=9904, nps=1414857, hashfull=34}
+34. Qe3 {+3.27/11 0.049s, n=23382, nps=477183, hashfull=14}
+Rd7 {+0.87/4 0.031s, n=25837, nps=1359842, hashfull=34}
+35. a4 {+2.79/9 0.036s, n=15043, nps=417861, hashfull=7}
+Qd6 {+0.87/4 0.030s, n=19400, nps=1293333, hashfull=35}
+36. Ba3 {+2.43/7 0.024s, n=10477, nps=419080, hashfull=13}
+Rc8 {+0.97/4 0.030s, n=13246, nps=1324600, hashfull=37}
+37. a5 {+4.17/8 0.018s, n=8352, nps=464000, hashfull=8}
+Qe7 {+0.94/3 0.029s, n=10108, nps=1123111, hashfull=37}
+38. Rg2 {+4.48/9 0.023s, n=10059, nps=437347, hashfull=14}
+Rdc7 {+0.75/5 0.029s, n=38109, nps=1314103, hashfull=37}
+39. Qg3 {+4.35/10 0.026s, n=12136, nps=449481, hashfull=17}
+Rg8 {-0.76/6 0.028s, n=41353, nps=1476892, hashfull=38}
+40. Bb2 {+4.01/9 0.016s, n=9465, nps=591562, hashfull=7}
+Rd7 {+0.75/5 0.029s, n=23998, nps=1333222, hashfull=38}
+41. d4 {+2.69/9 0.019s, n=10379, nps=518950, hashfull=16}
+cxd4 {+0.70/5 0.029s, n=19228, nps=1281866, hashfull=40}
+42. Bxd4 {+2.52/9 0.054s, n=28975, nps=526818, hashfull=11}
+Rdd8 {+0.64/5 0.029s, n=17978, nps=1284142, hashfull=41}
+43. Bb6 {+1.76/8 0.030s, n=18265, nps=608833, hashfull=10}
+Rc8 {+0.70/5 0.027s, n=24787, nps=1304578, hashfull=43}
+44. Be3 {+2.13/11 0.049s, n=26186, nps=534408, hashfull=18}
+Rce8 {+0.64/4 0.028s, n=9739, nps=1217375, hashfull=43}
+45. Qh4 {+2.37/7 0.007s, n=5443, nps=777571, hashfull=17}
+Rd8 {+0.80/4 0.027s, n=21527, nps=1345437, hashfull=44}
+46. Qg3 {+1.45/10 0.042s, n=24029, nps=572119, hashfull=9}
+Ra8 {+0.64/4 0.027s, n=12782, nps=1278200, hashfull=45}
+47. Qg4 {+2.28/7 0.009s, n=5885, nps=588500, hashfull=6}
+Rab8 {+0.65/4 0.027s, n=16781, nps=1198642, hashfull=45}
+48. Bd2 {+2.40/8 0.030s, n=13876, nps=447612, hashfull=9}
+Rbd8 {+0.75/4 0.027s, n=23827, nps=1191350, hashfull=45}
+49. b4 {+2.20/7 0.035s, n=1885, nps=1885000, hashfull=4}
+Qc7 {+0.65/4 0.026s, n=27829, nps=1159541, hashfull=47}
+50. Be3 {+2.88/7 0.004s, n=3499, nps=699800, hashfull=10}
+Rde8 {+0.64/4 0.026s, n=21682, nps=1084100, hashfull=47}
+51. Bf4 {+3.30/9 0.024s, n=11747, nps=469880, hashfull=6}
+Qd7 {+0.59/5 0.025s, n=17288, nps=1440666, hashfull=47}
+52. c5 {+2.45/9 0.035s, n=15059, nps=430257, hashfull=12}
+Rd8 {+0.59/5 0.025s, n=20640, nps=1290000, hashfull=47}
+53. Rg1 {+2.95/9 0.010s, n=6998, nps=636181, hashfull=5}
+Qe7 {+0.59/4 0.026s, n=6897, nps=1379400, hashfull=49}
+54. h3 {+2.19/8 0.030s, n=17026, nps=549225, hashfull=9}
+Qd7 {+0.53/5 0.025s, n=30012, nps=1304869, hashfull=49}
+55. Qh4 {+2.78/7 0.005s, n=3763, nps=752600, hashfull=4}
+Rge8 {+0.63/4 0.026s, n=11836, nps=1183600, hashfull=49}
+56. Qh5 {+4.34/9 0.002s, n=2861, nps=953666, hashfull=8}
+Re7 {+0.58/4 0.024s, n=23608, nps=1124190, hashfull=51}
+57. Kh2 {+4.56/9 0.012s, n=6648, nps=554000, hashfull=4}
+Bf8 {+0.34/4 0.024s, n=9145, nps=1306428, hashfull=51}
+58. Qg4 {+M3/10 0.004s, n=4443, nps=1110750, hashfull=11}
+Ree8 {-M2/1 0.000s, n=1, nps=1000, hashfull=51}
+59. Kh1 {+M1/4 0.001s, n=1277, nps=638500, hashfull=5}
+Qb5 {-M2/2 0.002s, n=3480, nps=1160000, hashfull=51}
+60. Bxf7 {+M1/5 0.004s, n=2461, nps=615250, hashfull=4}
+Rxe4 {-M2/2 0.003s, n=4468, nps=1489333, hashfull=51}
+61. Qg6+ {+M1/11 0.004s, n=5091, nps=1018200, hashfull=2}
+Kh8 {-M2/2 0.000s, n=102, nps=102000, hashfull=51, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "5"]
+[White "CleanedChess"]
+[Black "SF1400"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:18 +0100"]
+[GameEndTime "2026-11-17T02:22:23 +0100"]
+[PlyCount "97"]
+[Termination "normal"]
+[TimeControl "2+0.02"]
+[ECO "A00"]
+[Opening "Hungarian Opening: Indian Defense"]
+
+1. g3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+Nf6 {-0.03/10 0.073s, n=34050, nps=460135, hashfull=7}
+2. Bg2 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e5 {-0.13/11 0.145s, n=46787, nps=393168, hashfull=9}
+3. Nf3 {-0.78/5 0.054s, n=18806, nps=1106235, hashfull=0}
+Qe7 {+0.14/9 0.068s, n=27107, nps=398632, hashfull=7}
+4. Nc3 {-0.11/5 0.053s, n=25491, nps=1062125, hashfull=3}
+e4 {-0.24/9 0.060s, n=23104, nps=378754, hashfull=4}
+5. Nd4 {-0.50/6 0.051s, n=59117, nps=1374813, hashfull=7}
+c5 {-0.37/9 0.081s, n=31178, nps=384913, hashfull=9}
+6. Nf5 {-0.41/6 0.051s, n=58432, nps=1270260, hashfull=11}
+Qd8 {-0.04/10 0.132s, n=48612, nps=365503, hashfull=17}
+7. Nxe4 {+0.73/5 0.049s, n=34898, nps=1292518, hashfull=11}
+Nxe4 {+4.09/11 0.046s, n=20918, nps=454739, hashfull=5}
+8. Bxe4 {-0.71/5 0.049s, n=24148, nps=1509250, hashfull=14}
+d5 {+5.07/12 0.051s, n=23016, nps=451294, hashfull=5}
+9. Bd3 {-0.78/5 0.048s, n=13166, nps=1316600, hashfull=17}
+c4 {+5.81/14 0.063s, n=30477, nps=483761, hashfull=8}
+10. Bxc4 {-1.10/5 0.046s, n=13678, nps=1519777, hashfull=17}
+dxc4 {+5.82/13 0.157s, n=58066, nps=369847, hashfull=15}
+11. Ne3 {-1.22/5 0.045s, n=15979, nps=1141357, hashfull=19}
+Nc6 {+5.00/13 0.175s, n=56530, nps=323028, hashfull=21}
+12. O-O {-1.40/5 0.045s, n=26464, nps=1202909, hashfull=20}
+a5 {+5.64/12 0.132s, n=46628, nps=353242, hashfull=13}
+13. Nxc4 {-0.25/5 0.044s, n=32456, nps=1081866, hashfull=22}
+Bh3 {+4.19/10 0.055s, n=20081, nps=358589, hashfull=5}
+14. Re1 {-0.32/5 0.043s, n=13724, nps=1372400, hashfull=22}
+b5 {+4.58/9 0.084s, n=28248, nps=336285, hashfull=9}
+15. Ne3 {-0.33/6 0.043s, n=39659, nps=1133114, hashfull=24}
+h5 {+2.92/10 0.082s, n=31690, nps=386463, hashfull=8}
+16. d3 {-0.03/5 0.042s, n=17592, nps=1099500, hashfull=24}
+h4 {+3.80/9 0.033s, n=12972, nps=393090, hashfull=4}
+17. g4 {-0.32/5 0.040s, n=12226, nps=1222600, hashfull=25}
+Bc5 {+4.22/12 0.147s, n=53415, nps=360912, hashfull=15}
+18. Nf5 {-0.70/5 0.040s, n=27848, nps=1160333, hashfull=26}
+g6 {+5.69/9 0.029s, n=12431, nps=428655, hashfull=5}
+19. Ne3 {-0.86/5 0.039s, n=34228, nps=1140933, hashfull=27}
+Qd7 {+5.46/9 0.034s, n=13636, nps=401058, hashfull=5}
+20. g5 {-0.66/4 0.038s, n=5799, nps=1159800, hashfull=27}
+a4 {+8.92/10 0.021s, n=9572, nps=455809, hashfull=1}
+21. Kh1 {-0.27/4 0.038s, n=18719, nps=985210, hashfull=30}
+Kf8 {0.00/11 0.144s, n=51130, nps=355069, hashfull=16}
+22. Bd2 {-0.12/5 0.038s, n=29779, nps=1102925, hashfull=31}
+Kg8 {+5.85/11 0.050s, n=19811, nps=396220, hashfull=7}
+23. c3 {+0.20/4 0.038s, n=16566, nps=1035375, hashfull=32}
+a3 {+4.67/11 0.116s, n=42635, nps=367543, hashfull=15}
+24. bxa3 {+0.44/4 0.037s, n=8988, nps=1123500, hashfull=33}
+Qb7 {0.00/11 0.065s, n=28374, nps=436523, hashfull=11}
+25. Kg1 {+0.53/5 0.035s, n=14847, nps=1237250, hashfull=33}
+Rh5 {+5.84/10 0.014s, n=7603, nps=543071, hashfull=2}
+26. Nd5 {+0.99/5 0.035s, n=16885, nps=1206071, hashfull=33}
+Be7 {+3.86/11 0.097s, n=41045, nps=418826, hashfull=7}
+27. Nxe7+ {+1.33/4 0.034s, n=7698, nps=1283000, hashfull=33}
+Qxe7 {+3.66/10 0.019s, n=8397, nps=419850, hashfull=2}
+28. Qc1 {+0.81/5 0.034s, n=17116, nps=1006823, hashfull=34}
+Rd8 {0.00/9 0.077s, n=29709, nps=385831, hashfull=9}
+29. c4 {+1.82/5 0.034s, n=35107, nps=1350269, hashfull=34}
+Qe6 {+6.61/9 0.017s, n=7568, nps=445176, hashfull=2}
+30. Kh1 {+1.14/5 0.034s, n=25607, nps=1506294, hashfull=35}
+Nd4 {+8.35/12 0.064s, n=23601, nps=368765, hashfull=6}
+31. cxb5 {+1.83/5 0.034s, n=31965, nps=1522142, hashfull=35}
+Qg4 {+8.99/10 0.025s, n=13143, nps=505500, hashfull=4}
+32. Rg1 {+0.43/6 0.032s, n=43474, nps=1811416, hashfull=40}
+Qe6 {+8.58/10 0.023s, n=12369, nps=515375, hashfull=2}
+33. Qc7 {+2.27/5 0.032s, n=25433, nps=1271650, hashfull=40}
+Re8 {+2.63/8 0.016s, n=9199, nps=541117, hashfull=9}
+34. Qc4 {+2.33/4 0.031s, n=37086, nps=1196322, hashfull=41}
+Qxe2 {+10.66/8 0.006s, n=5457, nps=779571, hashfull=13}
+35. Qd5 {+0.66/4 0.031s, n=9657, nps=1207125, hashfull=41}
+Nf3 {+7.67/10 0.032s, n=14221, nps=444406, hashfull=14}
+36. Rge1 {+0.28/4 0.032s, n=14314, nps=1301272, hashfull=43}
+Nxd2 {+M7/11 0.013s, n=12154, nps=934923, hashfull=6}
+37. Rxe2 {+3.47/6 0.030s, n=27317, nps=1300809, hashfull=44}
+Rxe2 {-1.36/11 0.014s, n=12136, nps=809066, hashfull=9}
+38. Qd8+ {+3.35/5 0.031s, n=5, nps=5000, hashfull=46}
+Kh7 {+3.01/9 0.031s, n=14119, nps=441218, hashfull=19}
+39. Qf6 {+3.37/6 0.031s, n=19122, nps=1593500, hashfull=49}
+Kg8 {+4.00/10 0.024s, n=15553, nps=648041, hashfull=7}
+40. b6 {+3.63/5 0.029s, n=18268, nps=1304857, hashfull=51}
+Bd7 {-2.61/8 0.050s, n=28861, nps=577220, hashfull=11}
+41. Qd8+ {+6.88/5 0.029s, n=29249, nps=1329500, hashfull=53}
+Re8 {-8.70/9 0.055s, n=25730, nps=459464, hashfull=15}
+42. Qxd7 {+8.03/6 0.030s, n=34796, nps=1449833, hashfull=53}
+Rb8 {-7.56/10 0.023s, n=12171, nps=529173, hashfull=16}
+43. b7 {+8.21/4 0.029s, n=9457, nps=1576166, hashfull=54}
+h3 {-8.46/12 0.042s, n=20510, nps=476976, hashfull=22}
+44. Qc8+ {+12.01/6 0.028s, n=23998, nps=1599866, hashfull=54}
+Kh7 {-9.51/10 0.018s, n=8775, nps=487500, hashfull=17}
+45. Qxb8 {+16.42/6 0.028s, n=23732, nps=1695142, hashfull=55}
+Nf3 {0.00/11 0.042s, n=22396, nps=533238, hashfull=9}
+46. Qf8 {+27.72/6 0.027s, n=33910, nps=2119375, hashfull=55}
+Rxg5 {-M8/15 0.008s, n=7427, nps=928375, hashfull=8}
+47. b8=Q {+M7/1 0.000s, n=1, nps=1000, hashfull=56}
+Rg1+ {-M6/194 0.005s, n=33437, nps=5572833, hashfull=7}
+48. Rxg1 {+M5/1 0.000s, n=1, nps=1000, hashfull=56}
+Nd2 {-M4/102 0.002s, n=9024, nps=4512000, hashfull=3}
+49. Qh8# {+M1/1 0.000s, n=45, nps=45000, hashfull=56, White mates} 1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "6"]
+[White "CleanedChess"]
+[Black "SF1800"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:20 +0100"]
+[GameEndTime "2026-11-17T02:22:23 +0100"]
+[PlyCount "46"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A02"]
+[Opening "Bird Opening"]
+
+1. f4 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+Nf6 {+0.16/11 0.136s, n=48826, nps=356394, hashfull=13}
+2. Nf3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+c5 {+0.30/10 0.057s, n=22818, nps=400315, hashfull=4}
+3. Nc3 {+0.11/6 0.054s, n=68836, nps=1323769, hashfull=2}
+d6 {+0.35/10 0.062s, n=28740, nps=463548, hashfull=6}
+4. e4 {+0.58/6 0.053s, n=49332, nps=1264923, hashfull=3}
+a6 {-0.35/11 0.157s, n=56831, nps=361980, hashfull=14}
+5. e5 {+1.04/5 0.052s, n=26354, nps=1317700, hashfull=4}
+Ng8 {-0.42/10 0.054s, n=23307, nps=431611, hashfull=7}
+6. d4 {+1.35/5 0.051s, n=25535, nps=1110217, hashfull=7}
+Bg4 {-1.10/10 0.063s, n=26369, nps=418555, hashfull=11}
+7. dxc5 {+1.53/5 0.049s, n=35741, nps=1152935, hashfull=8}
+Nc6 {-1.72/11 0.069s, n=26758, nps=382257, hashfull=7}
+8. Be3 {+2.00/4 0.048s, n=17953, nps=854904, hashfull=9}
+dxc5 {-1.75/11 0.148s, n=53487, nps=358973, hashfull=15}
+9. Qxd8+ {+1.87/5 0.048s, n=46937, nps=1203512, hashfull=13}
+Kxd8 {-1.27/11 0.078s, n=30109, nps=386012, hashfull=8}
+10. Bxc5 {+2.20/5 0.047s, n=45319, nps=1192605, hashfull=15}
+h5 {0.00/13 0.170s, n=64838, nps=379169, hashfull=20}
+11. Bd3 {+2.25/4 0.045s, n=16745, nps=1196071, hashfull=15}
+g6 {-3.70/12 0.063s, n=25338, nps=402190, hashfull=10}
+12. O-O {+2.50/4 0.044s, n=18166, nps=789826, hashfull=16}
+Bh6 {-4.22/14 0.146s, n=55779, nps=382047, hashfull=20}
+13. Nd4 {+2.60/5 0.044s, n=44537, nps=1060404, hashfull=21}
+e6 {-5.00/13 0.096s, n=35068, nps=361525, hashfull=9}
+14. Be4 {+2.59/5 0.044s, n=62241, nps=1447465, hashfull=24}
+Nxd4 {-4.17/10 0.037s, n=14985, nps=394342, hashfull=4}
+15. Bxd4 {+2.43/5 0.042s, n=26050, nps=1532352, hashfull=24}
+Kc7 {-4.02/12 0.059s, n=25826, nps=437728, hashfull=8}
+16. h3 {+2.56/5 0.041s, n=36559, nps=1354037, hashfull=25}
+f5 {-3.23/11 0.049s, n=20719, nps=422836, hashfull=9}
+17. exf6 {+5.81/5 0.041s, n=41285, nps=1290156, hashfull=25}
+Bf5 {-8.19/12 0.147s, n=55312, nps=373729, hashfull=20}
+18. f7 {+5.94/5 0.040s, n=41751, nps=1346806, hashfull=28}
+Bxe4 {-7.12/11 0.023s, n=10980, nps=477391, hashfull=3}
+19. Bxh8 {+6.40/5 0.040s, n=42899, nps=1225685, hashfull=28}
+Bxc2 {-8.70/12 0.136s, n=54985, nps=401350, hashfull=28}
+20. Rfc1 {+7.13/5 0.038s, n=43150, nps=1198611, hashfull=30}
+Ne7 {-8.02/13 0.114s, n=51536, nps=452070, hashfull=20}
+21. Be5+ {+8.74/5 0.039s, n=24771, nps=1457117, hashfull=30}
+Kd7 {-8.21/12 0.085s, n=36856, nps=433600, hashfull=10}
+22. Rxc2 {+8.77/5 0.037s, n=18308, nps=1144250, hashfull=30}
+Rc8 {-8.92/12 0.093s, n=42684, nps=458967, hashfull=12}
+23. Rd2+ {+9.70/4 0.038s, n=7032, nps=1406400, hashfull=31}
+Nd5 {-8.85/14 0.037s, n=13845, nps=364342, hashfull=5, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "5"]
+[White "SF1400"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:19 +0100"]
+[GameEndTime "2026-11-17T02:22:23 +0100"]
+[PlyCount "93"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A10"]
+[Opening "English Opening"]
+
+1. c4 {+0.29/11 0.112s, n=43632, nps=389571, hashfull=10}
+d6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. Nc3 {+0.44/10 0.074s, n=27150, nps=366891, hashfull=8}
+g6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+3. d4 {+0.46/10 0.078s, n=32864, nps=421333, hashfull=9}
+Nf6 {-0.42/5 0.053s, n=31971, nps=1184111, hashfull=2}
+4. Nf3 {+0.50/10 0.079s, n=31484, nps=398531, hashfull=6}
+Nbd7 {-0.58/5 0.052s, n=51723, nps=1261536, hashfull=4}
+5. e3 {+0.62/11 0.036s, n=17902, nps=497277, hashfull=5}
+Bg7 {-0.51/5 0.052s, n=44224, nps=1105600, hashfull=8}
+6. a4 {+0.42/10 0.054s, n=22490, nps=416481, hashfull=5}
+a5 {-0.20/4 0.051s, n=16748, nps=1395666, hashfull=8}
+7. e4 {+0.12/13 0.158s, n=58702, nps=371531, hashfull=13}
+e5 {+0.02/5 0.050s, n=27602, nps=862562, hashfull=9}
+8. Be2 {-0.05/10 0.142s, n=56362, nps=396915, hashfull=15}
+exd4 {-0.36/6 0.049s, n=46462, nps=1133219, hashfull=11}
+9. Nxd4 {+0.07/12 0.054s, n=29614, nps=548407, hashfull=6}
+Nc5 {-0.21/5 0.049s, n=21943, nps=954043, hashfull=12}
+10. f3 {+0.18/9 0.065s, n=32589, nps=493772, hashfull=8}
+O-O {-0.31/5 0.047s, n=32387, nps=981424, hashfull=14}
+11. Be3 {+0.16/11 0.174s, n=62455, nps=405551, hashfull=18}
+Re8 {-0.36/5 0.045s, n=42494, nps=965772, hashfull=14}
+12. Ndb5 {+0.24/9 0.073s, n=30041, nps=411520, hashfull=7}
+Qe7 {-0.22/4 0.044s, n=28955, nps=965166, hashfull=14}
+13. O-O {+0.25/9 0.159s, n=49313, nps=404204, hashfull=11}
+Be6 {-0.30/4 0.043s, n=26331, nps=1144826, hashfull=14}
+14. Bf2 {+0.29/10 0.110s, n=42514, nps=386490, hashfull=12}
+Rac8 {-0.11/3 0.044s, n=17640, nps=1037647, hashfull=14}
+15. Rb1 {+0.22/10 0.122s, n=44210, nps=362377, hashfull=10}
+Rcd8 {-0.15/4 0.042s, n=37898, nps=1114647, hashfull=15}
+16. Bh4 {+0.27/9 0.046s, n=18353, nps=398978, hashfull=6}
+Rd7 {-0.02/3 0.041s, n=32992, nps=1031000, hashfull=16}
+17. Nd4 {+1.28/7 0.034s, n=15956, nps=469294, hashfull=6}
+Rf8 {-0.31/3 0.041s, n=26762, nps=991185, hashfull=16}
+18. f4 {+1.84/6 0.020s, n=9004, nps=428761, hashfull=2}
+Qe8 {-0.09/5 0.041s, n=30016, nps=1200640, hashfull=19}
+19. f5 {+4.26/9 0.040s, n=21528, nps=538200, hashfull=4}
+Nfxe4 {-1.20/5 0.039s, n=42021, nps=1680840, hashfull=19}
+20. g4 {+2.89/10 0.038s, n=22049, nps=565358, hashfull=4}
+Bxd4+ {+2.73/5 0.038s, n=60674, nps=1896062, hashfull=20}
+21. Kg2 {-0.52/12 0.044s, n=16924, nps=384636, hashfull=4}
+Nxc3 {+4.95/5 0.038s, n=72284, nps=2007888, hashfull=22}
+22. bxc3 {-5.82/12 0.104s, n=37094, nps=353276, hashfull=15}
+Bxc3 {+4.15/5 0.037s, n=44072, nps=1574000, hashfull=23}
+23. Qc2 {-5.62/13 0.130s, n=42395, nps=326115, hashfull=16}
+gxf5 {+5.06/4 0.038s, n=9290, nps=1161250, hashfull=23}
+24. gxf5 {-3.84/9 0.045s, n=17410, nps=386888, hashfull=6}
+Nxa4 {+4.77/4 0.036s, n=18714, nps=1169625, hashfull=27}
+25. Qxa4 {0.00/9 0.082s, n=44855, nps=547012, hashfull=7}
+Bxf5 {+6.25/5 0.036s, n=47023, nps=1567433, hashfull=28}
+26. Rxf5 {-5.30/11 0.047s, n=21082, nps=448553, hashfull=6}
+Qxe2+ {+6.25/5 0.035s, n=32007, nps=1185444, hashfull=29}
+27. Rf2 {-5.76/9 0.019s, n=7907, nps=395350, hashfull=4}
+Qe4+ {+7.14/5 0.035s, n=15285, nps=1175769, hashfull=31}
+28. Rf3 {-5.19/10 0.020s, n=8790, nps=418571, hashfull=5}
+Qxb1 {+7.02/5 0.034s, n=8400, nps=1050000, hashfull=31}
+29. Qxd7 {-5.20/12 0.083s, n=40500, nps=487951, hashfull=13}
+Qa2+ {+6.79/5 0.035s, n=36662, nps=1410076, hashfull=32}
+30. Kh3 {-4.90/11 0.068s, n=35836, nps=519362, hashfull=12}
+Qxc4 {+6.68/5 0.033s, n=4239, nps=1059750, hashfull=32}
+31. Qe7 {-5.38/11 0.033s, n=20205, nps=612272, hashfull=4}
+a4 {+7.99/3 0.034s, n=7944, nps=1134857, hashfull=33}
+32. Be1 {-0.26/9 0.004s, n=4730, nps=946000, hashfull=0}
+Bg7 {+8.01/4 0.034s, n=19269, nps=1284600, hashfull=33}
+33. Rg3 {-7.16/12 0.062s, n=33875, nps=546370, hashfull=20}
+Qf1+ {+8.29/4 0.032s, n=21513, nps=1265470, hashfull=36}
+34. Kh4 {-6.02/11 0.024s, n=11168, nps=465333, hashfull=10}
+Qf4+ {+8.28/5 0.031s, n=21447, nps=1128789, hashfull=37}
+35. Kh3 {-5.32/12 0.014s, n=6918, nps=461200, hashfull=11}
+d5 {+8.08/5 0.032s, n=32747, nps=1212851, hashfull=39}
+36. Bc3 {-6.28/10 0.055s, n=29803, nps=541872, hashfull=14}
+d4 {+8.58/4 0.030s, n=9041, nps=1291571, hashfull=39}
+37. Ba5 {-7.22/11 0.050s, n=27359, nps=547180, hashfull=15}
+Qf5+ {+8.82/4 0.031s, n=12495, nps=1249500, hashfull=42}
+38. Rg4 {-6.90/11 0.008s, n=4455, nps=495000, hashfull=4}
+h5 {+13.47/5 0.031s, n=23675, nps=1479687, hashfull=43}
+39. Kg2 {-9.89/10 0.011s, n=7404, nps=617000, hashfull=12}
+Qxg4+ {+13.93/5 0.029s, n=29586, nps=1408857, hashfull=47}
+40. Kf1 {-10.61/12 0.049s, n=24365, nps=497244, hashfull=18}
+Qf5+ {+15.93/4 0.030s, n=14721, nps=1472100, hashfull=47}
+41. Kg2 {-11.31/11 0.041s, n=24778, nps=589952, hashfull=12}
+Qxa5 {+16.82/4 0.029s, n=6747, nps=1349400, hashfull=47}
+42. h3 {0.00/10 0.035s, n=27724, nps=770111, hashfull=13}
+d3 {+17.49/4 0.029s, n=13122, nps=1874571, hashfull=50}
+43. Qb4 {0.00/10 0.028s, n=19636, nps=701285, hashfull=18}
+Qxb4 {+27.08/4 0.028s, n=13209, nps=1887000, hashfull=51}
+44. Kh2 {-20.04/13 0.028s, n=26574, nps=949071, hashfull=11}
+d2 {+36.16/4 0.029s, n=28976, nps=2414666, hashfull=52}
+45. Kg2 {-M8/11 0.011s, n=9972, nps=906545, hashfull=16}
+d1=Q {+M5/4 0.002s, n=6481, nps=3240500, hashfull=56}
+46. Kh2 {-M4/48 0.003s, n=15049, nps=3762250, hashfull=11}
+Qdd2+ {+M3/2 0.000s, n=591, nps=591000, hashfull=56}
+47. Kh1 {-M2/5 0.000s, n=161, nps=161000, hashfull=9, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "6"]
+[White "SF1800"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:22 +0100"]
+[GameEndTime "2026-11-17T02:22:26 +0100"]
+[PlyCount "91"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A48"]
+[Opening "Queen's Pawn Game: Barry Attack"]
+
+1. Nf3 {+0.29/11 0.108s, n=43632, nps=404000, hashfull=10}
+g6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. d4 {+0.36/7 0.026s, n=8493, nps=326653, hashfull=2}
+Bg7 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+3. Nc3 {+0.58/8 0.023s, n=9388, nps=408173, hashfull=2}
+Nf6 {-1.25/5 0.053s, n=18768, nps=1173000, hashfull=0}
+4. Bf4 {+0.51/10 0.058s, n=29884, nps=515241, hashfull=5}
+d5 {-0.64/5 0.052s, n=30476, nps=1050896, hashfull=2}
+5. Be5 {+0.18/10 0.103s, n=43080, nps=418252, hashfull=10}
+Nc6 {-0.13/5 0.051s, n=21117, nps=1055850, hashfull=4}
+6. h3 {-0.05/9 0.067s, n=26210, nps=391194, hashfull=10}
+O-O {+0.10/5 0.051s, n=31786, nps=993312, hashfull=4}
+7. e3 {-0.05/9 0.075s, n=34097, nps=454626, hashfull=6}
+Bf5 {+0.08/5 0.050s, n=42319, nps=1007595, hashfull=6}
+8. Bf4 {+0.07/9 0.090s, n=38296, nps=420835, hashfull=8}
+Nb4 {+0.20/5 0.048s, n=41963, nps=1023487, hashfull=7}
+9. Bd3 {-0.01/10 0.079s, n=33587, nps=419837, hashfull=9}
+Nxd3+ {-0.08/4 0.047s, n=14728, nps=1132923, hashfull=7}
+10. cxd3 {+0.32/11 0.062s, n=21359, nps=339031, hashfull=7}
+Re8 {-0.23/5 0.046s, n=25642, nps=1114869, hashfull=8}
+11. Nh4 {0.00/10 0.196s, n=74428, nps=379734, hashfull=28}
+e6 {-0.11/4 0.045s, n=28305, nps=1010892, hashfull=9}
+12. g4 {+1.07/10 0.178s, n=75521, nps=424275, hashfull=18}
+Nd7 {-0.98/4 0.044s, n=26940, nps=928965, hashfull=9}
+13. Ng2 {+1.53/9 0.034s, n=17599, nps=517617, hashfull=4}
+g5 {-0.96/5 0.045s, n=34561, nps=1080031, hashfull=10}
+14. Bxc7 {+1.85/10 0.054s, n=28737, nps=532166, hashfull=3}
+Qxc7 {+0.35/6 0.044s, n=54926, nps=1408358, hashfull=10}
+15. h4 {+0.02/11 0.069s, n=29418, nps=426347, hashfull=9}
+Bg6 {+0.98/4 0.042s, n=21641, nps=1139000, hashfull=10}
+16. h5 {-1.57/10 0.055s, n=22544, nps=402571, hashfull=7}
+Bxd3 {+0.62/5 0.041s, n=44564, nps=1237888, hashfull=11}
+17. Qxd3 {-1.10/11 0.047s, n=22056, nps=469276, hashfull=5}
+Qc6 {+0.54/4 0.042s, n=25350, nps=1152272, hashfull=11}
+18. f4 {-0.15/11 0.180s, n=75400, nps=416574, hashfull=20}
+Bf6 {+0.51/3 0.040s, n=11443, nps=880230, hashfull=12}
+19. O-O-O {+0.09/8 0.040s, n=21427, nps=535675, hashfull=3}
+Be7 {+0.36/4 0.040s, n=27973, nps=1075884, hashfull=13}
+20. Ne1 {+0.21/13 0.131s, n=56181, nps=425613, hashfull=14}
+gxf4 {+1.38/5 0.039s, n=29924, nps=1246833, hashfull=13}
+21. exf4 {+0.42/9 0.081s, n=34991, nps=426719, hashfull=7}
+Qd6 {+1.52/4 0.038s, n=7191, nps=1198500, hashfull=13}
+22. Qf3 {+1.19/8 0.034s, n=16941, nps=498264, hashfull=3}
+b5 {+0.53/5 0.037s, n=38686, nps=1074611, hashfull=13}
+23. g5 {+1.79/9 0.053s, n=25057, nps=472773, hashfull=7}
+b4 {+0.61/5 0.038s, n=39267, nps=1402392, hashfull=13}
+24. Nb1 {+0.80/10 0.029s, n=17095, nps=589482, hashfull=3}
+Qc7+ {+1.82/4 0.036s, n=16799, nps=1119933, hashfull=15}
+25. Kd2 {-1.06/10 0.051s, n=19330, nps=379019, hashfull=6}
+Qc4 {+1.94/4 0.036s, n=4, nps=4000, hashfull=15}
+26. Qe3 {-0.51/11 0.047s, n=28387, nps=591395, hashfull=4}
+Qxa2 {+1.80/4 0.035s, n=6324, nps=1581000, hashfull=17}
+27. Nd3 {-0.81/10 0.031s, n=16566, nps=517687, hashfull=2}
+Nb6 {+1.98/5 0.035s, n=40428, nps=1263375, hashfull=18}
+28. Qe2 {-1.50/10 0.117s, n=50207, nps=429119, hashfull=14}
+Nc4+ {+1.91/3 0.034s, n=3404, nps=1134666, hashfull=18}
+29. Ke1 {-1.52/9 0.027s, n=10963, nps=406037, hashfull=4}
+Kf8 {+1.58/4 0.035s, n=10760, nps=1537142, hashfull=20}
+30. Rh3 {-0.72/9 0.046s, n=19789, nps=430195, hashfull=2}
+Bd6 {+1.91/5 0.034s, n=34383, nps=1322423, hashfull=24}
+31. g6 {+0.24/10 0.050s, n=29319, nps=586380, hashfull=4}
+fxg6 {+1.94/5 0.034s, n=29558, nps=1738705, hashfull=25}
+32. hxg6 {+2.96/7 0.016s, n=11191, nps=658294, hashfull=1}
+hxg6 {+1.96/5 0.033s, n=22416, nps=1601142, hashfull=26}
+33. Qg4 {+0.75/9 0.083s, n=41558, nps=500698, hashfull=21}
+Nxb2 {+3.56/5 0.032s, n=23606, nps=1242421, hashfull=26}
+34. Nc5 {+0.75/9 0.019s, n=21035, nps=1107105, hashfull=4}
+Nxd1 {+6.72/4 0.031s, n=8631, nps=1233000, hashfull=26}
+35. Nxe6+ {-1.12/9 0.031s, n=22615, nps=706718, hashfull=7}
+Rxe6+ {+5.65/6 0.031s, n=36670, nps=1410384, hashfull=26}
+36. Qxe6 {-5.85/11 0.066s, n=34266, nps=511432, hashfull=18}
+Qf2+ {+5.65/5 0.031s, n=5, nps=5000, hashfull=26}
+37. Kxd1 {-5.91/13 0.039s, n=21001, nps=538487, hashfull=14}
+Qxd4+ {+6.48/5 0.031s, n=5, nps=5000, hashfull=30}
+38. Nd2 {-5.84/11 0.054s, n=33692, nps=612581, hashfull=24}
+Bxf4 {+7.80/5 0.031s, n=28466, nps=1293909, hashfull=32}
+39. Rd3 {-5.46/10 0.038s, n=27475, nps=704487, hashfull=14}
+Qxd3 {+7.92/5 0.030s, n=23615, nps=1311944, hashfull=34}
+40. Qf6+ {-5.69/10 0.015s, n=10914, nps=682125, hashfull=9}
+Ke8 {+7.69/7 0.029s, n=23726, nps=1248736, hashfull=34}
+41. Qe6+ {-5.58/10 0.017s, n=12091, nps=671722, hashfull=12}
+Kd8 {+8.10/7 0.030s, n=1555, nps=777500, hashfull=35}
+42. Ke1 {-5.56/10 0.010s, n=7251, nps=659181, hashfull=9}
+Qxd2+ {+15.51/4 0.028s, n=15848, nps=1584800, hashfull=38}
+43. Kf1 {-8.39/14 0.017s, n=11413, nps=671352, hashfull=25}
+Qd3+ {+15.06/5 0.029s, n=32633, nps=1717526, hashfull=41}
+44. Qe2 {-12.06/10 0.049s, n=38021, nps=775938, hashfull=24}
+Qxe2+ {+15.59/5 0.029s, n=38987, nps=1624458, hashfull=44}
+45. Kxe2 {-8.77/13 0.009s, n=10640, nps=1182222, hashfull=6}
+b3 {+19.09/7 0.028s, n=46082, nps=1843280, hashfull=44}
+46. Kf1 {-10.35/13 0.023s, n=27367, nps=1189869, hashfull=6, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "7"]
+[White "SF1400"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:23 +0100"]
+[GameEndTime "2026-11-17T02:22:27 +0100"]
+[PlyCount "51"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "B10"]
+[Opening "Caro-Kann Defense"]
+
+1. e4 {+0.29/11 0.107s, n=43632, nps=404000, hashfull=10}
+c6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. c3 {+0.40/10 0.087s, n=36566, nps=415522, hashfull=11}
+d5 {-0.06/5 0.054s, n=26672, nps=1212363, hashfull=1}
+3. exd5 {+0.27/9 0.060s, n=31527, nps=516836, hashfull=8}
+cxd5 {+0.07/5 0.051s, n=43269, nps=1602555, hashfull=2}
+4. Bd3 {0.00/10 0.153s, n=70768, nps=459532, hashfull=13}
+Nf6 {+0.40/5 0.051s, n=29942, nps=1108962, hashfull=4}
+5. Bb5+ {-0.45/11 0.151s, n=61433, nps=404164, hashfull=17}
+Bd7 {+0.75/6 0.050s, n=50493, nps=1009860, hashfull=8}
+6. Be2 {-0.32/9 0.030s, n=13816, nps=460533, hashfull=2}
+Nc6 {+0.84/5 0.049s, n=22006, nps=1158210, hashfull=10}
+7. Nf3 {-0.39/10 0.055s, n=25034, nps=455163, hashfull=7}
+e5 {+0.83/6 0.047s, n=31463, nps=1367956, hashfull=14}
+8. d4 {-0.67/10 0.069s, n=30108, nps=436347, hashfull=6}
+e4 {+1.01/5 0.046s, n=23797, nps=1081681, hashfull=16}
+9. Ne5 {-0.56/10 0.056s, n=25478, nps=454964, hashfull=10}
+Bd6 {+0.58/6 0.047s, n=53103, nps=1234953, hashfull=20}
+10. Bf4 {-0.34/11 0.103s, n=52678, nps=511436, hashfull=10}
+Qc7 {+1.01/5 0.046s, n=33095, nps=1067580, hashfull=21}
+11. c4 {-0.16/12 0.057s, n=34618, nps=596862, hashfull=6}
+Nxe5 {+2.04/5 0.044s, n=55480, nps=1260909, hashfull=26}
+12. dxe5 {-3.32/13 0.173s, n=68745, nps=397369, hashfull=20}
+Bxe5 {+2.04/5 0.043s, n=35200, nps=1530434, hashfull=26}
+13. Bxe5 {-3.09/13 0.070s, n=30103, nps=430042, hashfull=8}
+Qxe5 {+2.01/5 0.042s, n=24840, nps=1035000, hashfull=27}
+14. O-O {-3.12/11 0.105s, n=37882, nps=357377, hashfull=8}
+Qxb2 {+2.21/5 0.042s, n=26576, nps=1265523, hashfull=28}
+15. Nd2 {-3.03/11 0.047s, n=20484, nps=426750, hashfull=6}
+d4 {+2.59/5 0.041s, n=18986, nps=1116823, hashfull=29}
+16. Qb1 {-1.97/10 0.075s, n=30647, nps=408626, hashfull=11}
+Qxd2 {+5.32/6 0.041s, n=41826, nps=1442275, hashfull=29}
+17. Rd1 {0.00/11 0.155s, n=56349, nps=363541, hashfull=20}
+Qxe2 {+6.71/5 0.040s, n=19476, nps=1498153, hashfull=30}
+18. Re1 {-8.30/12 0.034s, n=14551, nps=415742, hashfull=4}
+Qxc4 {+9.67/5 0.040s, n=27265, nps=1514722, hashfull=32}
+19. Qxe4+ {-10.78/12 0.134s, n=52146, nps=389149, hashfull=19}
+Nxe4 {+15.59/6 0.039s, n=24510, nps=1290000, hashfull=33}
+20. a3 {-12.89/10 0.119s, n=48101, nps=400841, hashfull=20}
+d3 {+17.69/5 0.037s, n=33352, nps=1516000, hashfull=36}
+21. Rac1 {0.00/11 0.103s, n=43353, nps=420902, hashfull=15}
+d2 {+22.06/5 0.037s, n=16868, nps=1686800, hashfull=36}
+22. h3 {0.00/13 0.092s, n=44815, nps=481881, hashfull=15}
+dxc1=Q {+29.59/5 0.036s, n=26358, nps=1757200, hashfull=38}
+23. Rxc1 {-21.09/13 0.018s, n=10897, nps=605388, hashfull=3}
+Qxc1+ {+30.26/5 0.036s, n=26432, nps=1888000, hashfull=41}
+24. Kh2 {-M10/18 0.013s, n=8046, nps=618923, hashfull=2}
+Qf4+ {+31.20/5 0.035s, n=3560, nps=3560000, hashfull=42}
+25. Kg1 {-M6/46 0.016s, n=28047, nps=1752937, hashfull=2}
+Qxf2+ {+M5/4 0.003s, n=7708, nps=2569333, hashfull=43}
+26. Kh1 {-M4/67 0.005s, n=11384, nps=1897333, hashfull=1, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "8"]
+[White "CleanedChess"]
+[Black "SF1800"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:23 +0100"]
+[GameEndTime "2026-11-17T02:22:27 +0100"]
+[PlyCount "64"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "C11"]
+[Opening "French Defense: Classical Variation, Steinitz Variation"]
+
+1. d4 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+Nf6 {-0.16/10 0.137s, n=51749, nps=377729, hashfull=14}
+2. Nc3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e6 {-0.02/10 0.057s, n=25884, nps=446275, hashfull=6}
+3. e4 {+0.39/5 0.054s, n=19983, nps=1110166, hashfull=1}
+d5 {-0.43/9 0.067s, n=27500, nps=410447, hashfull=6}
+4. e5 {+0.63/5 0.052s, n=40295, nps=1185147, hashfull=4}
+Ne4 {-0.31/11 0.081s, n=37505, nps=457378, hashfull=7}
+5. Nxe4 {+0.47/5 0.051s, n=28181, nps=1341952, hashfull=4}
+dxe4 {-0.80/11 0.062s, n=28534, nps=460225, hashfull=10}
+6. Bc4 {+0.30/5 0.050s, n=38287, nps=1160212, hashfull=5}
+Nd7 {-0.76/12 0.163s, n=59753, nps=366582, hashfull=16}
+7. Ne2 {+0.45/5 0.050s, n=25826, nps=1359263, hashfull=8}
+c5 {-0.98/9 0.060s, n=27473, nps=450377, hashfull=6}
+8. O-O {+0.90/5 0.049s, n=25724, nps=1118434, hashfull=11}
+Nb6 {-0.54/11 0.145s, n=60656, nps=418317, hashfull=19}
+9. Bb5+ {+0.82/6 0.047s, n=61614, nps=1467000, hashfull=14}
+Bd7 {-0.74/11 0.056s, n=19753, nps=352732, hashfull=5}
+10. Bxd7+ {+0.81/6 0.047s, n=30929, nps=1288708, hashfull=15}
+Nxd7 {-0.72/11 0.056s, n=20100, nps=352631, hashfull=5}
+11. Bf4 {+0.95/5 0.046s, n=17325, nps=1019117, hashfull=15}
+cxd4 {-0.92/9 0.052s, n=21572, nps=407018, hashfull=7}
+12. Nxd4 {+0.86/5 0.045s, n=20769, nps=1298062, hashfull=17}
+Qb6 {-0.97/10 0.114s, n=44789, nps=392885, hashfull=17}
+13. Re1 {+0.86/5 0.043s, n=29320, nps=977333, hashfull=20}
+Nc5 {-0.38/10 0.095s, n=38374, nps=403936, hashfull=12}
+14. Rb1 {+0.80/5 0.044s, n=38702, nps=1105771, hashfull=20}
+Rc8 {-0.82/8 0.059s, n=22874, nps=381233, hashfull=7}
+15. b4 {+1.48/5 0.043s, n=36199, nps=1248241, hashfull=20}
+Na4 {-0.26/10 0.063s, n=29164, nps=455687, hashfull=8}
+16. c4 {+0.65/4 0.041s, n=14652, nps=1221000, hashfull=20}
+Nc3 {+1.19/10 0.052s, n=23938, nps=460346, hashfull=7}
+17. c5 {-0.99/5 0.041s, n=24494, nps=1440823, hashfull=22}
+Qa6 {+0.71/11 0.088s, n=49030, nps=557159, hashfull=11}
+18. Qc1 {-0.99/5 0.041s, n=40129, nps=1605160, hashfull=27}
+Qd3 {+1.33/10 0.058s, n=27367, nps=471844, hashfull=7}
+19. Rb3 {+0.65/5 0.040s, n=22196, nps=1305647, hashfull=28}
+a5 {-2.22/11 0.044s, n=24048, nps=546545, hashfull=6}
+20. Qxc3 {+2.75/5 0.039s, n=25918, nps=1364105, hashfull=29}
+Qxc3 {-5.59/13 0.150s, n=54699, nps=364660, hashfull=21}
+21. Rxc3 {+2.52/6 0.039s, n=34746, nps=1510695, hashfull=29}
+axb4 {-5.60/12 0.143s, n=53804, nps=373638, hashfull=28}
+22. Rce3 {+2.47/6 0.038s, n=32240, nps=1791111, hashfull=30}
+g5 {-4.82/11 0.048s, n=19842, nps=404938, hashfull=6}
+23. Bxg5 {+4.09/6 0.037s, n=33679, nps=1464304, hashfull=32}
+Rg8 {-6.27/13 0.123s, n=52564, nps=423903, hashfull=16}
+24. Bf6 {+4.09/5 0.036s, n=16341, nps=1485545, hashfull=33}
+Rxc5 {-6.66/13 0.105s, n=43684, nps=416038, hashfull=9}
+25. Rxe4 {+4.16/5 0.035s, n=31400, nps=923529, hashfull=36}
+Rc4 {-6.82/12 0.083s, n=33827, nps=402702, hashfull=11}
+26. Rf4 {+4.16/5 0.035s, n=21976, nps=1156631, hashfull=37}
+Bh6 {0.00/11 0.069s, n=28305, nps=410217, hashfull=10}
+27. Rh4 {+4.13/6 0.034s, n=23759, nps=1187950, hashfull=38}
+Bg7 {-6.19/11 0.052s, n=22147, nps=417867, hashfull=9}
+28. Nxe6 {+5.41/6 0.034s, n=34916, nps=1396640, hashfull=40}
+fxe6 {-7.45/10 0.019s, n=10067, nps=529842, hashfull=3}
+29. Rxc4 {+8.47/6 0.034s, n=17120, nps=1426666, hashfull=40}
+Bh8 {-9.05/11 0.055s, n=25333, nps=452375, hashfull=9}
+30. Bxh8 {+11.03/6 0.033s, n=46960, nps=1619310, hashfull=41}
+b3 {-8.54/12 0.049s, n=25177, nps=513816, hashfull=6}
+31. axb3 {+11.67/5 0.033s, n=36049, nps=2120529, hashfull=43}
+h5 {-9.34/11 0.042s, n=23625, nps=562500, hashfull=10}
+32. Bf6 {+12.81/6 0.032s, n=51693, nps=1667516, hashfull=50}
+Rg4 {-9.09/10 0.012s, n=8042, nps=670166, hashfull=1, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "7"]
+[White "CleanedChess"]
+[Black "SF1400"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:04"]
+[GameStartTime "2026-11-17T02:22:23 +0100"]
+[GameEndTime "2026-11-17T02:22:27 +0100"]
+[PlyCount "86"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A00"]
+[Opening "Van Geet Opening: Reversed Nimzowitsch"]
+
+1. Nc3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e5 {+0.11/10 0.054s, n=25716, nps=476222, hashfull=3}
+2. Nf3 {+0.28/6 0.054s, n=64346, nps=1369063, hashfull=1}
+Bd6 {0.00/10 0.150s, n=65513, nps=436753, hashfull=16}
+3. d4 {+0.77/6 0.051s, n=53609, nps=1165413, hashfull=2}
+Nc6 {-0.99/11 0.125s, n=45779, nps=366232, hashfull=13}
+4. d5 {+0.70/5 0.050s, n=18235, nps=1302500, hashfull=5}
+Nb8 {-1.09/11 0.104s, n=39599, nps=377133, hashfull=11}
+5. Ne4 {+0.76/6 0.050s, n=56572, nps=1315627, hashfull=6}
+Na6 {-1.39/10 0.068s, n=28841, nps=417985, hashfull=9}
+6. Nxd6+ {+0.73/5 0.048s, n=40831, nps=1074500, hashfull=8}
+cxd6 {-2.98/12 0.052s, n=17059, nps=328057, hashfull=5}
+7. Bg5 {+0.74/5 0.048s, n=836, nps=836000, hashfull=8}
+Qc7 {-1.73/9 0.049s, n=18539, nps=378346, hashfull=7}
+8. e4 {+0.85/6 0.047s, n=56124, nps=1220086, hashfull=9}
+Nc5 {-3.11/12 0.127s, n=42584, nps=332687, hashfull=16}
+9. Bd3 {+0.75/5 0.047s, n=16981, nps=998882, hashfull=9}
+a5 {-2.49/10 0.066s, n=22615, nps=342651, hashfull=5}
+10. O-O {+1.09/5 0.045s, n=35505, nps=1075909, hashfull=12}
+b5 {-3.18/11 0.172s, n=56294, nps=327290, hashfull=21}
+11. Bxb5 {+1.67/5 0.044s, n=23070, nps=1153500, hashfull=12}
+a4 {-1.27/9 0.026s, n=12028, nps=445481, hashfull=3}
+12. Nd2 {+2.45/5 0.043s, n=50242, nps=1168418, hashfull=12}
+h6 {-5.16/11 0.167s, n=53783, nps=320136, hashfull=19}
+13. Bh4 {+2.37/5 0.042s, n=38738, nps=1139352, hashfull=13}
+g5 {-3.35/11 0.128s, n=42661, nps=330705, hashfull=17}
+14. Bg3 {+2.59/5 0.042s, n=29173, nps=1215541, hashfull=14}
+Nf6 {-4.12/12 0.146s, n=49844, nps=341397, hashfull=18}
+15. Qf3 {+2.82/5 0.041s, n=32639, nps=1255346, hashfull=15}
+Nh7 {-3.92/10 0.047s, n=17340, nps=368936, hashfull=3}
+16. Bc4 {+3.18/4 0.040s, n=31903, nps=1276120, hashfull=15}
+Rb8 {-4.53/12 0.115s, n=38501, nps=331905, hashfull=16}
+17. b3 {+3.21/4 0.040s, n=11916, nps=1324000, hashfull=16}
+Qd8 {0.00/11 0.117s, n=34894, nps=298239, hashfull=12}
+18. bxa4 {+3.49/5 0.039s, n=47523, nps=1485093, hashfull=18}
+O-O {-4.20/9 0.013s, n=6082, nps=467846, hashfull=0}
+19. Bb5 {+4.29/5 0.039s, n=40171, nps=1147742, hashfull=19}
+Qc7 {-4.66/13 0.110s, n=38633, nps=348045, hashfull=13}
+20. Rfe1 {+4.69/4 0.038s, n=39936, nps=1079351, hashfull=19}
+Kg7 {-3.98/11 0.027s, n=10421, nps=385962, hashfull=5}
+21. Rad1 {+4.48/3 0.038s, n=8918, nps=1114750, hashfull=20}
+Nf6 {-3.98/11 0.041s, n=14567, nps=346833, hashfull=3}
+22. a3 {+4.28/4 0.036s, n=36363, nps=1038942, hashfull=21}
+Ra8 {-4.19/10 0.026s, n=9623, nps=370115, hashfull=4}
+23. h4 {+4.30/4 0.036s, n=16510, nps=1179285, hashfull=21}
+Bb7 {-3.55/10 0.041s, n=15058, nps=358523, hashfull=4}
+24. hxg5 {+5.37/5 0.035s, n=32541, nps=1301640, hashfull=22}
+hxg5 {-4.09/10 0.043s, n=16419, nps=381837, hashfull=3}
+25. Qf5 {+5.32/4 0.035s, n=4, nps=4000, hashfull=22}
+Nh7 {-4.13/12 0.029s, n=14541, nps=501413, hashfull=3}
+26. Nc4 {+4.77/4 0.034s, n=25967, nps=1298350, hashfull=22}
+f6 {-4.29/11 0.037s, n=15024, nps=406054, hashfull=4}
+27. a5 {+5.15/4 0.034s, n=36746, nps=1049885, hashfull=22}
+Ba6 {-4.60/12 0.097s, n=32654, nps=336639, hashfull=11}
+28. Bxa6 {+5.14/4 0.033s, n=12936, nps=1437333, hashfull=23}
+Rxa6 {-3.91/12 0.071s, n=25316, nps=351611, hashfull=7}
+29. Qf3 {+5.10/4 0.036s, n=9201, nps=1150125, hashfull=26}
+Rh8 {-3.33/10 0.013s, n=5335, nps=410384, hashfull=0}
+30. Qh5 {+5.04/4 0.033s, n=4748, nps=791333, hashfull=26}
+Rxa5 {-2.53/9 0.027s, n=9835, nps=351250, hashfull=4}
+31. Nxa5 {+5.40/5 0.032s, n=36399, nps=1299964, hashfull=27}
+Nf8 {-2.76/11 0.041s, n=17090, nps=416829, hashfull=5}
+32. Qf3 {+4.83/5 0.032s, n=23329, nps=1458062, hashfull=31}
+Qxa5 {-2.54/11 0.019s, n=10756, nps=537800, hashfull=2}
+33. Qe3 {+4.48/5 0.032s, n=12073, nps=1207300, hashfull=32}
+g4 {-2.10/9 0.025s, n=10899, nps=419192, hashfull=5}
+34. Ra1 {+4.81/5 0.031s, n=36831, nps=1150968, hashfull=32}
+Kf7 {-3.10/10 0.048s, n=17258, nps=359541, hashfull=21}
+35. Qe2 {+4.72/5 0.031s, n=25499, nps=1159045, hashfull=32}
+Qa4 {-3.29/8 0.016s, n=7449, nps=438176, hashfull=12}
+36. Ra2 {+4.71/5 0.032s, n=18903, nps=1111941, hashfull=33}
+Qa5 {-2.84/8 0.014s, n=6971, nps=464733, hashfull=12}
+37. Rb1 {+4.72/6 0.031s, n=37823, nps=1220096, hashfull=34}
+Ng6 {-3.18/9 0.030s, n=11765, nps=392166, hashfull=12}
+38. Qxg4 {+5.24/4 0.030s, n=6847, nps=1141166, hashfull=34}
+Nf4 {0.00/8 0.054s, n=23067, nps=419400, hashfull=12}
+39. Bxf4 {+6.74/5 0.030s, n=27127, nps=1356350, hashfull=36}
+Rh1+ {-5.48/10 0.026s, n=11863, nps=456269, hashfull=8}
+40. Kxh1 {+11.96/6 0.029s, n=17923, nps=1120187, hashfull=39}
+Qc7 {-8.44/9 0.007s, n=4026, nps=575142, hashfull=16}
+41. Be3 {+13.72/4 0.029s, n=13225, nps=1469444, hashfull=39}
+Nxe4 {-9.93/12 0.021s, n=13249, nps=602227, hashfull=7}
+42. Qxe4 {+15.76/4 0.029s, n=12528, nps=1789714, hashfull=42}
+Qd8 {-14.42/11 0.049s, n=25954, nps=529673, hashfull=27}
+43. Rb8 {+19.45/5 0.028s, n=33527, nps=1596523, hashfull=46}
+Qxb8 {-13.00/11 0.041s, n=22091, nps=538804, hashfull=8, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "8"]
+[White "SF1800"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:26 +0100"]
+[GameEndTime "2026-11-17T02:22:30 +0100"]
+[PlyCount "61"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A10"]
+[Opening "English Opening"]
+
+1. c4 {+0.29/11 0.110s, n=43632, nps=393081, hashfull=10}
+d6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. Nc3 {+0.44/10 0.093s, n=27150, nps=288829, hashfull=8}
+e5 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+3. e3 {+0.52/8 0.032s, n=12984, nps=405750, hashfull=3}
+Nc6 {+0.41/5 0.053s, n=18803, nps=817521, hashfull=1}
+4. d4 {+0.52/8 0.023s, n=11467, nps=477791, hashfull=3}
+Nf6 {+0.28/5 0.052s, n=28385, nps=1051296, hashfull=2}
+5. Be2 {+0.60/10 0.127s, n=44475, nps=350196, hashfull=13}
+e4 {+0.33/5 0.052s, n=39253, nps=912860, hashfull=3}
+6. Bd2 {+0.94/9 0.085s, n=27183, nps=319800, hashfull=8}
+Be7 {+0.65/5 0.051s, n=22138, nps=885520, hashfull=3}
+7. f3 {+1.27/11 0.169s, n=54215, nps=320798, hashfull=14}
+Bf5 {+0.75/5 0.049s, n=26168, nps=1006461, hashfull=4}
+8. h4 {0.00/11 0.164s, n=56776, nps=346195, hashfull=11}
+Nh5 {+1.20/5 0.048s, n=29953, nps=880970, hashfull=5}
+9. g4 {-1.11/11 0.081s, n=32267, nps=398358, hashfull=11}
+Bxh4+ {+4.41/5 0.048s, n=27524, nps=1310666, hashfull=7}
+10. Kf1 {-3.71/12 0.127s, n=42497, nps=332007, hashfull=11}
+Ng3+ {+4.34/6 0.047s, n=61094, nps=1454619, hashfull=10}
+11. Kg2 {-3.54/13 0.091s, n=29903, nps=328604, hashfull=11}
+Nxh1 {+4.77/6 0.046s, n=65910, nps=1569285, hashfull=12}
+12. gxf5 {-2.69/12 0.058s, n=22969, nps=389305, hashfull=6}
+Nf2 {+4.83/5 0.044s, n=20440, nps=1277500, hashfull=12}
+13. Qa4 {-2.50/11 0.081s, n=28460, nps=347073, hashfull=11}
+Qg5+ {+5.00/5 0.044s, n=29036, nps=1075407, hashfull=12}
+14. Kf1 {-3.86/15 0.029s, n=9226, nps=318137, hashfull=5}
+O-O-O {+3.96/5 0.043s, n=26119, nps=967370, hashfull=14}
+15. d5 {-3.72/11 0.162s, n=51565, nps=318302, hashfull=19}
+Nd4 {+3.88/5 0.043s, n=40997, nps=1366566, hashfull=14}
+16. Qxa7 {-1.95/9 0.039s, n=16059, nps=411769, hashfull=5}
+exf3 {+4.15/5 0.042s, n=38803, nps=1385821, hashfull=17}
+17. Bxf3 {-2.83/9 0.042s, n=22424, nps=533904, hashfull=4}
+Nxf5 {+3.68/5 0.040s, n=25675, nps=1116304, hashfull=20}
+18. Nb5 {-3.40/10 0.143s, n=51638, nps=361104, hashfull=13}
+Ne4 {+4.32/4 0.040s, n=23814, nps=1082454, hashfull=23}
+19. Ke2 {-3.55/10 0.121s, n=16030, nps=411025, hashfull=4}
+Nfg3+ {+4.23/4 0.039s, n=24942, nps=1187714, hashfull=24}
+20. Kd1 {-3.14/8 0.021s, n=7082, nps=337238, hashfull=3}
+Nf2+ {+4.42/4 0.039s, n=4, nps=4000, hashfull=24}
+21. Ke1 {-2.74/8 0.048s, n=16813, nps=343122, hashfull=6}
+Nd3+ {+6.02/5 0.039s, n=40481, nps=1499296, hashfull=24}
+22. Kd1 {-4.24/12 0.113s, n=4169, nps=463222, hashfull=1}
+Nxb2+ {+6.33/5 0.038s, n=26381, nps=1319050, hashfull=24}
+23. Kc2 {-3.15/8 0.030s, n=10071, nps=324870, hashfull=2}
+Nxc4 {+4.84/5 0.037s, n=10514, nps=1168222, hashfull=25}
+24. Rc1 {-3.04/8 0.097s, n=41875, nps=431701, hashfull=10}
+Qf5+ {+7.16/4 0.036s, n=23506, nps=1119333, hashfull=27}
+25. Kc3 {-2.33/9 0.059s, n=23083, nps=391237, hashfull=8}
+Ne5 {+7.16/4 0.037s, n=4, nps=4000, hashfull=27}
+26. Kb4 {0.00/9 0.069s, n=31305, nps=447214, hashfull=9}
+Nd3+ {+9.71/4 0.036s, n=24839, nps=1182809, hashfull=29}
+27. Kb3 {-4.72/9 0.036s, n=14180, nps=383243, hashfull=4}
+Nxc1+ {+10.99/4 0.034s, n=13101, nps=1191000, hashfull=29}
+28. Kb2 {-7.60/11 0.062s, n=25153, nps=405693, hashfull=9}
+Nd3+ {+12.16/4 0.035s, n=17614, nps=1258142, hashfull=31}
+29. Kc2 {-7.07/12 0.032s, n=12447, nps=388968, hashfull=4}
+Ne5+ {+14.35/4 0.034s, n=35598, nps=1318444, hashfull=32}
+30. Be4 {-7.59/9 0.013s, n=4830, nps=371538, hashfull=1}
+Qxe4+ {+17.94/5 0.033s, n=39736, nps=1419142, hashfull=35}
+31. Kc1 {-11.52/11 0.050s, n=18186, nps=363720, hashfull=5, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "9"]
+[White "CleanedChess"]
+[Black "SF1400"]
+[Result "1-0"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:27 +0100"]
+[GameEndTime "2026-11-17T02:22:30 +0100"]
+[PlyCount "64"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A04"]
+[Opening "Zukertort Opening: Slav Invitation"]
+
+1. Nf3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+c6 {0.00/9 0.136s, n=48991, nps=357598, hashfull=16}
+2. g3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+e6 {-0.19/10 0.082s, n=33877, nps=413134, hashfull=6}
+3. e4 {+0.77/5 0.053s, n=24614, nps=1025583, hashfull=0}
+Nf6 {-0.47/9 0.068s, n=26543, nps=390338, hashfull=6}
+4. e5 {+0.81/6 0.053s, n=67595, nps=1299903, hashfull=1}
+Nd5 {-1.39/11 0.156s, n=53303, nps=341685, hashfull=12}
+5. Nc3 {+0.82/5 0.052s, n=25835, nps=1033400, hashfull=1}
+b6 {-0.37/9 0.052s, n=22222, nps=427346, hashfull=5}
+6. Ne4 {+1.14/5 0.051s, n=26748, nps=1114500, hashfull=3}
+d6 {-1.06/11 0.087s, n=30691, nps=348761, hashfull=10}
+7. c4 {+1.16/5 0.049s, n=28661, nps=1194208, hashfull=4}
+Nb4 {-0.96/10 0.073s, n=29478, nps=398351, hashfull=5}
+8. a3 {+1.43/5 0.049s, n=28204, nps=1084769, hashfull=4}
+d5 {-1.50/11 0.062s, n=25462, nps=410677, hashfull=4}
+9. Nc3 {+1.25/6 0.047s, n=50144, nps=1355243, hashfull=7}
+N4a6 {-1.29/12 0.077s, n=29326, nps=380857, hashfull=7}
+10. d4 {+1.41/5 0.047s, n=14741, nps=921312, hashfull=9}
+Qd7 {0.00/10 0.173s, n=58706, nps=339341, hashfull=19}
+11. Qc2 {+1.60/4 0.046s, n=15871, nps=881722, hashfull=11}
+Nc7 {-1.20/8 0.039s, n=13901, nps=347525, hashfull=3}
+12. Bd3 {+1.50/4 0.046s, n=15922, nps=936588, hashfull=12}
+Ba6 {-0.82/9 0.167s, n=36603, nps=366030, hashfull=8}
+13. Qe2 {+1.51/4 0.044s, n=19715, nps=821458, hashfull=12}
+c5 {-0.57/10 0.104s, n=41577, nps=399778, hashfull=14}
+14. dxc5 {+1.18/3 0.043s, n=12697, nps=846466, hashfull=12}
+bxc5 {-1.01/10 0.043s, n=19435, nps=441704, hashfull=4}
+15. Bf4 {+0.96/3 0.043s, n=5224, nps=870666, hashfull=12}
+Be7 {-0.25/9 0.153s, n=27731, nps=364881, hashfull=7}
+16. O-O {+0.58/4 0.042s, n=29189, nps=912156, hashfull=14}
+Bxc4 {-0.64/9 0.073s, n=29415, nps=402945, hashfull=8}
+17. Bxc4 {+0.83/5 0.040s, n=22769, nps=1423062, hashfull=15}
+dxc4 {-1.71/11 0.044s, n=19469, nps=432644, hashfull=4}
+18. Qxc4 {+0.78/5 0.040s, n=12778, nps=1064833, hashfull=15}
+Nd5 {-0.78/9 0.044s, n=19245, nps=437386, hashfull=7}
+19. Rfd1 {+1.39/5 0.039s, n=26453, nps=1259666, hashfull=15}
+a5 {0.00/9 0.041s, n=19027, nps=453023, hashfull=3}
+20. Nxd5 {+2.25/5 0.038s, n=31024, nps=1240960, hashfull=16}
+a4 {-5.58/11 0.042s, n=17193, nps=409357, hashfull=3}
+21. Nb6 {+6.68/5 0.039s, n=47388, nps=1579600, hashfull=16}
+Qb7 {-7.34/12 0.130s, n=47627, nps=366361, hashfull=20}
+22. Qb5+ {+6.51/5 0.038s, n=46653, nps=1504935, hashfull=18}
+Qc6 {-8.02/12 0.114s, n=42353, nps=371517, hashfull=16}
+23. Nxa8 {+8.78/5 0.038s, n=27771, nps=1633588, hashfull=18}
+Qxb5 {-9.19/9 0.096s, n=35993, nps=371061, hashfull=13}
+24. Nc7+ {+9.55/6 0.037s, n=31028, nps=1723777, hashfull=22}
+Kf8 {-8.89/12 0.015s, n=6837, nps=455800, hashfull=4}
+25. Nxb5 {+9.50/6 0.036s, n=169, nps=169000, hashfull=22}
+Na6 {-8.80/13 0.046s, n=21145, nps=459673, hashfull=8}
+26. Nc3 {+10.15/6 0.035s, n=40892, nps=1703833, hashfull=26}
+Kg8 {0.00/11 0.082s, n=32317, nps=389361, hashfull=11}
+27. Rd7 {+10.59/5 0.035s, n=16541, nps=1654100, hashfull=26}
+c4 {-8.88/13 0.032s, n=15178, nps=474312, hashfull=4}
+28. Rxe7 {+13.59/6 0.035s, n=66027, nps=1941970, hashfull=29}
+f6 {0.00/11 0.062s, n=23930, nps=385967, hashfull=9}
+29. Re8+ {+18.22/5 0.034s, n=30105, nps=2150357, hashfull=30}
+Kf7 {-12.22/14 0.055s, n=22761, nps=413836, hashfull=10}
+30. Rxh8 {+18.52/6 0.034s, n=66235, nps=1948088, hashfull=32}
+Nc5 {-12.41/11 0.048s, n=22290, nps=454897, hashfull=6}
+31. exf6 {+18.59/5 0.032s, n=21795, nps=1816250, hashfull=32}
+Kg6 {-12.25/9 0.014s, n=8521, nps=608642, hashfull=0}
+32. Ne5+ {+19.16/4 0.032s, n=19573, nps=1779363, hashfull=33}
+Kf5 {-13.28/13 0.008s, n=3982, nps=442444, hashfull=2, White wins by adjudication}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "9"]
+[White "SF1400"]
+[Black "CleanedChess"]
+[Result "0-1"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:27 +0100"]
+[GameEndTime "2026-11-17T02:22:31 +0100"]
+[PlyCount "71"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A40"]
+[Opening "Mikenas Defense"]
+
+1. d4 {+0.29/11 0.114s, n=43632, nps=379408, hashfull=10}
+Nc6 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+2. c3 {+0.82/10 0.089s, n=33477, nps=376146, hashfull=9}
+e5 {+0.69/6 0.054s, n=61406, nps=1137148, hashfull=0}
+3. Nf3 {+0.46/10 0.060s, n=28367, nps=465032, hashfull=6}
+e4 {+0.63/6 0.051s, n=50009, nps=1786035, hashfull=0}
+4. Nfd2 {-0.24/11 0.155s, n=54996, nps=419816, hashfull=14}
+d5 {+1.11/6 0.050s, n=36101, nps=1244862, hashfull=0}
+5. Qa4 {0.00/9 0.151s, n=57586, nps=381364, hashfull=20}
+Nf6 {+1.38/5 0.049s, n=29325, nps=977500, hashfull=4}
+6. a3 {-0.89/9 0.058s, n=23834, nps=410931, hashfull=7}
+Be7 {+1.80/5 0.048s, n=39192, nps=1004923, hashfull=4}
+7. e3 {-1.05/9 0.056s, n=19541, nps=348946, hashfull=6}
+Bd7 {+1.39/5 0.048s, n=33012, nps=917000, hashfull=5}
+8. Qc2 {-0.21/10 0.152s, n=48108, nps=314431, hashfull=15}
+O-O {+1.40/4 0.048s, n=15545, nps=1036333, hashfull=5}
+9. h3 {+0.02/9 0.084s, n=38534, nps=458738, hashfull=8}
+Bf5 {+1.71/4 0.047s, n=26514, nps=1104750, hashfull=5}
+10. c4 {-0.42/11 0.022s, n=12136, nps=551636, hashfull=2}
+Qd6 {+1.10/4 0.046s, n=41447, nps=1184200, hashfull=5}
+11. g4 {+0.12/9 0.081s, n=30255, nps=368963, hashfull=9}
+Be6 {+0.87/5 0.045s, n=53210, nps=1297804, hashfull=5}
+12. cxd5 {+0.69/9 0.099s, n=36100, nps=361000, hashfull=8}
+Bxd5 {+1.12/4 0.043s, n=12840, nps=1426666, hashfull=6}
+13. Bg2 {+0.45/10 0.162s, n=64220, nps=396419, hashfull=17}
+Qe6 {+1.25/2 0.042s, n=3383, nps=1127666, hashfull=6}
+14. Nc3 {+2.10/9 0.066s, n=27770, nps=420757, hashfull=5}
+Bd6 {0.00/2 0.042s, n=8463, nps=1057875, hashfull=6}
+15. g5 {+2.73/9 0.094s, n=33429, nps=355627, hashfull=11}
+Nxd4 {+0.08/5 0.042s, n=48093, nps=1145071, hashfull=8}
+16. Qb1 {+2.23/10 0.053s, n=27413, nps=507648, hashfull=9}
+Nf3+ {-0.67/3 0.040s, n=41362, nps=1088473, hashfull=8}
+17. Nxf3 {+1.68/10 0.059s, n=18669, nps=316423, hashfull=6}
+exf3 {+2.60/5 0.039s, n=42499, nps=1370935, hashfull=9}
+18. Bf1 {-4.41/11 0.035s, n=15383, nps=439514, hashfull=2}
+Be4 {+2.33/5 0.039s, n=41225, nps=1873863, hashfull=10}
+19. Bd3 {-2.24/10 0.107s, n=39595, nps=370046, hashfull=14}
+Bxd3 {+1.70/5 0.038s, n=36567, nps=1218900, hashfull=10}
+20. Qxd3 {-4.40/12 0.037s, n=17095, nps=462027, hashfull=3}
+Nd7 {+1.70/5 0.038s, n=29162, nps=1458100, hashfull=11}
+21. Qe4 {-4.72/12 0.128s, n=45878, nps=355643, hashfull=16}
+Qxe4 {+1.65/5 0.037s, n=24381, nps=903000, hashfull=12}
+22. Nxe4 {-2.40/10 0.028s, n=11736, nps=404689, hashfull=1}
+Be7 {+1.55/6 0.036s, n=33518, nps=1457304, hashfull=15}
+23. b3 {-1.73/9 0.011s, n=5313, nps=442750, hashfull=0}
+Rfe8 {+1.89/6 0.036s, n=35220, nps=1467500, hashfull=17}
+24. Bb2 {-0.96/10 0.010s, n=6334, nps=575818, hashfull=1}
+Bxa3 {+2.65/6 0.035s, n=43545, nps=1404677, hashfull=20}
+25. Rxa3 {-2.64/11 0.063s, n=29375, nps=466269, hashfull=10}
+Rxe4 {+2.61/6 0.036s, n=26381, nps=1465611, hashfull=20}
+26. Rg1 {-3.16/10 0.038s, n=15712, nps=413473, hashfull=5}
+b5 {+2.69/5 0.034s, n=24773, nps=1303842, hashfull=20}
+27. Ra1 {0.00/9 0.079s, n=34848, nps=441113, hashfull=10}
+Nc5 {+2.92/6 0.034s, n=42993, nps=1592333, hashfull=23}
+28. Ba3 {-3.87/12 0.091s, n=35389, nps=384663, hashfull=14}
+b4 {+5.11/6 0.033s, n=43935, nps=1627222, hashfull=24}
+29. Rg3 {-7.36/12 0.076s, n=33253, nps=437539, hashfull=15}
+bxa3 {+5.18/5 0.034s, n=22515, nps=1876250, hashfull=26}
+30. Rxf3 {-6.78/12 0.063s, n=29152, nps=455500, hashfull=6}
+Nxb3 {+7.13/5 0.032s, n=20723, nps=1726916, hashfull=29}
+31. Rxa3 {-6.89/12 0.041s, n=23264, nps=553904, hashfull=6}
+Nd4 {+7.88/6 0.032s, n=32837, nps=1824277, hashfull=32}
+32. Rg3 {0.00/11 0.055s, n=28260, nps=504642, hashfull=7}
+Nc2+ {+9.42/6 0.032s, n=52677, nps=1951000, hashfull=36}
+33. Kf1 {-9.08/11 0.048s, n=27964, nps=570693, hashfull=17}
+Nxa3 {+9.86/6 0.031s, n=33047, nps=1943941, hashfull=38}
+34. Kg1 {-8.11/12 0.019s, n=11592, nps=610105, hashfull=10}
+Nc4 {+10.29/6 0.031s, n=33144, nps=2071500, hashfull=39}
+35. f3 {-8.21/12 0.040s, n=20550, nps=501219, hashfull=10}
+Rxe3 {+11.64/6 0.030s, n=43378, nps=2065619, hashfull=39}
+36. Rg4 {-8.05/12 0.035s, n=19961, nps=570314, hashfull=19, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "10"]
+[White "CleanedChess"]
+[Black "SF1800"]
+[Result "0-1"]
+[EngineWhiteName "Cleaned Chess Engine 1.2"]
+[EngineWhiteAuthor "tomcuel"]
+[EngineBlackName "Stockfish 19"]
+[EngineBlackAuthor "the Stockfish developers (see AUTHORS file)"]
+[GameDuration "00:00:05"]
+[GameStartTime "2026-11-17T02:22:27 +0100"]
+[GameEndTime "2026-11-17T02:22:33 +0100"]
+[PlyCount "143"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A45"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+
+1. Nc3 {0.00/0 0.000s, n=0, nps=0, hashfull=0}
+Nf6 {+0.04/10 0.052s, n=22358, nps=421849, hashfull=3}
+2. d4 {+0.21/6 0.054s, n=58535, nps=1245425, hashfull=0}
+d5 {+0.01/9 0.026s, n=13641, nps=505222, hashfull=3}
+3. e3 {+0.14/5 0.052s, n=27056, nps=1176347, hashfull=0}
+g6 {+0.25/9 0.044s, n=17580, nps=390666, hashfull=4}
+4. Bb5+ {+0.78/5 0.051s, n=59238, nps=1184760, hashfull=2}
+Nc6 {+0.22/11 0.164s, n=55571, nps=338847, hashfull=15}
+5. Nf3 {+0.84/5 0.050s, n=17057, nps=1003352, hashfull=2}
+Bg7 {-0.19/13 0.168s, n=61568, nps=366476, hashfull=17}
+6. O-O {+0.59/5 0.049s, n=27201, nps=937965, hashfull=3}
+Bd7 {-0.13/11 0.161s, n=58967, nps=366254, hashfull=16}
+7. Re1 {+0.67/5 0.048s, n=39083, nps=849630, hashfull=5}
+h6 {-0.13/10 0.121s, n=46687, nps=385842, hashfull=12}
+8. e4 {+0.89/4 0.047s, n=27276, nps=974142, hashfull=5}
+a6 {-0.46/9 0.068s, n=32398, nps=476441, hashfull=10}
+9. exd5 {+1.40/5 0.045s, n=49573, nps=1152860, hashfull=5}
+Nxd5 {+0.32/11 0.048s, n=21167, nps=431979, hashfull=6}
+10. Nxd5 {+1.70/5 0.046s, n=49942, nps=1161441, hashfull=6}
+axb5 {-0.60/12 0.059s, n=24925, nps=415416, hashfull=5}
+11. Bf4 {+1.51/4 0.045s, n=8859, nps=1265571, hashfull=6}
+Rc8 {-0.48/10 0.076s, n=34879, nps=452974, hashfull=7}
+12. Qd3 {+1.37/4 0.044s, n=17417, nps=1244071, hashfull=6}
+e6 {-0.37/9 0.052s, n=23390, nps=449807, hashfull=4}
+13. Qxb5 {+1.60/4 0.042s, n=31894, nps=1328916, hashfull=6}
+O-O {+1.52/9 0.055s, n=25017, nps=446732, hashfull=5}
+14. Bxc7 {+1.71/4 0.042s, n=13850, nps=1731250, hashfull=6}
+Rxc7 {+2.51/12 0.049s, n=28589, nps=583448, hashfull=3}
+15. Nxc7 {+1.45/5 0.042s, n=27187, nps=1699187, hashfull=6}
+Qxc7 {+2.97/12 0.058s, n=29022, nps=491898, hashfull=6}
+16. Qc4 {+1.40/5 0.041s, n=25787, nps=1121173, hashfull=6}
+Rc8 {+2.17/11 0.057s, n=23494, nps=412175, hashfull=7}
+17. Qd3 {+0.66/4 0.040s, n=36823, nps=1052085, hashfull=7}
+Ne7 {+2.18/13 0.124s, n=48429, nps=387432, hashfull=17}
+18. Ne5 {+1.54/5 0.040s, n=31950, nps=1101724, hashfull=9}
+Be8 {+2.13/12 0.094s, n=40508, nps=426400, hashfull=8}
+19. Qb3 {+1.50/4 0.038s, n=34175, nps=1005147, hashfull=9}
+Bxe5 {+3.22/9 0.017s, n=8772, nps=487333, hashfull=2}
+20. dxe5 {+1.49/5 0.037s, n=16196, nps=1245846, hashfull=9}
+b5 {+2.58/12 0.131s, n=50802, nps=384863, hashfull=19}
+21. Rac1 {+1.53/5 0.037s, n=17863, nps=893150, hashfull=9}
+Qc5 {0.00/10 0.148s, n=56148, nps=376832, hashfull=19}
+22. Qh3 {+1.53/5 0.036s, n=28505, nps=1018035, hashfull=10}
+Nf5 {+2.60/11 0.049s, n=20503, nps=418428, hashfull=4}
+23. c4 {+1.45/5 0.036s, n=34075, nps=1216964, hashfull=10}
+bxc4 {+3.05/9 0.024s, n=11868, nps=494500, hashfull=3}
+24. Re2 {+0.48/4 0.036s, n=37492, nps=1102705, hashfull=11}
+Rd8 {+4.04/11 0.111s, n=42849, nps=386027, hashfull=17}
+25. Re4 {+0.69/4 0.036s, n=15143, nps=1081642, hashfull=11}
+Rd2 {+5.55/8 0.012s, n=6272, nps=522666, hashfull=0}
+26. Qf3 {-0.37/5 0.035s, n=25723, nps=1071791, hashfull=11}
+Rxb2 {+6.56/11 0.040s, n=17498, nps=426780, hashfull=6}
+27. Rexc4 {-0.52/4 0.034s, n=4, nps=4000, hashfull=12}
+Qxc4 {+8.02/12 0.037s, n=20738, nps=560486, hashfull=3}
+28. Qd1 {-6.14/6 0.033s, n=34465, nps=1276481, hashfull=15}
+Qxa2 {0.00/13 0.103s, n=45513, nps=437625, hashfull=15}
+29. Rc8 {-6.21/5 0.033s, n=19808, nps=1165176, hashfull=16}
+Kg7 {+8.92/11 0.048s, n=21332, nps=435346, hashfull=8}
+30. Qe1 {-6.50/5 0.032s, n=13572, nps=1233818, hashfull=18}
+Rb1 {+9.07/11 0.035s, n=17015, nps=486142, hashfull=6}
+31. Rc1 {-6.82/7 0.033s, n=39771, nps=1657125, hashfull=19}
+Rb2 {+8.54/11 0.014s, n=8558, nps=570533, hashfull=1}
+32. Rc8 {0.00/7 0.032s, n=29663, nps=1483150, hashfull=20}
+Nd4 {+9.33/11 0.070s, n=32215, nps=453732, hashfull=10}
+33. Kh1 {-7.96/5 0.032s, n=43211, nps=1600407, hashfull=22}
+Rb3 {+10.03/14 0.054s, n=27253, nps=504685, hashfull=10}
+34. Rc1 {-6.80/6 0.031s, n=42208, nps=1361548, hashfull=25}
+Nc6 {+9.13/9 0.011s, n=6253, nps=625300, hashfull=4}
+35. Rd1 {-6.38/5 0.030s, n=27010, nps=1421578, hashfull=26}
+Rb8 {+8.53/12 0.069s, n=32695, nps=473840, hashfull=11}
+36. Qe3 {-6.38/5 0.030s, n=13748, nps=1249818, hashfull=27}
+Kg8 {+8.75/13 0.056s, n=25974, nps=463821, hashfull=25}
+37. h3 {-6.07/4 0.030s, n=11609, nps=1289888, hashfull=28}
+Ra8 {0.00/13 0.050s, n=25354, nps=507080, hashfull=20}
+38. Kg1 {-6.18/5 0.030s, n=22228, nps=1234888, hashfull=28}
+Qb2 {+8.98/12 0.020s, n=10420, nps=496190, hashfull=17}
+39. Re1 {-6.18/4 0.030s, n=5148, nps=1716000, hashfull=28}
+Ra1 {+8.80/12 0.018s, n=10536, nps=585333, hashfull=14}
+40. f4 {-6.95/6 0.030s, n=32566, nps=1550761, hashfull=29}
+Ra4 {0.00/10 0.041s, n=19560, nps=465714, hashfull=13}
+41. Rd1 {-6.54/5 0.028s, n=24428, nps=1357111, hashfull=29}
+g5 {+9.24/10 0.022s, n=11441, nps=497434, hashfull=8}
+42. fxg5 {-5.45/5 0.028s, n=21383, nps=1425533, hashfull=30}
+Ra2 {+9.07/10 0.019s, n=11210, nps=590000, hashfull=9}
+43. Qg3 {-5.43/5 0.029s, n=11835, nps=1315000, hashfull=31}
+Ra3 {+8.01/14 0.035s, n=19337, nps=537138, hashfull=11}
+44. Qf4 {-5.58/5 0.027s, n=22256, nps=1391000, hashfull=34}
+Qc3 {+8.71/11 0.014s, n=10092, nps=672800, hashfull=7}
+45. gxh6 {-4.53/5 0.028s, n=25860, nps=1521176, hashfull=37}
+Qxe5 {+7.16/10 0.011s, n=7746, nps=704181, hashfull=6}
+46. Qxe5 {-4.53/5 0.028s, n=27897, nps=1549833, hashfull=38}
+Nxe5 {+7.07/10 0.008s, n=7437, nps=929625, hashfull=3}
+47. Rd8 {-3.89/5 0.028s, n=36280, nps=1814000, hashfull=39}
+Kh7 {+6.85/9 0.005s, n=4688, nps=937600, hashfull=5}
+48. Rxe8 {-3.66/6 0.026s, n=22980, nps=1915000, hashfull=42}
+Kxh6 {+6.25/12 0.041s, n=29308, nps=697809, hashfull=12}
+49. Kf2 {-3.62/5 0.026s, n=3214, nps=1607000, hashfull=42}
+Kg6 {+6.72/12 0.024s, n=18793, nps=751720, hashfull=19}
+50. h4 {-3.57/5 0.026s, n=43884, nps=1755360, hashfull=47}
+Kf5 {+7.08/11 0.018s, n=13626, nps=757000, hashfull=13}
+51. Rf8 {-3.71/5 0.027s, n=41414, nps=1800608, hashfull=48}
+Ra4 {0.00/11 0.041s, n=29937, nps=712785, hashfull=8}
+52. Rh8 {-3.77/5 0.026s, n=22200, nps=1707692, hashfull=52}
+Ng4+ {+7.36/9 0.005s, n=4942, nps=988400, hashfull=13}
+53. Ke1 {-3.77/6 0.026s, n=12066, nps=1723714, hashfull=52}
+Ke4 {+6.74/12 0.035s, n=23498, nps=652722, hashfull=21}
+54. Rf8 {-3.85/6 0.025s, n=26277, nps=1642312, hashfull=56}
+Ke3 {+6.60/12 0.034s, n=23468, nps=670514, hashfull=11}
+55. Kd1 {-5.34/6 0.025s, n=28569, nps=1785562, hashfull=56}
+f6 {+6.96/10 0.006s, n=5007, nps=834500, hashfull=3}
+56. Re8 {-4.08/5 0.025s, n=8858, nps=1771600, hashfull=57}
+e5 {+7.39/11 0.012s, n=8473, nps=706083, hashfull=15}
+57. g3 {-4.83/5 0.025s, n=4217, nps=2108500, hashfull=59}
+Kf3 {+M7/9 0.004s, n=3600, nps=720000, hashfull=1}
+58. h5 {-4.85/5 0.024s, n=22210, nps=1586428, hashfull=62}
+Rb4 {0.00/11 0.041s, n=28351, nps=675023, hashfull=12}
+59. Kd2 {-4.63/5 0.025s, n=19696, nps=1641333, hashfull=62}
+Rb1 {+6.90/11 0.016s, n=13754, nps=859625, hashfull=5}
+60. Ra8 {-4.55/5 0.024s, n=22069, nps=1697615, hashfull=63}
+e4 {+6.80/11 0.030s, n=18003, nps=600100, hashfull=17}
+61. Kc3 {-5.00/5 0.024s, n=22712, nps=1514133, hashfull=64}
+Ne5 {+7.50/10 0.013s, n=10224, nps=786461, hashfull=10}
+62. Ra6 {-3.78/5 0.024s, n=21298, nps=1638307, hashfull=65}
+e3 {+6.57/10 0.009s, n=6988, nps=698800, hashfull=6}
+63. Rxf6+ {-3.79/5 0.024s, n=22556, nps=1611142, hashfull=66}
+Kg4 {+5.83/9 0.011s, n=7893, nps=657750, hashfull=4}
+64. Re6 {-2.72/5 0.025s, n=8970, nps=1794000, hashfull=66}
+Kf5 {+5.99/9 0.009s, n=7427, nps=742700, hashfull=11}
+65. Rxe5+ {-4.73/6 0.024s, n=18169, nps=1816900, hashfull=67}
+Kxe5 {+6.30/12 0.011s, n=9119, nps=829000, hashfull=11}
+66. Kd3 {-5.66/7 0.024s, n=48206, nps=2537157, hashfull=70}
+Rb3+ {+6.62/12 0.014s, n=17889, nps=1277785, hashfull=8}
+67. Ke2 {-5.92/7 0.023s, n=1958, nps=1958000, hashfull=72}
+Ke4 {+7.05/12 0.026s, n=26245, nps=972037, hashfull=18}
+68. Ke1 {-6.20/6 0.023s, n=6, nps=6000, hashfull=74}
+Kd3 {+9.97/10 0.008s, n=10294, nps=1143777, hashfull=26}
+69. Kf1 {-12.77/7 0.023s, n=37506, nps=3125500, hashfull=76}
+Kd2 {+11.13/10 0.011s, n=12634, nps=1148545, hashfull=23}
+70. Kg2 {-14.43/7 0.023s, n=39759, nps=2839928, hashfull=78}
+e2 {+M13/12 0.013s, n=18535, nps=1425769, hashfull=18}
+71. Kh3 {-M10/7 0.006s, n=19894, nps=2842000, hashfull=78}
+Rb4 {+M9/13 0.033s, n=46130, nps=1397878, hashfull=24}
+72. h6 {-14.13/6 0.023s, n=31674, nps=3519333, hashfull=79, Black wins by adjudication}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.11.17"]
+[Round "10"]
+[White "SF1800"]
+[Black "CleanedChess"]
+[Result "1-0"]
+[EngineWhiteName "Stockfish 19"]
+[EngineWhiteAuthor "the Stockfish developers (see AUTHORS file)"]
+[EngineBlackName "Cleaned Chess Engine 1.2"]
+[EngineBlackAuthor "tomcuel"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-11-17T02:22:30 +0100"]
+[GameEndTime "2026-11-17T02:22:34 +0100"]
+[PlyCount "64"]
+[Termination "adjudication"]
+[TimeControl "2+0.02"]
+[ECO "A00"]
+[Opening "Van't Kruijs Opening"]
+
+1. e3 {+0.29/11 0.106s, n=43632, nps=411622, hashfull=10}
+Nf6 {-0.20/6 0.052s, n=44389, nps=1233027, hashfull=1}
+2. c4 {+0.14/10 0.052s, n=23105, nps=444326, hashfull=7}
+Nc6 {+0.48/6 0.052s, n=58741, nps=1276978, hashfull=2}
+3. d4 {+0.23/9 0.065s, n=24895, nps=377196, hashfull=7}
+d5 {+0.28/5 0.051s, n=27832, nps=1113280, hashfull=3}
+4. Nc3 {+0.53/10 0.086s, n=33128, nps=380781, hashfull=10}
+e6 {+0.16/4 0.050s, n=20625, nps=859375, hashfull=5}
+5. Qc2 {+0.47/9 0.071s, n=26439, nps=367208, hashfull=7}
+Nb4 {+0.74/4 0.049s, n=18555, nps=1030833, hashfull=5}
+6. Qb1 {+0.11/11 0.116s, n=44178, nps=380844, hashfull=16}
+Be7 {+0.73/5 0.047s, n=31462, nps=1310916, hashfull=7}
+7. c5 {+0.59/10 0.066s, n=28426, nps=424268, hashfull=9}
+O-O {+0.88/5 0.046s, n=52941, nps=1231186, hashfull=11}
+8. Nf3 {+0.21/9 0.065s, n=30019, nps=461830, hashfull=5}
+Bd7 {+0.68/5 0.045s, n=38656, nps=1246967, hashfull=11}
+9. a3 {+0.79/8 0.056s, n=25542, nps=448105, hashfull=4}
+Nc6 {+0.65/5 0.044s, n=18731, nps=1440846, hashfull=11}
+10. Qc2 {+1.09/9 0.062s, n=30397, nps=490274, hashfull=5}
+Qb8 {+0.67/4 0.044s, n=32274, nps=1008562, hashfull=11}
+11. Bb5 {+1.21/9 0.023s, n=14412, nps=600500, hashfull=2}
+b6 {+0.15/5 0.044s, n=34369, nps=1145633, hashfull=11}
+12. Ne5 {+0.73/11 0.193s, n=86055, nps=443582, hashfull=19}
+Nxe5 {+0.32/4 0.043s, n=19733, nps=1096277, hashfull=11}
+13. dxe5 {+3.25/11 0.058s, n=27913, nps=473101, hashfull=6}
+Bxb5 {-0.94/5 0.041s, n=23910, nps=1258421, hashfull=11}
+14. exf6 {+3.71/13 0.065s, n=36102, nps=547000, hashfull=9}
+gxf6 {-1.08/6 0.041s, n=47391, nps=1634172, hashfull=13}
+15. Nxb5 {+3.41/12 0.071s, n=35572, nps=494055, hashfull=10}
+bxc5 {-1.05/6 0.041s, n=32279, nps=1291160, hashfull=16}
+16. Qa4 {+3.52/15 0.151s, n=59711, nps=395437, hashfull=17}
+f5 {-0.93/5 0.040s, n=30474, nps=1218960, hashfull=17}
+17. Rb1 {+2.03/12 0.140s, n=59372, nps=424085, hashfull=16}
+a6 {-0.74/6 0.039s, n=40573, nps=1267906, hashfull=19}
+18. Nc3 {+3.37/13 0.036s, n=24370, nps=676944, hashfull=8}
+Bf6 {-0.85/6 0.039s, n=32944, nps=1497454, hashfull=19}
+19. Bd2 {+3.27/12 0.155s, n=59329, nps=380314, hashfull=22}
+d4 {-0.02/6 0.037s, n=54650, nps=1477027, hashfull=19}
+20. Ne2 {+4.18/11 0.057s, n=23839, nps=418228, hashfull=5}
+d3 {+0.01/5 0.036s, n=25359, nps=1207571, hashfull=19}
+21. Nc3 {+4.92/10 0.046s, n=19733, nps=428978, hashfull=6}
+Bxc3 {-0.04/5 0.036s, n=18636, nps=1242400, hashfull=20}
+22. Bxc3 {+5.47/11 0.035s, n=22314, nps=637542, hashfull=6}
+Rd8 {-0.31/5 0.036s, n=19074, nps=1467230, hashfull=20}
+23. O-O {+6.78/14 0.130s, n=50353, nps=387330, hashfull=20}
+Qb7 {-0.36/4 0.036s, n=4, nps=4000, hashfull=21}
+24. Qh4 {+6.58/14 0.116s, n=48375, nps=413461, hashfull=14}
+Qb6 {-1.50/4 0.034s, n=11692, nps=1169200, hashfull=22}
+25. f4 {0.00/11 0.098s, n=36980, nps=377346, hashfull=17}
+c4 {-0.85/5 0.034s, n=41479, nps=1296218, hashfull=25}
+26. h3 {+6.23/11 0.078s, n=29871, nps=382961, hashfull=8}
+Qxe3+ {+0.85/4 0.033s, n=31726, nps=1269040, hashfull=27}
+27. Kh2 {+5.81/13 0.068s, n=25533, nps=370043, hashfull=9}
+Qb6 {+0.51/4 0.033s, n=41379, nps=1217029, hashfull=30}
+28. Bf6 {+7.26/12 0.035s, n=15806, nps=439055, hashfull=3}
+Rdc8 {+0.28/4 0.032s, n=17326, nps=1443833, hashfull=30}
+29. Qh6 {+M5/9 0.004s, n=3634, nps=726800, hashfull=0}
+Qg1+ {-M4/1 0.000s, n=1, nps=1000, hashfull=31}
+30. Kxg1 {+M3/13 0.003s, n=3054, nps=763500, hashfull=0}
+Re8 {-M2/2 0.000s, n=786, nps=786000, hashfull=31}
+31. a4 {+M1/3 0.000s, n=655, nps=655000, hashfull=0}
+a5 {-M2/2 0.000s, n=991, nps=991000, hashfull=31}
+32. h4 {+M1/2 0.000s, n=680, nps=680000, hashfull=0}
+c5 {-M2/2 0.000s, n=927, nps=927000, hashfull=31, White wins by adjudication}
+1-0
+

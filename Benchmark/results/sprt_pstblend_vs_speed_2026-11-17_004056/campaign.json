@@ -1,0 +1,152 @@
+{
+  "directory": "results/sprt_pstblend_vs_speed_2026-11-17_004056",
+  "date": "2026-11-17 00:40",
+  "config": {
+    "name": "sprt_pstblend_vs_speed",
+    "mode": "sprt",
+    "fastchess": "Benchmark/tools/fastchess-src/fastchess",
+    "time_control": "8+0.08",
+    "concurrency": 4,
+    "bench_depth": 6,
+    "max_moves": 200,
+    "draw_adjudication": {
+      "movenumber": 40,
+      "movecount": 8,
+      "score": 10
+    },
+    "resign_adjudication": {
+      "movecount": 4,
+      "score": 700,
+      "twosided": true
+    },
+    "engine": {
+      "name": "CleanedChess-pstblend",
+      "version": "pstblend",
+      "cmd": "Benchmark/engines/pstblend/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "797aad4029df099e272a80caacace395eda226a6bd60fc872b8e707cfd4fb45e"
+    },
+    "stockfish": {
+      "cmd": "/opt/homebrew/bin/stockfish",
+      "elo_levels": [
+        1320,
+        1400,
+        1600,
+        1800,
+        2000
+      ],
+      "options": {
+        "Threads": 1,
+        "Hash": 16
+      }
+    },
+    "baseline": {
+      "name": "CleanedChess-speed",
+      "version": "speed",
+      "cmd": "Benchmark/engines/speed/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "022c44f30da071098d5b4d955e323b3b7230b68682935d442185af3a3dfc6ab4"
+    },
+    "sprt": {
+      "elo0": 0,
+      "elo1": 10,
+      "alpha": 0.05,
+      "beta": 0.05
+    },
+    "openings": {
+      "plies": 10
+    },
+    "games": 600,
+    "config_file": "Benchmark/configs/experiments/sprt_pstblend_vs_speed.json"
+  },
+  "bench": {
+    "depth": 6,
+    "positions": 10,
+    "nodes": 1445569,
+    "quiescence_nodes": 1143416,
+    "transposition_hits": 12033,
+    "beta_cutoffs": 54861,
+    "first_move_cutoff_percent": 81,
+    "time_ms": 1543,
+    "nps": 936856
+  },
+  "baseline_bench": {
+    "depth": 6,
+    "positions": 10,
+    "nodes": 1402790,
+    "quiescence_nodes": 1058698,
+    "transposition_hits": 13989,
+    "beta_cutoffs": 60590,
+    "first_move_cutoff_percent": 82,
+    "time_ms": 1217,
+    "nps": 1152662
+  },
+  "fastchess_command": [
+    "Benchmark/tools/fastchess-src/fastchess",
+    "-engine",
+    "cmd=Benchmark/engines/pstblend/UCI.x",
+    "name=CleanedChess-pstblend",
+    "option.Hash=64",
+    "option.OwnBook=false",
+    "option.BookPlies=10",
+    "-engine",
+    "cmd=Benchmark/engines/speed/UCI.x",
+    "name=CleanedChess-speed",
+    "option.Hash=64",
+    "option.OwnBook=false",
+    "option.BookPlies=10",
+    "-openings",
+    "file=openings.pgn",
+    "format=pgn",
+    "order=random",
+    "plies=10",
+    "-srand",
+    "20261116",
+    "-sprt",
+    "elo0=0",
+    "elo1=10",
+    "alpha=0.05",
+    "beta=0.05",
+    "model=logistic",
+    "-each",
+    "tc=8+0.08",
+    "-rounds",
+    "300",
+    "-games",
+    "2",
+    "-concurrency",
+    "4",
+    "-maxmoves",
+    "200",
+    "-draw",
+    "movenumber=40",
+    "movecount=8",
+    "score=10",
+    "-resign",
+    "movecount=4",
+    "score=700",
+    "twosided=true",
+    "-recover",
+    "-ratinginterval",
+    "0",
+    "-autosaveinterval",
+    "1",
+    "-config",
+    "outname=fastchess_state.json",
+    "-pgnout",
+    "file=games.pgn",
+    "nodes=true",
+    "nps=true",
+    "hashfull=true"
+  ]
+}

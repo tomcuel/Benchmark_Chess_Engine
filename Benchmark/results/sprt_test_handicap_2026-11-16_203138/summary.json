@@ -1,0 +1,64 @@
+{
+  "planned_games": 200,
+  "played_games": 200,
+  "counted_games": 200,
+  "complete": true,
+  "wins": 104,
+  "draws": 93,
+  "losses": 3,
+  "score": 0.7525,
+  "opponents": {
+    "CleanedChess-v1.0": {
+      "games": 200,
+      "score": 0.7525,
+      "stderr": 0.018707451723845234,
+      "elo": 193.17252039851732,
+      "elo_low": 160.49556627555987,
+      "elo_high": 229.29171914111603,
+      "wins": 104,
+      "draws": 93,
+      "losses": 3,
+      "white_points": 77.5,
+      "white_games": 100,
+      "black_points": 73.0,
+      "black_games": 100,
+      "plies": 15160,
+      "rating": null,
+      "average_plies": 75.8
+    }
+  },
+  "terminations": {
+    "nulle par répétition": 92,
+    "arrêt par adjudication (gain)": 85,
+    "mat": 22,
+    "arrêt par adjudication (nulle)": 1
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 6565,
+    "book_moves": 0,
+    "average_depth": 4.059558263518659,
+    "average_time_ms": 37.70906321401371,
+    "average_nodes": 11825.721553693831,
+    "average_nps": 648675.6228998133,
+    "average_hashfull": 11.381721249047981
+  },
+  "elo_difference": {
+    "elo": 193.17252039851732,
+    "elo_low": 160.49556627555987,
+    "elo_high": 229.29171914111603
+  },
+  "sprt": {
+    "llr": 2.84,
+    "lower": -2.94,
+    "upper": 2.94
+  },
+  "verdict": {
+    "label": "Amélioration significative",
+    "detail": "Le test séquentiel n'a pas atteint sa borne avec le nombre de parties prévu, mais l'intervalle de confiance à 95 % de l'écart Elo est entièrement positif."
+  },
+  "warnings": []
+}

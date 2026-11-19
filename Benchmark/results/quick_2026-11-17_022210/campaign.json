@@ -1,0 +1,127 @@
+{
+  "directory": "results/quick_2026-11-17_022210",
+  "date": "2026-11-17 02:22",
+  "config": {
+    "name": "quick",
+    "mode": "gauntlet",
+    "fastchess": "Benchmark/tools/fastchess-src/fastchess",
+    "time_control": "2+0.02",
+    "concurrency": 4,
+    "bench_depth": 5,
+    "max_moves": 200,
+    "draw_adjudication": {
+      "movenumber": 40,
+      "movecount": 8,
+      "score": 10
+    },
+    "resign_adjudication": {
+      "movecount": 4,
+      "score": 700,
+      "twosided": true
+    },
+    "engine": {
+      "name": "CleanedChess",
+      "version": "1.2",
+      "cmd": "Chess_Engine/UCI/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "9faad60cda6c2c9041986ea338df5a65c9549c7e96832543f8212d1c8a9e94aa"
+    },
+    "stockfish": {
+      "cmd": "/opt/homebrew/bin/stockfish",
+      "elo_levels": [
+        1400,
+        1800
+      ],
+      "options": {
+        "Threads": 1,
+        "Hash": 16
+      }
+    },
+    "baseline": null,
+    "sprt": {
+      "elo0": 0,
+      "elo1": 10,
+      "alpha": 0.05,
+      "beta": 0.05
+    },
+    "openings": {
+      "plies": 10
+    },
+    "games": 20,
+    "config_file": "Benchmark/configs/quick.json"
+  },
+  "bench": {
+    "depth": 5,
+    "positions": 10,
+    "nodes": 578458,
+    "quiescence_nodes": 493657,
+    "transposition_hits": 3090,
+    "beta_cutoffs": 16820,
+    "first_move_cutoff_percent": 79,
+    "time_ms": 567,
+    "nps": 1020208
+  },
+  "fastchess_command": [
+    "Benchmark/tools/fastchess-src/fastchess",
+    "-engine",
+    "cmd=Chess_Engine/UCI/UCI.x",
+    "name=CleanedChess",
+    "option.Hash=64",
+    "option.OwnBook=true",
+    "option.BookPlies=10",
+    "option.BookFile=Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+    "-engine",
+    "cmd=/opt/homebrew/bin/stockfish",
+    "name=SF1400",
+    "option.Threads=1",
+    "option.Hash=16",
+    "option.UCI_LimitStrength=true",
+    "option.UCI_Elo=1400",
+    "-engine",
+    "cmd=/opt/homebrew/bin/stockfish",
+    "name=SF1800",
+    "option.Threads=1",
+    "option.Hash=16",
+    "option.UCI_LimitStrength=true",
+    "option.UCI_Elo=1800",
+    "-tournament",
+    "gauntlet",
+    "-seeds",
+    "1",
+    "-each",
+    "tc=2+0.02",
+    "-rounds",
+    "5",
+    "-games",
+    "2",
+    "-concurrency",
+    "4",
+    "-maxmoves",
+    "200",
+    "-draw",
+    "movenumber=40",
+    "movecount=8",
+    "score=10",
+    "-resign",
+    "movecount=4",
+    "score=700",
+    "twosided=true",
+    "-recover",
+    "-ratinginterval",
+    "0",
+    "-autosaveinterval",
+    "1",
+    "-config",
+    "outname=fastchess_state.json",
+    "-pgnout",
+    "file=games.pgn",
+    "nodes=true",
+    "nps=true",
+    "hashfull=true"
+  ]
+}

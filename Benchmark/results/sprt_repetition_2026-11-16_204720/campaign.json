@@ -1,0 +1,152 @@
+{
+  "directory": "results/sprt_repetition_2026-11-16_204720",
+  "date": "2026-11-16 20:47",
+  "config": {
+    "name": "sprt_repetition",
+    "mode": "sprt",
+    "fastchess": "Benchmark/tools/fastchess-src/fastchess",
+    "time_control": "8+0.08",
+    "concurrency": 4,
+    "bench_depth": 6,
+    "max_moves": 200,
+    "draw_adjudication": {
+      "movenumber": 40,
+      "movecount": 8,
+      "score": 10
+    },
+    "resign_adjudication": {
+      "movecount": 4,
+      "score": 700,
+      "twosided": true
+    },
+    "engine": {
+      "name": "CleanedChess-new",
+      "version": "en cours",
+      "cmd": "Chess_Engine/UCI/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "b3359c8ae29283bbcad5979f572c2f23191fe2f1cf5e00beea8a91f73b6d5dfe"
+    },
+    "stockfish": {
+      "cmd": "/opt/homebrew/bin/stockfish",
+      "elo_levels": [
+        1320,
+        1400,
+        1600,
+        1800,
+        2000
+      ],
+      "options": {
+        "Threads": 1,
+        "Hash": 16
+      }
+    },
+    "baseline": {
+      "name": "CleanedChess-v1.0",
+      "version": "1.0",
+      "cmd": "Benchmark/engines/v1.0/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "80b2c622cfee9d9e8f6c193aa39eacfa7ffceec33e7244f699af31933ce48a6c"
+    },
+    "sprt": {
+      "elo0": 0,
+      "elo1": 10,
+      "alpha": 0.05,
+      "beta": 0.05
+    },
+    "openings": {
+      "plies": 10
+    },
+    "games": 400,
+    "config_file": "Benchmark/configs/sprt.json"
+  },
+  "bench": {
+    "depth": 6,
+    "positions": 10,
+    "nodes": 4495976,
+    "quiescence_nodes": 3411242,
+    "transposition_hits": 39364,
+    "beta_cutoffs": 170219,
+    "first_move_cutoff_percent": 75,
+    "time_ms": 7387,
+    "nps": 608633
+  },
+  "baseline_bench": {
+    "depth": 6,
+    "positions": 10,
+    "nodes": 4496502,
+    "quiescence_nodes": 3411676,
+    "transposition_hits": 39502,
+    "beta_cutoffs": 170216,
+    "first_move_cutoff_percent": 75,
+    "time_ms": 7370,
+    "nps": 610108
+  },
+  "fastchess_command": [
+    "Benchmark/tools/fastchess-src/fastchess",
+    "-engine",
+    "cmd=Chess_Engine/UCI/UCI.x",
+    "name=CleanedChess-new",
+    "option.Hash=64",
+    "option.OwnBook=false",
+    "option.BookPlies=10",
+    "-engine",
+    "cmd=Benchmark/engines/v1.0/UCI.x",
+    "name=CleanedChess-v1.0",
+    "option.Hash=64",
+    "option.OwnBook=false",
+    "option.BookPlies=10",
+    "-openings",
+    "file=openings.pgn",
+    "format=pgn",
+    "order=random",
+    "plies=10",
+    "-srand",
+    "20261116",
+    "-sprt",
+    "elo0=0",
+    "elo1=10",
+    "alpha=0.05",
+    "beta=0.05",
+    "model=logistic",
+    "-each",
+    "tc=8+0.08",
+    "-rounds",
+    "200",
+    "-games",
+    "2",
+    "-concurrency",
+    "4",
+    "-maxmoves",
+    "200",
+    "-draw",
+    "movenumber=40",
+    "movecount=8",
+    "score=10",
+    "-resign",
+    "movecount=4",
+    "score=700",
+    "twosided=true",
+    "-recover",
+    "-ratinginterval",
+    "0",
+    "-autosaveinterval",
+    "1",
+    "-config",
+    "outname=fastchess_state.json",
+    "-pgnout",
+    "file=games.pgn",
+    "nodes=true",
+    "nps=true",
+    "hashfull=true"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "planned_games": 400,
+  "played_games": 216,
+  "counted_games": 216,
+  "complete": true,
+  "wins": 64,
+  "draws": 116,
+  "losses": 36,
+  "score": 0.5648148148148148,
+  "opponents": {
+    "CleanedChess-v1.0": {
+      "games": 216,
+      "score": 0.5648148148148148,
+      "stderr": 0.02272416935299551,
+      "elo": 45.2927908300198,
+      "elo_low": 14.09655079938424,
+      "elo_high": 77.23465012250617,
+      "wins": 64,
+      "draws": 116,
+      "losses": 36,
+      "white_points": 62.5,
+      "white_games": 108,
+      "black_points": 59.5,
+      "black_games": 108,
+      "plies": 22357,
+      "rating": null,
+      "average_plies": 103.50462962962963
+    }
+  },
+  "terminations": {
+    "nulle par répétition": 104,
+    "arrêt par adjudication (gain)": 93,
+    "mat": 7,
+    "nulle par matériel insuffisant": 6,
+    "arrêt par adjudication (nulle)": 4,
+    "nulle par la règle des 50 coups": 2
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 10093,
+    "book_moves": 0,
+    "average_depth": 5.695927870801546,
+    "average_time_ms": 180.3750123848212,
+    "average_nodes": 61870.3618349351,
+    "average_nps": 682923.6423953049,
+    "average_hashfull": 94.42702863370653
+  },
+  "elo_difference": {
+    "elo": 45.2927908300198,
+    "elo_low": 14.09655079938424,
+    "elo_high": 77.23465012250617
+  },
+  "sprt": {
+    "llr": 2.96,
+    "lower": -2.94,
+    "upper": 2.94
+  },
+  "stopped_by_sprt": true,
+  "verdict": {
+    "label": "Amélioration significative",
+    "detail": "Le test séquentiel (SPRT) accepte l'hypothèse d'un gain : la nouvelle version est meilleure."
+  },
+  "warnings": []
+}

@@ -1,0 +1,188 @@
+{
+  "planned_games": 300,
+  "played_games": 300,
+  "counted_games": 293,
+  "complete": true,
+  "wins": 207,
+  "draws": 6,
+  "losses": 80,
+  "score": 0.7167235494880546,
+  "opponents": {
+    "SF1320": {
+      "games": 49,
+      "score": 0.9795918367346939,
+      "stderr": 0.020198843236954835,
+      "elo": 672.4964949502347,
+      "elo_low": 477.9971218989022,
+      "elo_high": Infinity,
+      "wins": 48,
+      "draws": 0,
+      "losses": 1,
+      "white_points": 24.0,
+      "white_games": 24,
+      "black_points": 24.0,
+      "black_games": 25,
+      "plies": 2733,
+      "rating": 1320,
+      "average_plies": 55.775510204081634
+    },
+    "SF1400": {
+      "games": 49,
+      "score": 0.9489795918367347,
+      "stderr": 0.029731892207538104,
+      "elo": 507.8051776871667,
+      "elo_low": 364.4535866427462,
+      "elo_high": Infinity,
+      "wins": 46,
+      "draws": 1,
+      "losses": 2,
+      "white_points": 24.0,
+      "white_games": 24,
+      "black_points": 22.5,
+      "black_games": 25,
+      "plies": 2928,
+      "rating": 1400,
+      "average_plies": 59.755102040816325
+    },
+    "SF1600": {
+      "games": 49,
+      "score": 0.8571428571428571,
+      "stderr": 0.049989586587411795,
+      "elo": 311.2605001534574,
+      "elo_low": 199.44498393075912,
+      "elo_high": 531.2119527504553,
+      "wins": 42,
+      "draws": 0,
+      "losses": 7,
+      "white_points": 22.0,
+      "white_games": 24,
+      "black_points": 20.0,
+      "black_games": 25,
+      "plies": 3904,
+      "rating": 1600,
+      "average_plies": 79.6734693877551
+    },
+    "SF1800": {
+      "games": 50,
+      "score": 0.61,
+      "stderr": 0.06824954212300621,
+      "elo": 77.70609119370712,
+      "elo_low": -16.52892277625016,
+      "elo_high": 185.12265414974723,
+      "wins": 30,
+      "draws": 1,
+      "losses": 19,
+      "white_points": 17.5,
+      "white_games": 25,
+      "black_points": 13.0,
+      "black_games": 25,
+      "plies": 4836,
+      "rating": 1800,
+      "average_plies": 96.72
+    },
+    "SF2000": {
+      "games": 48,
+      "score": 0.46875,
+      "stderr": 0.07127048012189588,
+      "elo": -21.74306492903708,
+      "elo_low": -123.7635473672406,
+      "elo_high": 76.56787797211626,
+      "wins": 22,
+      "draws": 1,
+      "losses": 25,
+      "white_points": 11.5,
+      "white_games": 24,
+      "black_points": 11.0,
+      "black_games": 24,
+      "plies": 5164,
+      "rating": 2000,
+      "average_plies": 107.58333333333333
+    },
+    "SF2200": {
+      "games": 48,
+      "score": 0.4270833333333333,
+      "stderr": 0.06907998982493384,
+      "elo": -51.03153310980336,
+      "elo_low": -154.123631175167,
+      "elo_high": 43.64374986571916,
+      "wins": 19,
+      "draws": 3,
+      "losses": 26,
+      "white_points": 8.0,
+      "white_games": 24,
+      "black_points": 12.5,
+      "black_games": 24,
+      "plies": 5919,
+      "rating": 2200,
+      "average_plies": 123.3125
+    }
+  },
+  "terminations": {
+    "arrêt par adjudication (gain)": 238,
+    "mat": 49,
+    "perte au temps": 7,
+    "nulle par répétition": 4,
+    "nulle par la règle des 50 coups": 2
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [
+    {
+      "opponent": "SF2000",
+      "reason": "Black loses on time (86ms overrun)"
+    },
+    {
+      "opponent": "SF2000",
+      "reason": "White loses on time (81ms overrun)"
+    },
+    {
+      "opponent": "SF1400",
+      "reason": "Black loses on time (36ms overrun)"
+    },
+    {
+      "opponent": "SF1600",
+      "reason": "Black loses on time (95ms overrun)"
+    },
+    {
+      "opponent": "SF1320",
+      "reason": "Black loses on time (73ms overrun)"
+    },
+    {
+      "opponent": "SF2200",
+      "reason": "White loses on time (24ms overrun)"
+    },
+    {
+      "opponent": "SF2200",
+      "reason": "Black loses on time (4ms overrun)"
+    }
+  ],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 12462,
+    "book_moves": 604,
+    "average_depth": 6.772749157438613,
+    "average_time_ms": 187.22380035307336,
+    "average_nodes": 139940.4351628952,
+    "average_nps": 1361441.6173762947,
+    "average_hashfull": 174.71465254373294
+  },
+  "rating": {
+    "games": 293,
+    "score": 0.7167235494880546,
+    "elo": 1982.8977399385344,
+    "margin": 62.894778107624205
+  },
+  "rating_white": {
+    "games": 145,
+    "score": 0.7379310344827587,
+    "elo": 2015.7305193462566,
+    "margin": 80.44804696902511
+  },
+  "rating_black": {
+    "games": 148,
+    "score": 0.6959459459459459,
+    "elo": 1951.1993561383283,
+    "margin": 95.91167038222207
+  },
+  "warnings": []
+}

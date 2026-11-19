@@ -1,0 +1,67 @@
+{
+  "planned_games": 400,
+  "played_games": 400,
+  "counted_games": 400,
+  "complete": true,
+  "wins": 154,
+  "draws": 109,
+  "losses": 137,
+  "score": 0.52125,
+  "opponents": {
+    "CleanedChess-kingshield": {
+      "games": 400,
+      "score": 0.52125,
+      "stderr": 0.021296915122852887,
+      "elo": 14.77491240205391,
+      "elo_low": -14.24724834199966,
+      "elo_high": 44.005101783430256,
+      "wins": 154,
+      "draws": 109,
+      "losses": 137,
+      "white_points": 105.0,
+      "white_games": 200,
+      "black_points": 103.5,
+      "black_games": 200,
+      "plies": 55586,
+      "rating": null,
+      "average_plies": 138.965
+    }
+  },
+  "terminations": {
+    "arrêt par adjudication (gain)": 287,
+    "nulle par répétition": 46,
+    "nulle par la règle des 50 coups": 33,
+    "nulle par matériel insuffisant": 20,
+    "arrêt par adjudication (nulle)": 10,
+    "mat": 4
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 25791,
+    "book_moves": 0,
+    "average_depth": 7.783412818425032,
+    "average_time_ms": 164.38497925632976,
+    "average_nodes": 123482.85363111163,
+    "average_nps": 1418711.6760464571,
+    "average_hashfull": 230.88542514830755
+  },
+  "elo_difference": {
+    "elo": 14.77491240205391,
+    "elo_low": -14.24724834199966,
+    "elo_high": 44.005101783430256
+  },
+  "sprt": {
+    "llr": 0.49,
+    "lower": -2.94,
+    "upper": 2.94
+  },
+  "stopped_by_sprt": false,
+  "verdict": {
+    "label": "Résultat non concluant",
+    "detail": "Le test séquentiel n'a atteint aucune de ses bornes et l'intervalle de confiance contient zéro : il faut plus de parties pour conclure."
+  },
+  "warnings": []
+}

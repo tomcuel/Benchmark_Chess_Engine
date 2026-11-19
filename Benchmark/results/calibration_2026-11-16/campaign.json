@@ -1,0 +1,73 @@
+{
+  "directory": "results/calibration_2026-11-16",
+  "date": "2026-11-16 20:03",
+  "config": {
+    "name": "calibration",
+    "mode": "gauntlet",
+    "fastchess": "Benchmark/tools/fastchess-src/fastchess",
+    "time_control": "8+0.08",
+    "concurrency": 4,
+    "bench_depth": 6,
+    "max_moves": 200,
+    "draw_adjudication": {
+      "movenumber": 40,
+      "movecount": 8,
+      "score": 10
+    },
+    "resign_adjudication": {
+      "movecount": 4,
+      "score": 700,
+      "twosided": true
+    },
+    "engine": {
+      "name": "CleanedChess",
+      "version": "1.0",
+      "cmd": "Chess_Engine/UCI/UCI.x",
+      "book_file": "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt",
+      "options": {
+        "Hash": 64,
+        "OwnBook": true,
+        "BookPlies": 10
+      },
+      "sha256": "80b2c622cfee9d9e8f6c193aa39eacfa7ffceec33e7244f699af31933ce48a6c"
+    },
+    "stockfish": {
+      "cmd": "/opt/homebrew/bin/stockfish",
+      "elo_levels": [
+        1320,
+        1400,
+        1600,
+        1800,
+        2000,
+        2200
+      ],
+      "options": {
+        "Threads": 1,
+        "Hash": 16
+      }
+    },
+    "baseline": null,
+    "sprt": {
+      "elo0": 0,
+      "elo1": 10,
+      "alpha": 0.05,
+      "beta": 0.05
+    },
+    "openings": {
+      "plies": 10
+    },
+    "games": 120,
+    "config_file": "Benchmark/configs/calibration.json"
+  },
+  "bench": {
+    "depth": 6,
+    "positions": 10,
+    "nodes": 4496502,
+    "quiescence_nodes": 3411676,
+    "transposition_hits": 39502,
+    "beta_cutoffs": 170216,
+    "first_move_cutoff_percent": 75,
+    "time_ms": 7498,
+    "nps": 599693
+  }
+}

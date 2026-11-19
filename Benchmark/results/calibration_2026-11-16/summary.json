@@ -1,0 +1,171 @@
+{
+  "planned_games": 120,
+  "played_games": 120,
+  "counted_games": 118,
+  "complete": true,
+  "wins": 52,
+  "draws": 8,
+  "losses": 58,
+  "score": 0.4745762711864407,
+  "opponents": {
+    "SF1320": {
+      "games": 20,
+      "score": 0.725,
+      "stderr": 0.09666307464590602,
+      "elo": 168.40212509629242,
+      "elo_low": 24.737699553206465,
+      "elo_high": 411.5973571181573,
+      "wins": 14,
+      "draws": 1,
+      "losses": 5,
+      "white_points": 8.5,
+      "white_games": 10,
+      "black_points": 6.0,
+      "black_games": 10,
+      "plies": 1397,
+      "rating": 1320,
+      "average_plies": 69.85
+    },
+    "SF1400": {
+      "games": 20,
+      "score": 0.95,
+      "stderr": 0.03354101966249685,
+      "elo": 511.50144038113143,
+      "elo_low": 353.23792427740057,
+      "elo_high": Infinity,
+      "wins": 18,
+      "draws": 2,
+      "losses": 0,
+      "white_points": 10.0,
+      "white_games": 10,
+      "black_points": 9.0,
+      "black_games": 10,
+      "plies": 1651,
+      "rating": 1400,
+      "average_plies": 82.55
+    },
+    "SF1600": {
+      "games": 20,
+      "score": 0.425,
+      "stderr": 0.10170422803403996,
+      "elo": -52.51156585572756,
+      "elo_low": -214.19112940876488,
+      "elo_high": 88.25069488778341,
+      "wins": 7,
+      "draws": 3,
+      "losses": 10,
+      "white_points": 5.0,
+      "white_games": 10,
+      "black_points": 3.5,
+      "black_games": 10,
+      "plies": 2340,
+      "rating": 1600,
+      "average_plies": 117.0
+    },
+    "SF1800": {
+      "games": 19,
+      "score": 0.39473684210526316,
+      "stderr": 0.10900549789446536,
+      "elo": -74.25463078476466,
+      "elo_low": -262.1412904397777,
+      "elo_high": 76.52958069260679,
+      "wins": 7,
+      "draws": 1,
+      "losses": 11,
+      "white_points": 4.0,
+      "white_games": 10,
+      "black_points": 3.5,
+      "black_games": 9,
+      "plies": 1804,
+      "rating": 1800,
+      "average_plies": 94.94736842105263
+    },
+    "SF2000": {
+      "games": 20,
+      "score": 0.2,
+      "stderr": 0.0894427190999916,
+      "elo": -240.82399653118495,
+      "elo_low": -638.6322555966997,
+      "elo_high": -88.51144944084167,
+      "wins": 4,
+      "draws": 0,
+      "losses": 16,
+      "white_points": 3.0,
+      "white_games": 10,
+      "black_points": 1.0,
+      "black_games": 10,
+      "plies": 1947,
+      "rating": 2000,
+      "average_plies": 97.35
+    },
+    "SF2200": {
+      "games": 19,
+      "score": 0.13157894736842105,
+      "stderr": 0.07294844366905093,
+      "elo": -327.8175742167475,
+      "elo_low": -Infinity,
+      "elo_high": -168.78752714265337,
+      "wins": 2,
+      "draws": 1,
+      "losses": 16,
+      "white_points": 2.0,
+      "white_games": 10,
+      "black_points": 0.5,
+      "black_games": 9,
+      "plies": 1943,
+      "rating": 2200,
+      "average_plies": 102.26315789473684
+    }
+  },
+  "terminations": {
+    "arrêt par adjudication (gain)": 88,
+    "mat": 22,
+    "nulle par répétition": 6,
+    "perte au temps": 2,
+    "nulle par la règle des 50 coups": 1,
+    "pat": 1
+  },
+  "engine_technical_losses": [],
+  "opponent_technical_losses": [
+    {
+      "opponent": "SF2200",
+      "reason": "White loses on time (6ms overrun)"
+    },
+    {
+      "opponent": "SF1800",
+      "reason": "White loses on time (31ms overrun)"
+    }
+  ],
+  "unfinished_games": 0,
+  "replayed_games": 0,
+  "search": {
+    "searched_moves": 5406,
+    "book_moves": 257,
+    "average_depth": 5.2469478357380686,
+    "average_time_ms": 184.49778024417313,
+    "average_nodes": 62394.949315575286,
+    "average_nps": 660152.3318867924,
+    "average_hashfull": 84.27580466148724
+  },
+  "rating": {
+    "games": 118,
+    "score": 0.4745762711864407,
+    "elo": 1672.9761649015036,
+    "margin": 88.56775885687031
+  },
+  "rating_white": {
+    "games": 60,
+    "score": 0.5416666666666666,
+    "elo": 1760.6392438441621,
+    "margin": 127.53708315295734
+  },
+  "rating_black": {
+    "games": 58,
+    "score": 0.4051724137931034,
+    "elo": 1583.940540360657,
+    "margin": 120.73115381973653
+  },
+  "warnings": [
+    "Résultats non monotones : meilleur score contre 1400 que contre 1320. L'échelle de Stockfish bridé est peu fiable à cadence rapide, ou l'échantillon est trop petit."
+  ]
+}
