@@ -1,0 +1,21 @@
+# macOS and editors
+.DS_Store
+.vscode/
+
+# build products of the engine
+Chess_Engine/UCI/build/
+*.o
+*.d
+*.x
+
+# Python
+__pycache__/
+
+# versions of the engine kept as references : macOS arm64 binaries, recreated with "python3 benchmark.py --snapshot <name>"
+Benchmark/engines/
+
+# internal files of Fastchess in each campaign : state used to resume, raw output
+Benchmark/results/*/fastchess_state.json
+Benchmark/results/*/fastchess_output.txt
+Benchmark/results/*/fastchess.log
+Benchmark/results/*/config.json
