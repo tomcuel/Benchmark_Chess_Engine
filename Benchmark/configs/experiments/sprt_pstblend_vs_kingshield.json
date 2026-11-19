@@ -1,0 +1,12 @@
+{
+  "name": "sprt_pstblend_vs_kingshield",
+  "mode": "sprt",
+  "games": 400,
+  "time_control": "8+0.08",
+  "concurrency": 4,
+  "bench_depth": 6,
+  "engine": {"name": "CleanedChess-pstblend", "version": "pstblend", "cmd": "engines/pstblend/UCI.x", "options": {"Hash": 64}},
+  "baseline": {"name": "CleanedChess-kingshield", "version": "kingshield", "cmd": "engines/kingshield/UCI.x", "options": {"Hash": 64}},
+  "sprt": {"elo0": 0, "elo1": 10, "alpha": 0.05, "beta": 0.05},
+  "openings": {"plies": 10}
+}

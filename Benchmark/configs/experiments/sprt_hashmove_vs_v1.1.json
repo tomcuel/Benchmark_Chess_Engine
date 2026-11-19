@@ -1,0 +1,12 @@
+{
+  "name": "sprt_hashmove_vs_v1.1",
+  "mode": "sprt",
+  "games": 400,
+  "time_control": "8+0.08",
+  "concurrency": 4,
+  "bench_depth": 6,
+  "engine": {"name": "CleanedChess-hashmove", "version": "hashmove", "cmd": "engines/hashmove/UCI.x", "options": {"Hash": 64}},
+  "baseline": {"name": "CleanedChess-v1.1", "version": "v1.1", "cmd": "engines/v1.1/UCI.x", "options": {"Hash": 64}},
+  "sprt": {"elo0": 0, "elo1": 10, "alpha": 0.05, "beta": 0.05},
+  "openings": {"plies": 10}
+}

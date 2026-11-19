@@ -1,0 +1,29 @@
+{
+  "name": "quick",
+  "mode": "gauntlet",
+  "games": 20,
+  "time_control": "2+0.02",
+  "concurrency": 4,
+  "bench_depth": 5,
+  "engine": {
+    "name": "CleanedChess",
+    "version": "1.2",
+    "cmd": "../Chess_Engine/UCI/UCI.x",
+    "options": {
+      "Hash": 64,
+      "OwnBook": true,
+      "BookPlies": 10
+    }
+  },
+  "stockfish": {
+    "cmd": "/opt/homebrew/bin/stockfish",
+    "elo_levels": [
+      1400,
+      1800
+    ],
+    "options": {
+      "Threads": 1,
+      "Hash": 16
+    }
+  }
+}

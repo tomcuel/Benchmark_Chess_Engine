@@ -1,0 +1,12 @@
+{
+  "name": "sprt_matescore_vs_ttage",
+  "mode": "sprt",
+  "games": 400,
+  "time_control": "8+0.08",
+  "concurrency": 4,
+  "bench_depth": 6,
+  "engine": {"name": "CleanedChess-matescore", "version": "matescore", "cmd": "engines/matescore/UCI.x", "options": {"Hash": 64}},
+  "baseline": {"name": "CleanedChess-ttage", "version": "ttage", "cmd": "engines/ttage/UCI.x", "options": {"Hash": 64}},
+  "sprt": {"elo0": 0, "elo1": 10, "alpha": 0.05, "beta": 0.05},
+  "openings": {"plies": 10}
+}

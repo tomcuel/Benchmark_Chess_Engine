@@ -1,0 +1,12 @@
+{
+  "name": "sprt_speed_vs_matescore",
+  "mode": "sprt",
+  "games": 400,
+  "time_control": "8+0.08",
+  "concurrency": 4,
+  "bench_depth": 6,
+  "engine": {"name": "CleanedChess-speed", "version": "speed", "cmd": "engines/speed/UCI.x", "options": {"Hash": 64}},
+  "baseline": {"name": "CleanedChess-matescore", "version": "matescore", "cmd": "engines/matescore/UCI.x", "options": {"Hash": 64}},
+  "sprt": {"elo0": 0, "elo1": 10, "alpha": 0.05, "beta": 0.05},
+  "openings": {"plies": 10}
+}

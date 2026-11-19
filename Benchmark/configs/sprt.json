@@ -1,0 +1,33 @@
+{
+  "name": "sprt",
+  "mode": "sprt",
+  "games": 400,
+  "time_control": "8+0.08",
+  "concurrency": 4,
+  "bench_depth": 6,
+  "engine": {
+    "name": "CleanedChess-new",
+    "version": "en cours",
+    "cmd": "../Chess_Engine/UCI/UCI.x",
+    "options": {
+      "Hash": 64
+    }
+  },
+  "baseline": {
+    "name": "CleanedChess-v1.2",
+    "version": "1.2",
+    "cmd": "engines/v1.2/UCI.x",
+    "options": {
+      "Hash": 64
+    }
+  },
+  "sprt": {
+    "elo0": 0,
+    "elo1": 10,
+    "alpha": 0.05,
+    "beta": 0.05
+  },
+  "openings": {
+    "plies": 10
+  }
+}
