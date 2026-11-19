@@ -30,9 +30,10 @@
  * @param is_captures_only : if we want to order only the captures (less time consuming)
  * @param valid_moves : the valid moves to order
  * @param nb_moves : the number of valid moves
+ * @param hash_move : the best move already found for this position (from the transposition tables), tried first, 0 if there is none
 **/
 /////////////////////////////////////////////////////////////////////////////////////
-void order_moves(bool is_captures_only, const move* valid_moves, int nb_moves);
+void order_moves(bool is_captures_only, move* valid_moves, int nb_moves, move hash_move);
 
 
 /////////////////////////////////////////////////////////////////////////////////////

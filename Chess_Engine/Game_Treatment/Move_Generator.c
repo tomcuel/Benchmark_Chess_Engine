@@ -5,6 +5,7 @@ bool are_they_possible_moves() {
 
     // no need to have a great move generation algorithm, because it's not a function that is called during the AI search
 
+
     // going through all the from and to index to check if there is a possible move
     for (int from_index = 0; from_index < NUMBER_SQUARES; from_index++) {
 
@@ -173,6 +174,32 @@ int is_game_over(int color) {
 }
 
 
+// the AI only looks at the promotions to a queen, but all the legal moves are needed to check the move generation (perft)
+bool are_under_promotions_generated = false;
+
+
+// Function to add the promotions to a rook, a bishop and a knight of a pawn move to the valid moves array
+static move* add_under_promotions(move* valid_moves, int* nb_moves, int from_index, int to_index) {
+
+    int under_promotion_flags[3] = {Promote_To_Rook_Flag, Promote_To_Bishop_Flag, Promote_To_Knight_Flag};
+    for (int i = 0; i < 3; i++) {
+        // reallocating the valid moves array if needed
+        if (*nb_moves >= max_size_valid_moves_array) {
+            valid_moves = realloc(valid_moves, max_size_valid_moves_array_extended * sizeof(int*));
+            // looking for realloc errors
+            if (valid_moves == NULL) {
+                printf("Error: not enough memory to reallocate the valid moves array\n");
+                return NULL;
+            }
+        }
+        valid_moves[*nb_moves] = get_move_value(from_index, to_index, under_promotion_flags[i]);
+        (*nb_moves)++;
+    }
+    return valid_moves;
+
+}
+
+
 move* generate_all_possible_moves(int* nb_moves) {
 
     // putting back the number of moves to 0
@@ -184,6 +211,9 @@ move* generate_all_possible_moves(int* nb_moves) {
         printf("Error: not enough memory to allocate the valid moves array\n");
         return NULL;
     }
+
+    // an en passant is only possible right after a pawn of the opponent moved two squares, so we look at it once for all the pieces
+    bool is_en_passant_to_look_at = (chess_log->actual_size > 0 && get_flag(chess_log->moves[chess_log->actual_size-1]->move_value) == Pawn_Two_Up_Flag);
 
     // going through all the from and to index to check if there is a possible move
     for (int from_index = 0; from_index < NUMBER_SQUARES; from_index++) {
@@ -207,10 +237,10 @@ move* generate_all_possible_moves(int* nb_moves) {
         // looking for en passant or castle moves
         if (game_settings->color_of_player_that_is_playing == WHITE) {
             // if a left en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(WHITE, bitboards, from_index, from_index+7, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(WHITE, bitboards, from_index, from_index+7, chess_log)) {
                 int to_index = from_index+7;
-                int flag = No_Flag;
-                int piece_taken_type = NOTHING;
+                int flag = En_Passant_Flag;
+                int piece_taken_type = PAWN_BLACK;
                 // adding into a move value the information of the move                    
                 int move_value = get_move_value(from_index, to_index, flag);
                 // udpate the first part of the log 
@@ -242,7 +272,7 @@ move* generate_all_possible_moves(int* nb_moves) {
                 }
             }
             // if a right en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(WHITE, bitboards, from_index, from_index+9, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(WHITE, bitboards, from_index, from_index+9, chess_log)) {
                 int to_index = from_index+9;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_BLACK;
@@ -280,7 +310,7 @@ move* generate_all_possible_moves(int* nb_moves) {
             if (from_index == 4) {
                 // if a queen side castle is possible, we add it to the valid moves
                 if (is_castle_possible(WHITE, bitboards, 4, 2, chess_log)) {
-                    int to_index = 4;
+                    int to_index = 2;
                     int flag = Castle_Flag;
                     // adding into a move value the information of the move
                     int move_value = get_move_value(from_index, to_index, flag);
@@ -322,7 +352,7 @@ move* generate_all_possible_moves(int* nb_moves) {
         }
         else if (game_settings->color_of_player_that_is_playing == BLACK) {
             // if a left en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(BLACK, bitboards, from_index, from_index-9, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(BLACK, bitboards, from_index, from_index-9, chess_log)) {
                 int to_index = from_index-9;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_WHITE;
@@ -357,7 +387,7 @@ move* generate_all_possible_moves(int* nb_moves) {
                 }
             }
             // if a right en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(BLACK, bitboards, from_index, from_index-7, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(BLACK, bitboards, from_index, from_index-7, chess_log)) {
                 int to_index = from_index-7;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_WHITE;
@@ -496,6 +526,13 @@ move* generate_all_possible_moves(int* nb_moves) {
                     // incrementing the number of moves
                     valid_moves[*nb_moves] = move_value;
                     (*nb_moves)++;
+                    // the same move with the other promotions (the pawn moves the same way, so the move is as legal as the promotion to a queen)
+                    if (flag == Promote_To_Queen_Flag && are_under_promotions_generated) {
+                        valid_moves = add_under_promotions(valid_moves, nb_moves, from_index, to_index);
+                        if (valid_moves == NULL) {
+                            return NULL;
+                        }
+                    }
                 }
             }
         }
@@ -518,7 +555,7 @@ move* generate_all_possible_moves(int* nb_moves) {
                 if (has_pawn_moved_two_squares(BLACK, bitboards, from_index, to_index)) {
                     flag = Pawn_Two_Up_Flag;
                 }
-                else if (is_promotion_possible(WHITE, bitboards, from_index, to_index)) {
+                else if (is_promotion_possible(BLACK, bitboards, from_index, to_index)) {
                     flag = Promote_To_Queen_Flag;
                 }
                 // if the move is a capture, we need to know if it's a capture, to play the sound of the capture (not needed when we will consider the AI move as a useful part)
@@ -559,6 +596,13 @@ move* generate_all_possible_moves(int* nb_moves) {
                     // incrementing the number of moves
                     valid_moves[*nb_moves] = move_value;
                     (*nb_moves)++;
+                    // the same move with the other promotions (the pawn moves the same way, so the move is as legal as the promotion to a queen)
+                    if (flag == Promote_To_Queen_Flag && are_under_promotions_generated) {
+                        valid_moves = add_under_promotions(valid_moves, nb_moves, from_index, to_index);
+                        if (valid_moves == NULL) {
+                            return NULL;
+                        }
+                    }
                 }
             }
         }
@@ -995,6 +1039,9 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
         return NULL;
     }
 
+    // an en passant is only possible right after a pawn of the opponent moved two squares, so we look at it once for all the pieces
+    bool is_en_passant_to_look_at = (chess_log->actual_size > 0 && get_flag(chess_log->moves[chess_log->actual_size-1]->move_value) == Pawn_Two_Up_Flag);
+
     // going through all the from and to index to check if there is a possible move
     for (int from_index = 0; from_index < NUMBER_SQUARES; from_index++) {
 
@@ -1017,7 +1064,7 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
         // looking for en passant or castle moves
         if (game_settings->color_of_player_that_is_playing == WHITE) {
             // if a left en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(WHITE, bitboards, from_index, from_index+7, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(WHITE, bitboards, from_index, from_index+7, chess_log)) {
                 int to_index = from_index+7;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_BLACK;
@@ -1052,7 +1099,7 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
                 }
             }
             // if a right en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(WHITE, bitboards, from_index, from_index+9, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(WHITE, bitboards, from_index, from_index+9, chess_log)) {
                 int to_index = from_index+9;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_BLACK;
@@ -1089,7 +1136,7 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
         }
         else if (game_settings->color_of_player_that_is_playing == BLACK) {
             // if a left en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(BLACK, bitboards, from_index, from_index-9, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(BLACK, bitboards, from_index, from_index-9, chess_log)) {
                 int to_index = from_index-9;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_WHITE;
@@ -1124,7 +1171,7 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
                 }
             }
             // if a right en passant is possible, we simulate the move and add it to the valid moves if the player is not in check after the move
-            if (is_en_passant_possible(BLACK, bitboards, from_index, from_index-7, chess_log)) {
+            if (is_en_passant_to_look_at && is_en_passant_possible(BLACK, bitboards, from_index, from_index-7, chess_log)) {
                 int to_index = from_index-7;
                 int flag = En_Passant_Flag;
                 int piece_taken_type = PAWN_WHITE;
@@ -1219,6 +1266,13 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
                     // incrementing the number of moves
                     valid_moves[*nb_moves] = move_value;
                     (*nb_moves)++;
+                    // the same move with the other promotions (the pawn moves the same way, so the move is as legal as the promotion to a queen)
+                    if (flag == Promote_To_Queen_Flag && are_under_promotions_generated) {
+                        valid_moves = add_under_promotions(valid_moves, nb_moves, from_index, to_index);
+                        if (valid_moves == NULL) {
+                            return NULL;
+                        }
+                    }
                 }
             }
         }
@@ -1241,7 +1295,7 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
                 if (has_pawn_moved_two_squares(BLACK, bitboards, from_index, to_index)) {
                     flag = Pawn_Two_Up_Flag;
                 }
-                else if (is_promotion_possible(WHITE, bitboards, from_index, to_index)) {
+                else if (is_promotion_possible(BLACK, bitboards, from_index, to_index)) {
                     flag = Promote_To_Queen_Flag;
                 }
                 // if the move is a capture, we need to know if it's a capture, to play the sound of the capture (not needed when we will consider the AI move as a useful part)
@@ -1282,6 +1336,13 @@ move* generate_all_possible_moves_that_capture(int* nb_moves) {
                     // incrementing the number of moves
                     valid_moves[*nb_moves] = move_value;
                     (*nb_moves)++;
+                    // the same move with the other promotions (the pawn moves the same way, so the move is as legal as the promotion to a queen)
+                    if (flag == Promote_To_Queen_Flag && are_under_promotions_generated) {
+                        valid_moves = add_under_promotions(valid_moves, nb_moves, from_index, to_index);
+                        if (valid_moves == NULL) {
+                            return NULL;
+                        }
+                    }
                 }
             }
         }
@@ -1713,10 +1774,8 @@ void make_move_AI(move move_value) {
     int from_index = get_from_square(move_value);
     int to_index = get_to_square(move_value);
     int flag = get_flag(move_value);
-    bool is_pawn_promotion_happening = false;
-    if (flag == Promote_To_Queen_Flag) {
-        is_pawn_promotion_happening = true;
-    }
+    // the promotion can be to a queen (the only one chosen by the AI), but also to a rook, a bishop or a knight when the move comes from the opponent
+    bool is_pawn_promotion_happening = is_promotion_flag(flag);
 
     // getting the type of the captured piece (wether by an en passant or a normal capture)
     int piece_taken_type = NOTHING;
@@ -1735,14 +1794,14 @@ void make_move_AI(move move_value) {
     // all put in a make move function
     make_move(from_index, to_index, flag, type_move_legal_attacking);
     if (is_pawn_promotion_happening) {
-        // the AI will always promote to a queen
-        add_flag_to_move(&chess_log->moves[chess_log->actual_size-1]->move_value, Promote_To_Queen_Flag);
+        // the pawn is replaced by the piece chosen in the flag of the move (the AI itself always promotes to a queen)
+        int promoted_piece_type = get_type_of_promoted_piece(flag, game_settings->color_of_player_that_is_playing);
         if (game_settings->color_of_player_that_is_playing == WHITE) {
-            bitboards[QUEEN_WHITE] |= (1ULL << to_index);
+            bitboards[promoted_piece_type] |= (1ULL << to_index);
             bitboards[PAWN_WHITE] &= ~(1ULL << to_index);
         }
         else if (game_settings->color_of_player_that_is_playing == BLACK) {
-            bitboards[QUEEN_BLACK] |= (1ULL << to_index);
+            bitboards[promoted_piece_type] |= (1ULL << to_index);
             bitboards[PAWN_BLACK] &= ~(1ULL << to_index);
         }
     }

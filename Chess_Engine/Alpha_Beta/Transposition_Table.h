@@ -49,6 +49,7 @@ typedef struct TT_entry {
     int value; // the value of the position
     int cut_flag; // the type of cut in the alpha-beta pruning has been made (EXACT, ALPHA_CUT, BETA_CUT)
     move move; // the move that is going to have this value, this cut, etc.
+    uint8_t age; // the number of the search that wrote this entry (to know if it comes from an older search)
 } TT_entry;
 
 
@@ -75,6 +76,8 @@ extern bit_board* en_passant_file_hash; // the file where the opposition pawn mo
 // Declares the Transposition Tables as extern so they can be accessed in other files
 /////////////////////////////////////////////////////////////////////////////////
 extern TT* transposition_tables;
+// the number of the current search (it changes at each new search, see start_new_search_in_TT)
+extern uint8_t transposition_tables_age;
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -102,6 +105,14 @@ void free_random_transposition_tables();
 // Function to initialize the transposition tables
 /////////////////////////////////////////////////////////////////////////////////////
 void initialize_transposition_tables(int MB_size);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Function to tell the transposition tables that a new search starts
+// the entries written by the previous searches can then be replaced by the ones of the new search, even if they were searched deeper :
+// most of them are positions that can't be reached anymore, and they would otherwise fill the tables forever
+/////////////////////////////////////////////////////////////////////////////////////
+void start_new_search_in_TT();
 
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -136,6 +147,19 @@ int get_index_zobrist_in_TT(bit_board zobrist_key);
 
 
 /////////////////////////////////////////////////////////////////////////////////////
+// Functions to convert a mate score between "counted from the root of the search" (used in the search)
+// and "counted from the position itself" (kept in the transposition tables, since the same position can be found at different depths)
+/**
+ * @param value : the score to convert (it's only changed if it's a mate score)
+ * @param ply_from_root : the number of half-moves between the root of the search and the position
+ * @return the converted score
+**/
+/////////////////////////////////////////////////////////////////////////////////////
+int correct_mate_score_for_storage(int value, int ply_from_root);
+int correct_retrieved_mate_score(int value, int ply_from_root);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
 // Function to lookup for an evaluation in the transposition tables (of if not found)
 /**
  * @param index_in_TT the index of the
@@ -157,12 +181,13 @@ int lookup_for_evaluation_in_TT(int index_in_TT, bit_board zobrist_key, int ply_
  * @param zobrist_key the zobrist key of the position
  * @param ply_remaining the remaining ply to search
  * @param ply_from_root the ply from the root
+ * @param ply_from_root : the number of half-moves between the root of the search and this position (to store the mate scores)
  * @param value the value of the position
  * @param cut_flag the type of cut in the alpha-beta pruning has been made (EXACT, ALPHA_CUT, BETA_CUT)
  * @param best_move the best move to play
 **/
 /////////////////////////////////////////////////////////////////////////////////////
-void store_evaluation_in_TT(int index_in_TT, bit_board zobrist_key, int ply_remaining, int value, int cut_flag, move best_move);
+void store_evaluation_in_TT(int index_in_TT, bit_board zobrist_key, int ply_remaining, int ply_from_root, int value, int cut_flag, move best_move);
 
 
 /////////////////////////////////////////////////////////////////////////////////////

@@ -289,6 +289,15 @@ void initialize_attacks() {
 }
 
 
+// Function to get the bitboard with only the given square, or an empty one if the square is outside of the board
+// (shifting a 64 bits integer by a negative number or by 64 and more isn't defined in C)
+static inline bit_board square_mask(int square) {
+
+    return (square >= 0 && square < NUMBER_SQUARES) ? (1ULL << square) : 0ULL;
+
+}
+
+
 bit_board calculate_pawn_moves_with_blockers(int pawn_pos, int color_moving, bit_board all_pieces) {
 
     bit_board pawn_move = precomputed_pawn_moves[color_moving][pawn_pos];
@@ -298,42 +307,42 @@ bit_board calculate_pawn_moves_with_blockers(int pawn_pos, int color_moving, bit
     // for the white pawns 
     if (color_moving == WHITE) {
         // if the square in front of the pawn is occupied, the pawn can't move there
-        if ((all_pieces & (1ULL << (pawn_pos + 8)))) {
-            pawn_move &= ~(1ULL << (pawn_pos + 8));
-            pawn_move &= ~(1ULL << (pawn_pos + 16));
+        if ((all_pieces & square_mask(pawn_pos + 8))) {
+            pawn_move &= ~square_mask(pawn_pos + 8);
+            pawn_move &= ~square_mask(pawn_pos + 16);
         }
         // else we look if the pawn is on the starting rank and if the square two squares in front of the pawn is occupied
-        else if (rank == 1 && (all_pieces & (1ULL << (pawn_pos + 16)))) {
-            pawn_move &= ~(1ULL << (pawn_pos + 16));
+        else if (rank == 1 && (all_pieces & square_mask(pawn_pos + 16))) {
+            pawn_move &= ~square_mask(pawn_pos + 16);
         }
         // looking for the left diagonal capture not possible (left edge or no piece to capture)
-        if (file == 0 || !(all_pieces & (1ULL << (pawn_pos + 7)))) {
-            pawn_move &= ~(1ULL << (pawn_pos + 7));
+        if (file == 0 || !(all_pieces & square_mask(pawn_pos + 7))) {
+            pawn_move &= ~square_mask(pawn_pos + 7);
         }
         // looking for the right diagonal capture not possible (right edge or no piece to capture)
-        if (file == 7 || !(all_pieces & (1ULL << (pawn_pos + 9)))) {
-            pawn_move &= ~(1ULL << (pawn_pos + 9));
+        if (file == 7 || !(all_pieces & square_mask(pawn_pos + 9))) {
+            pawn_move &= ~square_mask(pawn_pos + 9);
         }
     }
 
     // for the black pawns 
     if (color_moving == BLACK) {
         // if the square in front of the pawn is occupied, the pawn can't move there
-        if ((all_pieces & (1ULL << (pawn_pos - 8)))) {
-            pawn_move &= ~(1ULL << (pawn_pos - 8));
-            pawn_move &= ~(1ULL << (pawn_pos - 16));
+        if ((all_pieces & square_mask(pawn_pos - 8))) {
+            pawn_move &= ~square_mask(pawn_pos - 8);
+            pawn_move &= ~square_mask(pawn_pos - 16);
         }
         // else we look if the pawn is on the starting rank and if the square two squares in front of the pawn is occupied
-        else if (rank == 6 && (all_pieces & (1ULL << (pawn_pos - 16)))) {
-            pawn_move &= ~(1ULL << (pawn_pos - 16));
+        else if (rank == 6 && (all_pieces & square_mask(pawn_pos - 16))) {
+            pawn_move &= ~square_mask(pawn_pos - 16);
         }
         // looking for the left diagonal capture not possible (left edge or no piece to capture)
-        if (file == 0 || !(all_pieces & (1ULL << (pawn_pos - 9)))) {
-            pawn_move &= ~(1ULL << (pawn_pos - 9));
+        if (file == 0 || !(all_pieces & square_mask(pawn_pos - 9))) {
+            pawn_move &= ~square_mask(pawn_pos - 9);
         }
         // looking for the right diagonal capture not possible (right edge or no piece to capture)
-        if (file == 7 || !(all_pieces & (1ULL << (pawn_pos - 7)))) {
-            pawn_move &= ~(1ULL << (pawn_pos - 7));
+        if (file == 7 || !(all_pieces & square_mask(pawn_pos - 7))) {
+            pawn_move &= ~square_mask(pawn_pos - 7);
         }
     }
     
@@ -677,7 +686,7 @@ int get_king_index(const bit_board* bitboard_array, int color) {
 }
 
 
-bool is_case_threatened(int color, int case_index, const bit_board* bitboard_array, Log* log) {
+bool is_case_threatened(int color, int case_index, const bit_board* bitboard_array, const Log* log) {
 
     // look for en passant (the out of range will be dealt with in the is_en_passant_possible function)
     if (is_en_passant_possible(BLACK, bitboard_array, case_index, case_index + 7, log)) {
@@ -886,7 +895,10 @@ bool is_castle_possible(int color, const bit_board* bitboard_array, int from, in
             if (bitboard_array[BLACK_PIECES] & (1ULL << 59) || bitboard_array[BLACK_PIECES] & (1ULL << 58) || bitboard_array[BLACK_PIECES] & (1ULL << 57)) {
                 return false;
             }
-            // if a white piece is on the squares 59 or 58, the castle is not possible
+            // if a white piece is on the squares 59 or 58 or 57, the castle is not possible
+            if (bitboard_array[WHITE_PIECES] & (1ULL << 59) || bitboard_array[WHITE_PIECES] & (1ULL << 58) || bitboard_array[WHITE_PIECES] & (1ULL << 57)) {
+                return false;
+            }
             // check if the squares between the king and the rook are not threatened, but the king need also not to be threatened
             if (is_case_threatened(BLACK, 60, bitboard_array, log)) {
                 return false;
@@ -1031,9 +1043,21 @@ bool will_capture(int color, const bit_board* bitboard_array, int to) {
 
 int get_type_of_piece(const bit_board* bitboard_array, int position_index) {
 
-    for (int i = 0; i < NUMBER_OF_BIBOARD; i++) {
-        if (bitboard_array[i] & (1ULL << position_index) && i != WHITE_PIECES && i != BLACK_PIECES) {
-            return i;
+    // this function is the most called one of the AI search, so we first look at the bitboards with all the pieces of a color :
+    // an empty square is known at once, and for the other ones only the 6 bitboards of the right color are looked at
+    bit_board position_mask = 1ULL << position_index;
+    if (bitboard_array[WHITE_PIECES] & position_mask) {
+        for (int i = PAWN_WHITE; i <= KING_WHITE; i++) {
+            if (bitboard_array[i] & position_mask) {
+                return i;
+            }
+        }
+    }
+    else if (bitboard_array[BLACK_PIECES] & position_mask) {
+        for (int i = PAWN_BLACK; i <= KING_BLACK; i++) {
+            if (bitboard_array[i] & position_mask) {
+                return i;
+            }
         }
     }
 

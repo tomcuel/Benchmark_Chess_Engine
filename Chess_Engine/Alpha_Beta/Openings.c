@@ -1,70 +1,106 @@
 #include "Openings.h"
-#include <unistd.h>
+
+
+// the opening book is kept in memory : one line per game, with the NUMBER_OF_OPENING_MOVES first moves of the game
+// nothing is written on the disk, so several engines can run at the same time without disturbing each other
+static move (*opening_book_lines)[NUMBER_OF_OPENING_MOVES] = NULL;
+static int nb_opening_book_lines = 0;
+// the file with the openings in formal chess language (the path is relative to where the program is launched)
+static char opening_book_path[PATH_MAX] = "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt";
+// the way the opening book is used
+static bool is_opening_book_enabled = true;
+static int opening_book_max_plies = NUMBER_OF_OPENING_MOVES;
+
+
+void set_opening_book_path(const char* path){
+
+    snprintf(opening_book_path, sizeof(opening_book_path), "%s", path);
+
+}
+
+
+void set_opening_book_usage(bool is_enabled, int max_plies){
+
+    is_opening_book_enabled = is_enabled;
+    opening_book_max_plies = int_clamp(max_plies, 0, NUMBER_OF_OPENING_MOVES);
+
+}
+
+
+int get_number_of_opening_book_lines(){
+
+    return nb_opening_book_lines;
+
+}
+
+
+void free_opening_book(){
+
+    free(opening_book_lines);
+    opening_book_lines = NULL;
+    nb_opening_book_lines = 0;
+
+}
+
+
+// Function to know if a piece can legally go from a square to another one in the current position (used to check the moves read in the book)
+static bool is_from_to_playable(int from_square, int to_square){
+
+    if (from_square < 0 || from_square > 63 || to_square < 0 || to_square > 63){
+        return false;
+    }
+    int nb_moves = 0;
+    move* valid_moves = generate_all_possible_moves(&nb_moves);
+    bool is_playable = false;
+    for (int i = 0; i < nb_moves; i++){
+        if (get_from_square(valid_moves[i]) == from_square && get_to_square(valid_moves[i]) == to_square){
+            is_playable = true;
+            break;
+        }
+    }
+    free(valid_moves);
+    return is_playable;
+
+}
 
 
 void load_opening_book(){
 
-/*
-    char cwd[PATH_MAX];
-    if (getcwd(cwd, sizeof(cwd)) != NULL) {
-        printf("Current working directory: %s\n", cwd);
-    } else {
-        perror("getcwd() error");
-    }
-*/
+    // if the book was already loaded, we start again from scratch
+    free_opening_book();
 
-    // Opening the file with all the 8 first openings in formal chess language
+    // Opening the file with all the first moves of the games in formal chess language
     // one thing here that isn't considered is to have two knights for example that goes to the same square, we need to add the rank or file from where it comes, but I don't do that and simply suppress the lines where it happens
-    FILE* formal_file = fopen("Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt", "r");
-    // Creating the opening book with the 8 first openings with move values 
-    FILE* opening_book = fopen("Chess_Engine/Alpha_Beta/Data/Opening_Book_Init.txt", "w");
-
-    // If the file doesn't exist, we need to stop the function
+    FILE* formal_file = fopen(opening_book_path, "r");
+    // If the file doesn't exist, we need to stop the function (the AI will simply play without the opening book)
     if (formal_file == NULL) {
-        printf("Error: Unable to open 'Openings_in_Games.txt'\n");
-    }
-    if (opening_book == NULL) {
-        printf("Error: Unable to open 'Opening_Book_Init.txt'\n");
-    }
-
-    // If one of the files cannot be opened, return
-    if (formal_file == NULL || opening_book == NULL) {
-        if (formal_file != NULL) {
-            fclose(formal_file);
-        }
-        if (opening_book != NULL) {
-            fclose(opening_book);
-        }
+        fprintf(stderr, "Error: Unable to open the opening book '%s'\n", opening_book_path);
         return;
     }
 
     // reading the file with the openings in formal chess language
+    int capacity = 0;
+    int nb_skipped_lines = 0;
+    char opening_move[16];
+    move line_moves[NUMBER_OF_OPENING_MOVES];
     bool is_file_empty = false;
     while (!is_file_empty) {
-        // getting the openings moves
-        char* opening_move = (char*)malloc(10*sizeof(char));
-        // looking for malloc errors
-        if (opening_move == NULL){
-            printf("Error: memory allocation failed in load_opening_book\n");
-            return;
-        }
-        char* opening_move_value = (char*)malloc(10*sizeof(char));
-        // looking for malloc errors
-        if (opening_move_value == NULL){
-            printf("Error: memory allocation failed in load_opening_book\n");
-            return;
-        }
+        int nb_moves_made = 0;
+        bool is_line_valid = true;
         for (int i = 0; i < NUMBER_OF_OPENING_MOVES; i++){
-            fscanf(formal_file, "%s", opening_move);
+            // the end of the file and we break
+            if (fscanf(formal_file, "%15s", opening_move) != 1){
+                is_file_empty = true;
+                break;
+            }
+            // a move of the line wasn't understood, we only read the rest of the line to go to the next one
+            if (!is_line_valid){
+                continue;
+            }
             move move_value = 0;
             int from_square = 0;
             int to_square = 0;
             int flag = No_Flag;
-            // an empty line and we break 
-            if (strcmp(opening_move, "") == 0){
-                is_file_empty = true;
-                break;
-            }
             // if the move is a castle
             if (strcmp(opening_move, "O-O") == 0){
                 from_square = (game_settings->color_of_player_that_is_playing == WHITE) ? 4 : 60;
@@ -101,7 +137,15 @@ void load_opening_book(){
                     }
                 }
                 // getting the square to where the piece is moving
-                to_square = get_index((int)(opening_move[index+1]-'1'), (int)(opening_move[index]-'a'));
+                int to_rank = (int)(opening_move[index+1]-'1');
+                int to_file = (int)(opening_move[index]-'a');
+                // the square isn't on the board, the notation of the move isn't handled, the line will be skipped
+                if (to_rank < 0 || to_rank > 7 || to_file < 0 || to_file > 7){
+                    is_line_valid = false;
+                    nb_skipped_lines++;
+                    continue;
+                }
+                to_square = get_index(to_rank, to_file);
                 
                 // now we need to get from where the piece moved
                 // if the move is a knight move
@@ -280,147 +324,53 @@ void load_opening_book(){
 
             }
 
+            // the notation of some moves isn't handled (ex : N1c3, when the rank from where the piece comes is given)
+            // so we check that the move found can really be played, otherwise the whole line is skipped
+            if (!is_from_to_playable(from_square, to_square)){
+                is_line_valid = false;
+                nb_skipped_lines++;
+                continue;
+            }
+
             move_value = get_move_value(from_square, to_square, flag);
             make_move_AI(move_value);
-            sprintf(opening_move_value, "%d", move_value);
-            fprintf(opening_book, "%s ", opening_move_value);
+            line_moves[i] = move_value;
+            nb_moves_made++;
 
         }
-        
 
-        if (!is_file_empty){
-            // undoing the moves made
-            for (int i = 0; i < NUMBER_OF_OPENING_MOVES; i++){
-                undo_last_move_AI();
+        // undoing the moves made
+        for (int i = 0; i < nb_moves_made; i++){
+            undo_last_move_AI();
+        }
+
+        // adding the line to the opening book only if it's complete
+        if (is_line_valid && nb_moves_made == NUMBER_OF_OPENING_MOVES){
+            if (nb_opening_book_lines == capacity){
+                capacity = (capacity == 0) ? 1024 : 2*capacity;
+                void* new_lines = realloc(opening_book_lines, capacity*sizeof(*opening_book_lines));
+                // looking for malloc errors
+                if (new_lines == NULL){
+                    fprintf(stderr, "Error: memory allocation failed in load_opening_book\n");
+                    break;
+                }
+                opening_book_lines = new_lines;
             }
-            // going to the next line of the opening book
-            fprintf(opening_book, "\n");
+            memcpy(opening_book_lines[nb_opening_book_lines], line_moves, sizeof(line_moves));
+            nb_opening_book_lines++;
         }
-        free(opening_move);
-        free(opening_move_value);
     }
 
-    // closing the files
+    // closing the file
     fclose(formal_file);
-    fclose(opening_book);
-
-    // copying the opening book into the read file
-    copy_file_into_file("Chess_Engine/Alpha_Beta/Data/Opening_Book_Init.txt", "Chess_Engine/Alpha_Beta/Data/Opening_Book_read.txt");
+    if (nb_skipped_lines > 0){
+        fprintf(stderr, "Opening book : %d lines skipped because a move wasn't understood\n", nb_skipped_lines);
+    }
 
     // reset everything 
     reset_bitboards();
     reset_log();
     
-}
-
-
-void copy_file_into_file(const char* copy_from, const char* copy_into){
-    
-    char line[SIZE_LINE_OPENING_BOOK];
-    // loading the data for the opening book write back into the opening book read
-    FILE* file_to_copy_from = fopen(copy_from, "r");
-    FILE* file_to_copy_into = fopen(copy_into, "w");
-    // If the file doesn't exist, we need to stop the function
-    if (file_to_copy_from == NULL) {
-        printf("Error: Unable to open %s\n", copy_from);
-    }
-    if (file_to_copy_into == NULL) {
-        printf("Error: Unable to open %s\n", copy_into);
-    }
-    while (fgets(line, sizeof(line), file_to_copy_from) != NULL){
-        fprintf(file_to_copy_into, "%s", line);
-    }
-    // closing the files
-    fclose(file_to_copy_from);
-    fclose(file_to_copy_into);
-
-}
-
-
-move get_move_in_opening_book_line_at_index(int index, const char* line){
-
-    // Pointer to traverse the line
-    const char* ptr = line; 
-    // Track the search index
-    int search_index = 0;  
-
-    // Iterate through the line to find the value at the specified index
-    while (*ptr != '\0') {
-        int move_value;
-        // Read the integer at the current position
-        if (sscanf(ptr, "%d", &move_value) == 1) {
-            // Return the value if we reached the specified index
-            if (search_index == index) {
-                return (move) move_value; 
-            }
-            // Increment the current index
-            search_index++; 
-        }
-        
-        // Move the pointer past the current integer
-        while (*ptr != ' ' && *ptr != '\0') {
-            ptr++;
-        }
-        // Skip the space
-        if (*ptr == ' ') {
-            ptr++;
-        }
-    }
-    
-    // If the index is out of bounds, return an error value
-    return 0;  // Or handle it as appropriate
-
-}
-
-
-void update_opening_book(){
-
-    // if we're too far in the game, we don't need to update the opening book
-    if (chess_log->actual_size > NUMBER_OF_OPENING_MOVES){
-        return;
-    }
-
-    // Open file for reading and writing
-    FILE *file = fopen("Chess_Engine/Alpha_Beta/Data/Opening_Book_read.txt", "r+");  
-    if (file == NULL) {
-        perror("Error opening file");
-        return ;
-    }
-
-    char line[SIZE_LINE_OPENING_BOOK];
-    // To track where we are reading and writing from in the file
-    long read_pos = 0;    
-    long write_pos = 0;
-    // Read each line, process it, and write back only valid lines
-    while (fgets(line, sizeof(line), file) != NULL) {
-        // Store current read position (after the fgets call)
-        read_pos = ftell(file);  
-
-        // looking if the line does for now match the game
-        int i=0;
-        while(get_move_in_opening_book_line_at_index(i, line) == chess_log->moves[i]->move_value && i<chess_log->actual_size){
-            i++;
-        }
-        // skipping the line if it's not the same
-        if (i != chess_log->actual_size){
-            continue;
-        }
-
-        // Move to the write position
-        fseek(file, write_pos, SEEK_SET);  // Move to the write position
-        // Write the valid line back to the file
-        fputs(line, file);
-        // Update the write position to the end of the newly written line
-        write_pos = ftell(file);
-        // Return to the next read position to continue reading from the correct spot
-        fseek(file, read_pos, SEEK_SET);
-    }
-
-    // Truncate the file to the correct length to remove leftover content
-    ftruncate(fileno(file), write_pos);
-    // closing the file
-    fclose(file);
-
 }
 
 
@@ -438,43 +388,32 @@ bool is_move_in_move_array(move move_value, const move* moves_array, int nb_move
 
 move get_move_from_book(){
 
-    // if we're too far in the game, we need to stop the search in the opening book, because we want to test the AI, not to replicate games
-    if (chess_log->actual_size > NUMBER_OF_OPENING_MOVES){
+    // if the book isn't used, or if we're too far in the game, we need to stop the search in the opening book, because we want to test the AI, not to replicate games
+    if (!is_opening_book_enabled || opening_book_lines == NULL || chess_log->actual_size >= opening_book_max_plies){
         return 0;
     }
 
-    // opening the read file
-    FILE* opening_book_read = fopen("Chess_Engine/Alpha_Beta/Data/Opening_Book_read.txt", "r");
-    // getting the line of the opening book
-    char line[SIZE_LINE_OPENING_BOOK];
-    int max_size = SIZE_LINE_OPENING_BOOK;
-    move* moves__possibles_from_book = (move*)malloc(max_size*sizeof(move));
-    // looking for malloc errors
-    if (moves__possibles_from_book == NULL){
-        printf("Error: memory allocation failed in get_move_from_book\n");
-        return 0;
-    }
+    // the different moves that the book proposes in this position
+    move moves_possibles_from_book[256];
     int nb_moves = 0;
-    // going through the lines of the opening book
-    while (fgets(line, sizeof(line), opening_book_read) != NULL){
-        int i=0;
-        while(get_move_in_opening_book_line_at_index(i, line) == chess_log->moves[i]->move_value && i<chess_log->actual_size){
+    // going through the lines of the opening book, to keep the ones that started like the current game
+    for (int line = 0; line < nb_opening_book_lines; line++){
+        int i = 0;
+        while (i < chess_log->actual_size && opening_book_lines[line][i] == chess_log->moves[i]->move_value){
             i++;
         }
         if (i == chess_log->actual_size){
-            move move_possible = get_move_in_opening_book_line_at_index(chess_log->actual_size, line);
-            if (!is_move_in_move_array(move_possible, moves__possibles_from_book, nb_moves)){
-                moves__possibles_from_book[nb_moves] = move_possible;
+            move move_possible = opening_book_lines[line][chess_log->actual_size];
+            if (nb_moves < 256 && !is_move_in_move_array(move_possible, moves_possibles_from_book, nb_moves)){
+                moves_possibles_from_book[nb_moves] = move_possible;
                 nb_moves++;
             }
         }
     }
-    // closing the file
-    fclose(opening_book_read);
 
     printf("nb_moves : %d\n", nb_moves);
     for (int i = 0; i < nb_moves; i++){
-        printf("move %d : %d\n", i, moves__possibles_from_book[i]);
+        printf("move %d : %d\n", i, moves_possibles_from_book[i]);
     }
     printf("\n");
 
@@ -482,6 +421,6 @@ move get_move_from_book(){
         return 0;
     }
     set_seed();
-    return moves__possibles_from_book[random_int(0, nb_moves - 1)];
+    return moves_possibles_from_book[random_int(0, nb_moves - 1)];
 
 }

@@ -3,6 +3,8 @@
 
 Log* chess_log;
 Bitboards_Log* bitboards_log;
+int log_setup_size = 0;
+int log_setup_halfmove_clock = 0;
 
 
 void create_log() {
@@ -82,6 +84,8 @@ void reset_log() {
 
     // resetting the values
     chess_log->actual_size = 0;
+    log_setup_size = 0;
+    log_setup_halfmove_clock = 0;
     for (int i = 0; i < chess_log->max_size; i++) {
         chess_log->moves[i]->move_value = 0;
         chess_log->moves[i]->captured_piece_type = NOTHING;

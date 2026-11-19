@@ -25,6 +25,58 @@
 
 
 /////////////////////////////////////////////////////////////////////////////////////
+// Time given to the search in milliseconds, when it needs to be imposed (by a benchmark for example)
+// when it's 0 (the default value), the time is chosen with the clock of the game
+/////////////////////////////////////////////////////////////////////////////////////
+extern int forced_think_time_in_ms;
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Maximum depth of the iterative deepening, when it needs to be imposed
+// when it's 0 (the default value), the search only stops with the time
+/////////////////////////////////////////////////////////////////////////////////////
+extern int forced_max_depth;
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// To stop the search from outside of it (from another thread), it stops as soon as possible and gives the best move found until then
+// it needs to be put back to false before starting a new search
+/////////////////////////////////////////////////////////////////////////////////////
+extern volatile bool is_search_stop_requested;
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Function called each time a depth of the iterative deepening is completed (NULL by default, nothing is called)
+/**
+ * @param depth : the depth that has just been completed
+ * @param score : the score of the best move found at this depth
+ * @param best_move_found : the best move found at this depth
+**/
+/////////////////////////////////////////////////////////////////////////////////////
+extern void (*search_iteration_callback)(int depth, int score, move best_move_found);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Structure with the counters of a search, to measure how the search behaves (they are reset at the start of each search)
+/////////////////////////////////////////////////////////////////////////////////////
+typedef struct Search_Statistics {
+    long long nodes; // the number of positions visited (in the main search and in the quiescence search)
+    long long quiescence_nodes; // the part of them visited in the quiescence search
+    long long transposition_hits; // the number of positions whose value was found in the transposition table
+    long long beta_cutoffs; // the number of positions where a move was good enough to stop looking at the other ones (alpha-beta cutoff)
+    long long first_move_beta_cutoffs; // the part of them where it was the first move tried (shows the quality of the move ordering)
+} Search_Statistics;
+extern Search_Statistics search_statistics;
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// To see the draws by repetition of position and by the 50 moves rule in the search (true by default)
+// without it, the AI can repeat a position in a winning game and let the opponent claim the draw
+/////////////////////////////////////////////////////////////////////////////////////
+extern bool is_draw_detection_enabled;
+
+
+/////////////////////////////////////////////////////////////////////////////////////
 // Function to choose the best think for this state of the game
 /**
  * @param color_playing : the color of the player that is playing

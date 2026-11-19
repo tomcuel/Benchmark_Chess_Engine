@@ -15,10 +15,11 @@
 /**
  * A summary of the supported functions is given below:
  * 
- * load_opening_book : Function to load the opening book of all the games, it created the opening book not with values but with move_value structures
- * copy_file_into_file : Function to copy a file into another file
- * get_move_in_opening_book_line_at_index : Function to get the move in the opening book at a certain index in a line
- * update_opening_book : Function to update the opening book after a move has been played from the opening book
+ * set_opening_book_path : Function to choose the file from which the opening book is loaded
+ * set_opening_book_usage : Function to enable or disable the opening book, and to choose how many moves can be taken from it
+ * get_number_of_opening_book_lines : Function to get the number of lines loaded in the opening book
+ * load_opening_book : Function to load the opening book of all the games in memory, it created the opening book not with values but with move_value structures
+ * free_opening_book : Function to free the opening book
  * is_move_in_move_array : Function to check if a move is in an array of moves
  * get_move_from_book : Function to get the move from the opening book
 **/
@@ -26,37 +27,45 @@
 
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Function to load the opening book of all the games, it created the opening book not with values but with move_value structures
+// Function to choose the file from which the opening book is loaded (to call before load_opening_book)
+// by default it's "Chess_Engine/Alpha_Beta/Data/Opening_in_Games.txt", relative to where the program is launched
+/**
+ * @param path : the path of the file with the openings in formal chess language
+**/
+/////////////////////////////////////////////////////////////////////////////////////
+void set_opening_book_path(const char* path);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Function to enable or disable the opening book, and to choose how many moves can be taken from it
+/**
+ * @param is_enabled : true to use the opening book, false otherwise
+ * @param max_plies : the number of half-moves of the game during which the book can be used (at most NUMBER_OF_OPENING_MOVES)
+**/
+/////////////////////////////////////////////////////////////////////////////////////
+void set_opening_book_usage(bool is_enabled, int max_plies);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Function to get the number of lines loaded in the opening book
+/**
+ * @return the number of lines of the opening book (0 if it's not loaded)
+**/
+/////////////////////////////////////////////////////////////////////////////////////
+int get_number_of_opening_book_lines();
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Function to load the opening book of all the games in memory, it created the opening book not with values but with move_value structures
+// the book is only read, the current game is compared to it each time a move is asked, so there is nothing to update during the game
 /////////////////////////////////////////////////////////////////////////////////////
 void load_opening_book();
 
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Function to copy a file into another file
-/**
- * @param copy_from : the file from which we copy
- * @param copy_into : the file into which we copy
-**/
+// Function to free the opening book
 /////////////////////////////////////////////////////////////////////////////////////
-void copy_file_into_file(const char* copy_from, const char* copy_into);
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-// Function to get the move in the opening book at a certain index in a line
-/**
- * @param index : the index of the move in the opening book
- * @param line : the line of the opening book
- * @return the move in the opening book at a certain index
-**/
-/////////////////////////////////////////////////////////////////////////////////////
-move get_move_in_opening_book_line_at_index(int index, const char* line);
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-// Function to update the opening book considering the current game position
-// will be used before and after a level 7 AI play, and well as in different buttons functions of the GUI
-/////////////////////////////////////////////////////////////////////////////////////
-void update_opening_book();
+void free_opening_book();
 
 
 /////////////////////////////////////////////////////////////////////////////////////

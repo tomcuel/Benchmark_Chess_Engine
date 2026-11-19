@@ -14,23 +14,11 @@ void create_game_settings() {
     }
 
     // setting the default values
-    game_settings->game_mode = PLAYER_VS_PLAYER;
-    game_settings->white_player_type = HUMAN;
-    game_settings->black_player_type = HUMAN;
     game_settings->player_that_is_playing = White_Player;
     game_settings->color_of_player_that_is_playing = WHITE;
-    game_settings->loosing_player = Undetermined;
-    game_settings->time_mode = SHORT;
     game_settings->time_at_start = 0;
-    game_settings->blitz_time = 0;
     game_settings->white_time_remaining = 10*60;
     game_settings->black_time_remaining = 10*60;
-    game_settings->is_game_lost_on_time = false;
-    game_settings->has_match_started = false;
-    game_settings->is_game_on_pause = false;
-    game_settings->is_pawn_promotion_happening = false;
-    game_settings->color_of_pawn_promotion = NO_COLOR;
-    game_settings->is_board_reversed = false;
 
 }
 
@@ -38,23 +26,11 @@ void create_game_settings() {
 void reset_game_settings() {
     
     // setting the default values
-    game_settings->game_mode = PLAYER_VS_PLAYER;
-    game_settings->white_player_type = HUMAN;
-    game_settings->black_player_type = HUMAN;
     game_settings->player_that_is_playing = White_Player;
     game_settings->color_of_player_that_is_playing = WHITE;
-    game_settings->loosing_player = Undetermined;
-    game_settings->time_mode = SHORT;
     game_settings->time_at_start = 0;
-    game_settings->blitz_time = 0;
     game_settings->white_time_remaining = 10*60;
     game_settings->black_time_remaining = 10*60;
-    game_settings->is_game_lost_on_time = false;
-    game_settings->has_match_started = false;
-    game_settings->is_game_on_pause = false;
-    game_settings->is_pawn_promotion_happening = false;
-    game_settings->color_of_pawn_promotion = NO_COLOR;
-    game_settings->is_board_reversed = false;
 
 }
 

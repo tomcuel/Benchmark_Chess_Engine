@@ -9,15 +9,21 @@ const int king_pawn_shield_scores[6] = {4, 7, 4, 3, 6, 3};
 
 void piece_square_tables_evaluation(float endgame_white_transition, float endgame_black_transition, int* white_piece_square_tables_score, int* black_piece_square_tables_score){
 
-    for (int i=0; i<64; i++){
+    // for the pawns and the kings, the score goes progressively from the middle game table to the endgame table
+    // (the conversion to an integer applies to the whole blend, not to the transition alone, otherwise the endgame table is never used)
+    // going only through the squares where there is a piece (from the square 0 to the square 63), instead of the 64 squares
+    bit_board occupied_squares = bitboards[WHITE_PIECES] | bitboards[BLACK_PIECES];
+    while (occupied_squares){
+        int i = __builtin_ctzll(occupied_squares);
+        occupied_squares &= occupied_squares - 1;
         int piece = get_type_of_piece(bitboards, i);
         if (piece != NOTHING){
             switch(piece){
                 case PAWN_WHITE:
-                    (*white_piece_square_tables_score) += (int) endgame_white_transition * whitePawn_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_white_transition) * whitePawn_PST[7-get_rank(i)][get_file(i)];
+                    (*white_piece_square_tables_score) += (int)(endgame_white_transition * whitePawn_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_white_transition) * whitePawn_PST[7-get_rank(i)][get_file(i)]);
                     break;
                 case PAWN_BLACK:
-                    (*black_piece_square_tables_score) += (int) endgame_black_transition * blackPawn_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_black_transition) * blackPawn_PST[7-get_rank(i)][get_file(i)];
+                    (*black_piece_square_tables_score) += (int)(endgame_black_transition * blackPawn_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_black_transition) * blackPawn_PST[7-get_rank(i)][get_file(i)]);
                     break;
                 case KNIGHT_WHITE:
                     (*white_piece_square_tables_score) += whiteKnight_PST[7-get_rank(i)][get_file(i)];
@@ -44,10 +50,10 @@ void piece_square_tables_evaluation(float endgame_white_transition, float endgam
                     (*black_piece_square_tables_score) += blackQueen_PST[7-get_rank(i)][get_file(i)];
                     break;
                 case KING_WHITE:
-                    (*white_piece_square_tables_score) += (int) endgame_white_transition * whiteKing_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_white_transition) * whiteKing_PST[7-get_rank(i)][get_file(i)];
+                    (*white_piece_square_tables_score) += (int)(endgame_white_transition * whiteKing_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_white_transition) * whiteKing_PST[7-get_rank(i)][get_file(i)]);
                     break;
                 case KING_BLACK:
-                    (*black_piece_square_tables_score) += (int) endgame_black_transition * blackKing_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_black_transition) * blackKing_PST[7-get_rank(i)][get_file(i)];
+                    (*black_piece_square_tables_score) += (int)(endgame_black_transition * blackKing_PST_end[7-get_rank(i)][get_file(i)] + (1-endgame_black_transition) * blackKing_PST[7-get_rank(i)][get_file(i)]);
                     break;
             }
         }
@@ -113,6 +119,11 @@ bit_board get_pawn_mask(int pawn_position, bit_board pawn_bitboard, int color){
     // getting the rank mask, looking forward (forward means different things for white and black)
     int forward_rank_index = (color == WHITE) ? (rank_index + 1) : (7-(rank_index - 1));
     bit_board rank_mask = 0;
+    // there is no rank in front of the pawn (it's on the last rank), so the mask is empty
+    // (shifting a 64 bits integer by 64 isn't defined in C, it has to be dealt with separately)
+    if (forward_rank_index > 7) {
+        return 0;
+    }
     if (color == WHITE) {
         // getting the rank mask, looking forward
         rank_mask = Full_Bitboard_mask << (forward_rank_index * 8);
@@ -171,7 +182,7 @@ int evaluate_pawns(int color, int nb_pawns, bit_board friendly_pawn_bitboard, bi
 
 int mop_up_score(int color, int friendly_material, int opponent_material, float opponent_endgame_transition){
 
-    // if the friendly material is less than the opponent material, we need to push the king closer to the opponent king
+    // if the friendly side is ahead in the endgame, bring its king closer to the opponent king and push the opponent king to the edge
     if (friendly_material > opponent_material + 2*PAWN_VALUE && opponent_endgame_transition > 0.3){
         
         int mop_up_score = 0;
@@ -184,7 +195,7 @@ int mop_up_score(int color, int friendly_material, int opponent_material, float 
         // encouraging the friendly king to go closer to the opponent king
         mop_up_score += 4 * (14 - Orthogonal_Distance[friendly_king_index][opponent_king_index]);
         // encouraging the friendly king to push the opponent king to the edge of the board
-        mop_up_score += 10 * Centre_Manhattan_Distance[friendly_king_index];
+        mop_up_score += 10 * Centre_Manhattan_Distance[opponent_king_index];
         // returning the mop up score multiplied by the endgame transition
         return ((int) mop_up_score * opponent_endgame_transition);
 
@@ -211,15 +222,10 @@ int king_pawn_shield_score(int color, int opponent_material, float opponent_endg
     int king_square = get_king_index(bitboards, color);
     int king_file = get_file(king_square);
 
-    // we look if there is a good pawn shield for the king, when it's in a safe spot on a side file
-    if (king_file >= 2 && king_file <= 5){
+    // we look if there is a good pawn shield for the king, when it's in a safe spot on a side file (files a, b, c or f, g, h : where it goes when it castles)
+    if (king_file <= 2 || king_file >= 5){
 
-        int* pawn_shield_squares = (int*)malloc(sizeof(int)*6);
-        // looking for malloc errors
-        if (pawn_shield_squares == NULL){
-            printf("Error in malloc\n");
-            return 0;
-        }
+        int pawn_shield_squares[6];
 
         // udpating the pawn shield squares with the precomputed values
         for (int i=0; i<6; i++){
@@ -255,8 +261,6 @@ int king_pawn_shield_score(int color, int opponent_material, float opponent_endg
         // incrementing the penalty to make it stronger
         penalty *= penalty;
 
-        // free the memory
-        free(pawn_shield_squares);
 
     }
     // we then look if the king is castled, if not, we add a penalty depending on the developpement of the others player pieces (PST)

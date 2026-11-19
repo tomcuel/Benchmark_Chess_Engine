@@ -83,6 +83,14 @@ extern Bitboards_Log* bitboards_log;
 
 
 /////////////////////////////////////////////////////////////////////////////////////
+// Informations about the position from which the log starts, when it isn't the start of the game (position loaded from a FEN)
+// they are both put back to 0 by reset_log
+/////////////////////////////////////////////////////////////////////////////////////
+extern int log_setup_size; // the number of elements at the start of the log that aren't moves really played (they hold the state of the position), they must never be undone
+extern int log_setup_halfmove_clock; // the number of half-moves already played without any capture or pawn move in the loaded position (for the 50 moves rule)
+
+
+/////////////////////////////////////////////////////////////////////////////////////
 // Function to create the log of the game
 /////////////////////////////////////////////////////////////////////////////////////
 void create_log();

@@ -8,7 +8,7 @@ int promoted_piece_bias = 6000;
 int castling_bias = 10000;
 
 
-void order_moves(bool is_captures_only, const move* valid_moves, int nb_moves){
+void order_moves(bool is_captures_only, move* valid_moves, int nb_moves, move hash_move){
 
     // creating an array to store the scores of the moves
     int* scores = (int*)malloc(nb_moves*sizeof(int));
@@ -24,6 +24,12 @@ void order_moves(bool is_captures_only, const move* valid_moves, int nb_moves){
         // we first initialize the value of the move to 0
         scores[i] = 0;
 
+        // the best move found for this position in a previous search (kept in the transposition tables) is tried first
+        // it's very often still the best one, so the alpha-beta pruning can cut the other moves much sooner
+        if (!is_move_null(hash_move) && valid_moves[i] == hash_move){
+            scores[i] += hash_move_bias;
+        }
+
         // getting the differents informations about the move
         int from = get_from_square(valid_moves[i]);
         int to = get_to_square(valid_moves[i]);
@@ -37,14 +43,16 @@ void order_moves(bool is_captures_only, const move* valid_moves, int nb_moves){
 
         // capturing a piece is a good move, but it's better to capture a piece that is worth more than the piece that is moving
         if (is_capture_happening){
-            int capture_delta = get_value_of_piece(get_type_of_piece(bitboards, from)) - get_value_of_piece(get_type_of_piece(bitboards, to));
+            // the value of the captured piece minus the value of the piece that is moving (positive when we win material even if the piece is taken back)
+            int captured_square = (flag == En_Passant_Flag) ? ((game_settings->color_of_player_that_is_playing == WHITE) ? to - 8 : to + 8) : to;
+            int capture_delta = get_value_of_piece(get_type_of_piece(bitboards, captured_square)) - get_value_of_piece(get_type_of_piece(bitboards, from));
             // looking if the opponent can recapture the piece
             int recapture_possible = is_case_threatened(game_settings->color_of_player_that_is_playing, to, bitboards, chess_log);
             // if the opponent can recapture the piece, we don't want to capture it
             if (recapture_possible){
                 // if the opponent can recapture the piece, we want to capture it only if it's worth more than the piece that is moving
                 // if the piece that is moving is worth more than the piece that is being captured, we don't want to capture it
-                scores[i] += ((capture_delta > 0) ? winning_piece_bias : losing_piece_bias) + capture_delta;
+                scores[i] += ((capture_delta >= 0) ? winning_piece_bias : losing_piece_bias) + capture_delta;
             }
             // if the opponent can't recapture the piece, we want to capture it
             else{

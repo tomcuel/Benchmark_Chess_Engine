@@ -105,4 +105,11 @@ void make_move_AI(move move_value);
 void undo_last_move_AI();
 
 
+/////////////////////////////////////////////////////////////////////////////////////
+// To choose if the promotions to a rook, a bishop and a knight are generated with the promotion to a queen
+// false by default : the AI only looks at the promotion to a queen. It's set to true to check the move generation (perft)
+/////////////////////////////////////////////////////////////////////////////////////
+extern bool are_under_promotions_generated;
+
+
 #endif /* __MOVE_GENERATOR_H__ */

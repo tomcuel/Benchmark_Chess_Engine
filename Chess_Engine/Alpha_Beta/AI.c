@@ -14,6 +14,11 @@ void run_best_AI_level(move* selected_move, int* selected_score, bool* is_move_t
         run_iterative_deepening(selected_move, selected_score, depth_reached);
     }
 
+    // no move has been found (the game is over : checkmate or stalemate), so there is nothing to play
+    if (is_move_null(*selected_move)){
+        return;
+    }
+
     // getting if a capture will happen, to update the captured pieces and the score
     int taken_piece = NOTHING;
     if (get_flag(*selected_move) == En_Passant_Flag){
@@ -26,8 +31,6 @@ void run_best_AI_level(move* selected_move, int* selected_score, bool* is_move_t
 
     // making the move
     make_move_AI(*selected_move);
-    // updating the opening book after the move has been made
-    update_opening_book();
 
 }
 

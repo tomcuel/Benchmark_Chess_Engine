@@ -2,11 +2,8 @@
 #define __AI_H___
 
 
-#include "SDL2/SDL.h"
-
-
-#include "../Alpha_Beta/Openings.h"
-#include "../Alpha_Beta/Search.h"
+#include "Openings.h"
+#include "Search.h"
 #include "../Game_Treatment/Board.h"
 #include "../Game_Treatment/Log.h"
 #include "../Game_Treatment/Moves_Treatment.h"

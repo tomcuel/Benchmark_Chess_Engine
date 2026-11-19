@@ -303,7 +303,7 @@ int get_king_index(const bit_board* bitboard_array, int color);
  * @return true if the case is threatened, false otherwise
 **/
 /////////////////////////////////////////////////////////////////////////////////////
-bool is_case_threatened(int color, int case_index, const bit_board* bitboard_array, Log* log);
+bool is_case_threatened(int color, int case_index, const bit_board* bitboard_array, const Log* log);
 
 
 /////////////////////////////////////////////////////////////////////////////////////
